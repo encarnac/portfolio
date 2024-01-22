@@ -1,16 +1,1 @@
-body {
-  display: grid;
-  place-items: center;
-  background-color: #6d5b9c;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.wrapper {
-  background-color: #fff9e6;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-h1 {
-  color: #8873be;
-}
