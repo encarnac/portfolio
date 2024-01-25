@@ -2,8 +2,10 @@ import HeroSection from "./components/HeroSection";
 
 export default function App() {
   return (
-    <main className="container mx-auto flex min-h-screen flex-col bg-gradient-to-br from-dark-purple to-med-purple px-12 py-4">
-      <HeroSection />
+    <main className="flex min-h-screen flex-col bg-gradient-to-tr from-[#10031A] via-[#18082C] to-[#14022A]">
+      <div className="container mx-auto px-12 pt-12">
+        <HeroSection />
+      </div>
     </main>
   );
 }
