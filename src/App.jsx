@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
+// import AboutSection from "./components/AboutSection";
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <Navbar />
       <div className="container mx-auto mt-24 px-12 py-4">
         <HeroSection />
+        <AboutSection />
       </div>
     </main>
   );
