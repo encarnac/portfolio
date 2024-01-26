@@ -1,4 +1,3 @@
-"use client";
 import { TypeAnimation } from "react-type-animation";
 import HeaderPhoto from "../assets/header-pfp.png";
 
