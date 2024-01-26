@@ -1,6 +1,6 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
-import ProfilePhoto from "../assets/header-pfp.png";
+import HeaderPhoto from "../assets/header-pfp.png";
 
 export default function Header() {
   return (
@@ -44,11 +44,12 @@ export default function Header() {
           </div>
 
           <div className="col-span-5 mt-4 place-self-center lg:mt-0">
-            <div className="relative h-[250px] w-[250px] rounded-full bg-[#140B21] lg:h-[350px] lg:w-[350px]">
+            <div className="relative h-[250px] w-[250px] rounded-full bg-[#6a3dd1] lg:h-[350px] lg:w-[350px]">
+              {/* 140B21 6a3dd1 */}
               <img
-                src={ProfilePhoto}
+                src={HeaderPhoto}
                 alt="profile photo"
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-full"
+                className="size-11/12 absolute inset-x-0 bottom-0 rounded-bl-[50%]"
               />
             </div>
           </div>
