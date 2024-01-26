@@ -7,7 +7,7 @@ export default function Header() {
       <section>
         <div className="grid grid-cols-1 lg:grid-cols-12">
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-5xl font-extrabold text-white sm:text-6xl lg:text-8xl">
+            <h1 className="mb-4 text-4xl font-extrabold text-white sm:text-6xl lg:text-8xl">
               <span className="bg-gradient-to-r from-[#3034C2] to-[#7244D9] bg-clip-text text-transparent">
                 Hello, I'm
               </span>

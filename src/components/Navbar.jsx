@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  CodeBracketSquareIcon,
+} from "@heroicons/react/24/outline";
 import { NavLink } from "./NavLink";
 import { NavDrawer } from "./NavDrawer";
 
@@ -9,13 +13,13 @@ const pageSections = [
   { title: "Contact", href: "#contact" },
 ];
 
-export const Navbar = () => {
+const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="fixed left-0 right-0 top-0 z-10 bg-[#14022A] bg-opacity-90">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-4">
-        <a href="/" className="text-2xl font-semibold text-white md:text-5xl">
-          LOGO
+        <a href="/" className="text-2xl font-semibold text-white md:text-4xl">
+          <CodeBracketSquareIcon className="inline w-6" /> colene
         </a>
         <div className="mobile-menu block md:hidden">
           {navbarOpen ? (
@@ -48,3 +52,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;
