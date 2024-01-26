@@ -25,11 +25,11 @@ const Navbar = ({
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarBgColor = isTopOfPage
     ? "border-b dark:border-[#220C3D] border-[#d9dbdf]"
-    : "bg-[#EFF3FD] dark:bg-[#220C3D]";
+    : "bg-[#E9EFFD] dark:bg-[#220C3D]";
 
   return (
     <nav
-      className={`${navbarBgColor} transition duration-500 backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
+      className={`${navbarBgColor} backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
     >
       <div className="border-[#d9dbdf] container mx-auto flex flex-wrap items-center justify-between px-4 py-4">
         <a
