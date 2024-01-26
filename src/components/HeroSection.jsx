@@ -28,7 +28,7 @@ export default function Header() {
               />
             </h1>
             <p className="mb-6 text-base text-[#9d97a6] sm:text-lg lg:text-xl">
-              I'm a front-end developer from Los Angeles, CA
+              // I'm a front-end developer from Los Angeles, CA
             </p>
             <div className="">
               <button className="mr-4 w-full rounded-full bg-gradient-to-br from-[#3034C2] via-[#6A3DD1] to-[#9329BE] px-6 py-3 text-white sm:w-fit">
