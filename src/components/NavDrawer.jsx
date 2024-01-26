@@ -1,12 +1,16 @@
-import { NavLink } from "./NavLink";
+import { Link } from "./Link";
 
-export const NavDrawer = ({ links }) => {
+export const NavDrawer = ({ pages, selectedPage, setSelectedPage }) => {
   return (
-    <ul className="backdrop-blur-sm flex flex-col items-center py-4 text-stone-500 dark:text-[#b7b0c2]">
+    <ul className="flex flex-col items-center py-4 text-stone-500 dark:text-[#b7b0c2]">
       {" "}
-      {links.map((link, index) => (
+      {pages.map((page, index) => (
         <li className={index}>
-          <NavLink href={link.href} title={link.title}></NavLink>
+          <Link
+            page={page}
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
         </li>
       ))}
     </ul>
