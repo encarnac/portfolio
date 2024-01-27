@@ -33,16 +33,16 @@ const Navbar = ({
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-4">
         <a
-          href="/"
+          href="#hero"
+          onClick={() => setSelectedPage("hero")}
           className="text-2xl font-semibold text-stone-600 dark:text-white md:text-4xl"
         >
           <CodeBracketSquareIcon className="inline w-6" /> ce
         </a>
-
         <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-white"
+            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-[#AB86FF]"
           >
             {theme === "dark" ? (
               <MoonIconSolid className="h-5 w-5" />
@@ -80,7 +80,7 @@ const Navbar = ({
             ))}
             <button
               onClick={toggleTheme}
-              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-white"
+              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-[#AB86FF]"
             >
               {theme === "dark" ? (
                 <MoonIconSolid className="h-5 w-5" />
