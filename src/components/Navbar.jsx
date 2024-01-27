@@ -39,10 +39,10 @@ const Navbar = ({
         >
           <CodeBracketSquareIcon className="inline w-6" /> ce
         </a>
-        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
+        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#6a3dd1] md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-[#AB86FF]"
+            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-[#ad8cfa]"
           >
             {theme === "dark" ? (
               <MoonIconSolid className="h-5 w-5" />
@@ -53,14 +53,14 @@ const Navbar = ({
           {navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#6a3dd1]"
+              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#AB86FF]"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#6a3dd1]"
+              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#AB86FF]"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
