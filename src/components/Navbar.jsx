@@ -29,7 +29,7 @@ const Navbar = ({
 
   return (
     <nav
-      className={`${navbarBgColor} transition duration-500 backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
+      className={`${navbarBgColor} transition duration-300 backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
     >
       <div className="border-[#d9dbdf] container mx-auto flex flex-wrap items-center justify-between px-4 py-4">
         <a
