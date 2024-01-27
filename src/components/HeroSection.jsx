@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <>
       <section>
-        <div className="grid grid-cols-1 lg:grid-cols-12">
+        <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
           <div className="col-span-7 place-self-center text-center sm:text-left">
             <h1 className="mb-4 text-4xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-8xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:to-[#7943ed]">
-                Hello, I am
+                Hello, I'm
               </span>
               <br />
               <TypeAnimation
@@ -42,14 +42,16 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-5 mt-6 place-self-center lg:mt-0">
-            <div className="relative h-[250px] w-[250px] rounded-full bg-[#ad99db] dark:bg-[#6a3dd1] lg:h-[350px] lg:w-[350px]">
-              {/* 140B21 6a3dd1 */}
-              <img
-                src={HeaderPhoto}
-                alt="profile photo"
-                className="size-11/12 absolute inset-x-0 bottom-0 rounded-bl-[50%]"
-              />
+          <div className="col-span-5 mt-6 place-self-center lg:my-24">
+            <div className="lg:before:border-blue z-0 before:max-w-[400px] lg:relative lg:before:absolute lg:before:-left-12 lg:before:-top-12 lg:before:z-[-1] lg:before:h-full lg:before:w-full lg:before:rounded-full lg:before:border-2">
+              {" "}
+              <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-full bg-[#ad99db] dark:bg-[#6a3dd1]">
+                <img
+                  src={HeaderPhoto}
+                  alt="profile photo"
+                  className="size-11/12 absolute inset-x-0 bottom-0 rounded-bl-[50%]"
+                />
+              </div>
             </div>
           </div>
         </div>
