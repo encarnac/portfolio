@@ -68,8 +68,8 @@ const AboutSection = ({ setSelectedPage }) => {
         id="about"
         className="relative grid grid-cols-1 items-start justify-items-center gap-x-6 py-28 lg:grid-cols-12"
       >
-        <div className="absolute z-[0] h-full w-screen bg-[#d1d7e6] py-48 dark:bg-[#0e0517]"></div>
-        <div className="size-[60px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full bg-[#c93283] blur-[3rem] dark:bg-[#5722c9] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div>
+        <div className="absolute z-[0] h-full w-screen bg-[#e1e7f4] py-48 dark:bg-[#130f19]"></div>
+        <div className="size-[100px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full bg-[#c93283] blur-[4rem] dark:bg-[#502e77] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div>
         <div className="relative flex flex-col items-center gap-y-4 lg:col-span-4 lg:justify-self-end">
           <h2 className="text-center text-2xl font-extrabold text-stone-700 dark:text-slate-100 lg:text-3xl">
             About Me
@@ -78,7 +78,7 @@ const AboutSection = ({ setSelectedPage }) => {
             <img src={AboutPhoto} className="absolute inset-x-0 bottom-0" />
           </div>
         </div>
-        <div className="mt-6 flex h-full w-10/12 flex-col items-center gap-y-2 rounded-3xl bg-slate-200/80 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#150b2b] dark:bg-black/40 dark:shadow-md lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-200 lg:before:border-opacity-70 lg:before:content-[''] dark:lg:before:border-y-[#000]/[.01] dark:lg:before:border-r-slate-950/30">
+        <div className="mt-6 flex h-full w-10/12 flex-col items-center gap-y-2 rounded-3xl bg-slate-100/80 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#150b2b] dark:bg-black/40 dark:shadow-md lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-70 lg:before:content-[''] dark:lg:before:border-y-[#000]/[.01] dark:lg:before:border-r-slate-950/30">
           <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-900/10 px-1 text-slate-800 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#150b2b] dark:bg-[#03000A]/60 dark:text-slate-100 lg:mx-0">
             <Tab
               active={tab === "Info"}
