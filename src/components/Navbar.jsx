@@ -25,24 +25,24 @@ const Navbar = ({
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarBgColor = isTopOfPage
     ? "border-b dark:border-[#220C3D] border-[#d9dbdf]"
-    : "bg-[#E9EFFD] dark:bg-[#220C3D]";
+    : "bg-[#EFF3FD] dark:bg-[#220C3D]";
 
   return (
     <nav
-      className={`${navbarBgColor} backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
+      className={`${navbarBgColor} transition duration-500 backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-4">
         <a
-          href="#hero"
-          onClick={() => setSelectedPage("hero")}
+          href="/"
           className="text-2xl font-semibold text-stone-600 dark:text-white md:text-4xl"
         >
           <CodeBracketSquareIcon className="inline w-6" /> ce
         </a>
-        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#6a3dd1] md:hidden">
+
+        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-[#ad8cfa]"
+            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-white"
           >
             {theme === "dark" ? (
               <MoonIconSolid className="h-5 w-5" />
@@ -53,14 +53,14 @@ const Navbar = ({
           {navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#AB86FF]"
+              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#6a3dd1]"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#AB86FF]"
+              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#6a3dd1]"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
@@ -80,7 +80,7 @@ const Navbar = ({
             ))}
             <button
               onClick={toggleTheme}
-              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-[#AB86FF]"
+              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-white"
             >
               {theme === "dark" ? (
                 <MoonIconSolid className="h-5 w-5" />
