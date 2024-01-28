@@ -63,7 +63,7 @@ const AboutSection = ({ setSelectedPage }) => {
         className="relative grid grid-cols-1 items-start justify-items-center gap-x-6 py-28 lg:grid-cols-12"
       >
         <div className="absolute z-[0] h-full w-screen bg-[#eaedf1] py-48 dark:bg-[#181320]"></div>
-        <div className="size-[100px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full bg-[#c93283] blur-[4rem] dark:bg-[#502e77] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div>
+        <div className="size-[100px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full blur-[4rem] dark:bg-[#502e77] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div>
         <motion.div
           initial="hidden"
           whileInView="visible"
