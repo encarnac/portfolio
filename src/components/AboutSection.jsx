@@ -88,19 +88,19 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={motionVariants("left")}
           className="mt-6 flex h-full w-10/12 flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100/80 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#150b2b] dark:bg-black/40 dark:shadow-md lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
         >
-          <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-900/10 px-1 text-stone-700 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#150b2b] dark:bg-[#03000A]/60 dark:text-slate-100 lg:mx-0">
+          <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 text-stone-700 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#150b2b] dark:bg-[#03000A]/60 dark:text-slate-100 lg:mx-0">
             <Tab
-              active={tab === "Info"}
+              active={tab}
               selectTab={() => selectTab("Info")}
               text={"Info"}
             />
             <Tab
-              active={tab === "Education"}
+              active={tab}
               selectTab={() => selectTab("Education")}
               text={"Education"}
             />
             <Tab
-              active={tab === "Skills"}
+              active={tab}
               selectTab={() => selectTab("Skills")}
               text={"Skills"}
             />
