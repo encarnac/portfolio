@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Tab = ({ active, selectTab, text }) => {
-  const buttonClasses = active ? "dark:bg-[#2d2096] bg-slate-100" : "";
+  const buttonClasses = active ? "dark:bg-[#7943ed]/50 bg-slate-100" : "";
   return (
     <button
       onClick={selectTab}
