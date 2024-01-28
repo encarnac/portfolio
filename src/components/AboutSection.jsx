@@ -1,5 +1,6 @@
-import AboutPhoto from "../assets/about-pfp.png";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import AboutPhoto from "../assets/about-pfp.png";
 
 const motionVariants = (direction) => {
   return {
@@ -9,6 +10,8 @@ const motionVariants = (direction) => {
 };
 
 const AboutSection = ({ setSelectedPage }) => {
+  const [tab, setTab] = useState("info");
+
   return (
     <motion.div
       initial="hidden"
@@ -19,32 +22,45 @@ const AboutSection = ({ setSelectedPage }) => {
     >
       <div
         id="about"
-        className="md:grid-rows-8 mb-48 grid grid-flow-row grid-cols-1 items-stretch justify-items-center gap-x-0 gap-y-4 md:grid-cols-12 md:justify-items-stretch md:px-28"
+        className="mb-48 items-start justify-items-center gap-x-8 md:grid md:grid-cols-12"
       >
-        <div className="px-2 md:col-span-7 md:row-span-1">
-          <h1 className="text-2xl font-extrabold dark:text-white md:text-3xl">
+        <div className="col-span-3 flex flex-col items-center gap-y-4 justify-self-end">
+          <h2 className="text-start text-2xl font-extrabold text-slate-700 dark:text-slate-100 md:text-3xl">
             About Me
-          </h1>
+          </h2>
+          <div className="size-[150px] relative overflow-clip rounded-full bg-[#F38BBB] pt-12 dark:bg-[#3034C2]">
+            <img
+              src={AboutPhoto}
+              className="absolute inset-x-0 bottom-0 rounded-full"
+            />
+          </div>
         </div>
 
-        <div className="md:row-span-8 order-last place-self-center md:order-first md:col-span-5">
-          <div className="h-fill relative max-w-[300px] overflow-clip rounded-full bg-[#ad99db] dark:bg-[#6a3dd1]">
-            <img src={AboutPhoto} />
+        <div className="col-span-9 mt-6 flex h-full max-w-2xl flex-col items-center gap-y-2 rounded-3xl bg-slate-200/90 px-2 py-6 shadow-sm backdrop-blur-lg dark:bg-slate-950/60 md:mt-0 md:before:absolute md:before:-left-[0.93rem] md:before:top-[40%] md:before:h-0 md:before:w-0 md:before:border-y-[10px] md:before:border-r-[15px] md:before:border-y-[#fff]/[.01] md:before:border-r-slate-200 md:before:border-opacity-70 md:before:content-[''] dark:md:before:border-y-[#000]/[.01] dark:md:before:border-r-slate-950/60">
+          <div
+            role="tablsit"
+            aria-label="tabs"
+            className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-900/10 px-1 text-slate-800 shadow-inner transition dark:bg-slate-800/20 dark:text-slate-100 md:mx-0"
+          >
+            <button
+              role="tab"
+              aria-selected="true"
+              className="h-10 rounded-full bg-slate-100 px-3 dark:bg-slate-800"
+            >
+              <span className="">Info</span>
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              className="rounded-full px-3"
+            >
+              <span className=""> Education</span>
+            </button>
+            <button className="h-10 rounded-full px-3">
+              <span className="">Skills</span>
+            </button>
           </div>
-        </div>
-        <div className="md:row-span-7 place-self-stretch px-2 dark:text-white md:col-span-7">
-          <div className="mb-4 flex flex-row justify-start">
-            <button className="mr-1 grow pb-1 hover:border-b-2 hover:border-b-[#3034C2] md:text-start">
-              My Story
-            </button>
-            <button className="mr-1 grow pb-1 hover:border-b-2 hover:border-b-[#3034C2] md:text-start">
-              Education
-            </button>
-            <button className="mr-1 grow pb-1 hover:border-b-2 hover:border-b-[#3034C2] md:text-start">
-              Skills
-            </button>
-          </div>
-          <p className="mt-2 text-sm lg:text-base">
+          <p className="mt-2 px-8 text-sm text-slate-800 dark:text-slate-100 lg:text-base">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Node.js, Express, MySQL, MongoDB,
