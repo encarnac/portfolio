@@ -40,7 +40,7 @@ export default function App() {
   return (
     <main
       id="hero"
-      className="flex min-h-screen flex-col bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#120e15] dark:to-[#0d0715]"
+      className="flex min-h-screen flex-col bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#17121b] dark:to-[#11091b]"
     >
       <Navbar
         isTopOfPage={isTopOfPage}
