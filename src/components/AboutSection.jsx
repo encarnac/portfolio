@@ -67,8 +67,8 @@ const AboutSection = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, duration: 0.5 }}
-          transition={{ type: "tween", duration: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ type: "tween", duration: 0.6 }}
           variants={motionVariants("right")}
           className="relative flex flex-col items-center gap-y-4 lg:col-span-4 lg:justify-self-end"
         >
@@ -83,7 +83,7 @@ const AboutSection = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, duration: 0.5 }}
+          viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
           className="mt-6 flex h-full w-10/12 flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100/80 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#150b2b] dark:bg-black/40 dark:shadow-md lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"

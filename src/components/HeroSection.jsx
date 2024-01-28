@@ -1,11 +1,17 @@
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 import HeaderPhoto from "../assets/header-pfp.png";
 
 export default function Header() {
   return (
     <>
       <section>
-        <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1"
+        >
           <div className="col-span-7 place-self-center text-center sm:text-left">
             <h1 className="mb-4 text-4xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-8xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:to-[#7943ed]">
@@ -54,7 +60,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
