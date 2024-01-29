@@ -1,27 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const Tab = ({ active, selectTab, text }) => {
+export const Tab = ({ active, selectTab, tabName }) => {
   return (
     <button
-      key={text}
-      onClick={() => selectTab(text)}
+      key={tabName}
+      onClick={() => selectTab(tabName)}
       className={`${
-        active === text ? "" : "hover:text-white/80"
+        active === tabName
+          ? "text-stone-700 dark:text-white"
+          : "dark:text-slate-400 text-stone-500 hover:text-stone-700 dark:hover:text-white"
       } relative h-9 text-sm rounded-full px-3 transition focus-visible:outline-2`}
       style={{
         WebkitTapHighlightColor: "transparent",
       }}
     >
-      {active === text && (
-        <motion.span
-          layoutId="bubble"
-          className="absolute inset-0 z-10 bg-white/50 dark:bg-[#7943ed]/30"
+      {active === tabName && (
+        <motion.div
+          layoutId="active-pill"
+          className="absolute inset-0 bg-white dark:bg-[#7943ed]/30"
           style={{ borderRadius: 9999 }}
           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-        />
-      )}
-      {text}
+        ></motion.div>
+      )}{" "}
+      <span className="relative">{tabName}</span>
     </button>
   );
 };
