@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const Tab = ({ active, selectTab, text }) => {
-  // const buttonClasses = active ? "" : "";
   return (
     <button
       key={text}
