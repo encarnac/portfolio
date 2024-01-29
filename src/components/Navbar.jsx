@@ -38,11 +38,10 @@ const Navbar = ({
         >
           <CodeBracketSquareIcon className="inline w-6" /> ce
         </a>
-
-        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
+        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#7943ed] md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-white"
+            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#7943ed] dark:hover:text-[#AB86FF]"
           >
             {theme === "dark" ? (
               <MoonIconSolid className="h-5 w-5" />
@@ -80,7 +79,7 @@ const Navbar = ({
             ))}
             <button
               onClick={toggleTheme}
-              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#6a3dd1] dark:hover:text-white"
+              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#7943ed] dark:hover:text-[#AB86FF]"
             >
               {theme === "dark" ? (
                 <MoonIconSolid className="h-5 w-5" />
