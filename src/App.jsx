@@ -53,7 +53,8 @@ export default function App() {
         <HeroSection />
         <motion.div
           margin="0 0 -200px 0"
-          amount="all"
+          amount=".2"
+          viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("about")}
         >
           <AboutSection />
