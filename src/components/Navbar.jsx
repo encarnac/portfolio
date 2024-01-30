@@ -33,8 +33,9 @@ const Navbar = ({
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-4">
         <a
-          href="/"
-          className="text-2xl font-semibold text-stone-600 dark:text-white md:text-4xl"
+          href="#hero"
+          onClick={() => setSelectedPage("hero")}
+          className="text-2xl font-semibold text-stone-600 dark:text-[#6a3dd1] md:text-4xl"
         >
           <CodeBracketSquareIcon className="inline w-6" /> ce
         </a>
