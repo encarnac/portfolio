@@ -25,7 +25,7 @@ const Navbar = ({
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarBgColor = isTopOfPage
     ? "border-b dark:border-[#220C3D] border-[#d9dbdf]"
-    : "bg-[#eaedf1] dark:bg-[#11091b]";
+    : "bg-[#e3e8ee] dark:bg-[#181320]";
 
   return (
     <nav
