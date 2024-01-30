@@ -252,20 +252,23 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="mt-4 flex h-full w-full flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 px-1 py-6 backdrop-blur-lg dark:border-[1px] dark:border-[#6a3dd1]/30 dark:bg-[#11091b] dark:shadow-lg md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
+          className="mt-4 h-full w-full rounded-3xl border-[1px] border-slate-200 bg-slate-100 p-px dark:border-none dark:bg-gradient-to-b dark:from-[#3034C2] dark:to-[#7943ed] dark:shadow-2xl dark:shadow-[#33186C]/20 md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-none lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-['']"
         >
-          <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#6a3dd1]/30 dark:bg-[#03000A]/60 lg:mx-0">
-            {TAB_CONTENT.map((tabContent, index) => (
-              <Tab
-                className={index}
-                active={tab}
-                selectTab={() => selectTab(tabContent.name)}
-                tabName={tabContent.name}
-              />
-            ))}
-          </div>
-          <div className="mt-4 place-self-stretch px-4 py-2 text-sm text-stone-600 dark:text-slate-100 lg:text-base">
-            {TAB_CONTENT.find((t) => t.name === tab).content}
+          <div className="flex h-full w-full flex-col items-center gap-y-2 rounded-3xl py-4 dark:bg-[#11091b]">
+            {" "}
+            <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#3034C2]/80 dark:bg-[#0D0714]/90 lg:mx-0">
+              {TAB_CONTENT.map((tabContent, index) => (
+                <Tab
+                  className={index}
+                  active={tab}
+                  selectTab={() => selectTab(tabContent.name)}
+                  tabName={tabContent.name}
+                />
+              ))}
+            </div>
+            <div className="mt-4 place-self-stretch px-4 py-2 text-sm text-stone-600 dark:text-slate-100 lg:text-base">
+              {TAB_CONTENT.find((t) => t.name === tab).content}
+            </div>
           </div>
         </motion.div>
       </div>
