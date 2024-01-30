@@ -71,11 +71,11 @@ const TAB_CONTENT = [
             <span className="font-bold">React.js and Node.js</span>.
           </p>
           <p className="">
-            I craft interactive and responsive web applications that provide
-            users with a memorable, seamless experience by writing code that
-            accurately implements designs. I am a quick learner and always
-            looking to expand my knowledge, taking on new challenges by learning
-            the latest technologies.
+            I strive to write code that accurately implements pixel-perfect
+            designs. I craft interactive and responsive web applications that
+            provide users with a memorable, seamless experience. I am a quick
+            learner and always looking to expand my knowledge, taking on new
+            challenges by learning the latest technologies.
           </p>
           <p></p>
         </div>
@@ -167,17 +167,14 @@ const TAB_CONTENT = [
         <h3 className="text-center font-bold md:text-start">Back-End</h3>
         <div className="mb-5 flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Node.js</p>
-            <BiLogoNodejs className="size-10 text-[#6a3dd1]" />
+            <p className="text-[#9d97a6]">Python</p>
+            <BiLogoPython className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
             <p className="text-[#9d97a6]">Express</p>
             <SiExpress className="size-10 text-[#6a3dd1]" />
           </div>
-          <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Python</p>
-            <BiLogoPython className="size-10 text-[#6a3dd1]" />
-          </div>
+
           <div className="flex flex-col items-center">
             <p className="text-[#9d97a6]">MongoDB</p>
             <BiLogoMongodb className="size-10 text-[#6a3dd1]" />
