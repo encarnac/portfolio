@@ -13,7 +13,7 @@ export default function Header() {
           className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1"
         >
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-4xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-8xl">
+            <h1 className="mb-4 text-5xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-7xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:to-[#7943ed]">
                 Hello, I'm
               </span>
@@ -21,8 +21,10 @@ export default function Header() {
               <TypeAnimation
                 sequence={[
                   "Colene",
-                  3000, // Waits 2s
-                  "",
+                  2000, // Waits 2s
+                  "Full-Stack",
+                  2000,
+                  "Front-End",
                   700,
                   () => {
                     console.log("Sequence completed");
@@ -34,7 +36,7 @@ export default function Header() {
               />
             </h1>
             <p className="mb-6 text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
-              // I am a Front-End Developer based in Los Angeles, CA
+              // Scroll down to learn more about what I do
             </p>
             <div className="">
               <button className="mr-4 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
