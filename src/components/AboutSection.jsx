@@ -3,7 +3,28 @@ import { motion } from "framer-motion";
 import { Tab } from "./Tab";
 import AboutPhoto from "../assets/about-pfp.png";
 import { LuGraduationCap } from "react-icons/lu";
-import { BiUser, BiTrophy, BiMap } from "react-icons/bi";
+import {
+  BiUser,
+  BiTrophy,
+  BiMap,
+  BiLogoFigma,
+  BiLogoNodejs,
+  BiLogoPython,
+  BiLogoMongodb,
+  BiLogoGit,
+  BiLogoGithub,
+  BiLogoGoogleCloud,
+} from "react-icons/bi";
+import {
+  RiJavascriptFill,
+  RiHtml5Line,
+  RiCss3Fill,
+  RiReactjsLine,
+  RiBootstrapFill,
+} from "react-icons/ri";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { TbBrandNextjs, TbBrandFramerMotion } from "react-icons/tb";
+import { SiExpress, SiJirasoftware, SiPostman, SiMysql } from "react-icons/si";
 
 const motionVariants = (direction) => {
   return {
@@ -100,7 +121,98 @@ const TAB_CONTENT = [
       </ul>
     ),
   },
-  { name: "Skills", content: "" },
+  {
+    name: "Skills",
+    content: (
+      <div className="px-8 pb-4">
+        <h3 className="text-center font-bold md:text-start">Front-End</h3>
+        <div className="mb-5 flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">HTML5</p>
+            <RiHtml5Line className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">CSS3</p>
+            <RiCss3Fill className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Javascript</p>
+            <RiJavascriptFill className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">React</p>
+            <RiReactjsLine className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Next.js</p>
+            <TbBrandNextjs className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Bootstrap</p>
+            <RiBootstrapFill className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Tailwind</p>
+            <BiLogoTailwindCss className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Figma</p>
+            <BiLogoFigma className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Motion</p>
+            <TbBrandFramerMotion className="size-10 text-[#6a3dd1]" />
+          </div>
+        </div>
+        <h3 className="text-center font-bold md:text-start">Back-End</h3>
+        <div className="mb-5 flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Node.js</p>
+            <BiLogoNodejs className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Express</p>
+            <SiExpress className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Python</p>
+            <BiLogoPython className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">MongoDB</p>
+            <BiLogoMongodb className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">MySQL</p>
+            <SiMysql className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">GCP</p>
+            <BiLogoGoogleCloud className="size-10 text-[#6a3dd1]" />
+          </div>
+        </div>
+        <h3 className="text-center font-bold md:text-start">Development</h3>
+        <div className="flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Git</p>
+            <BiLogoGit className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">GitHub</p>
+            <BiLogoGithub className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Jira</p>
+            <SiJirasoftware className="size-10 text-[#6a3dd1]" />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[#9d97a6]">Postman</p>
+            <SiPostman className="size-10 text-[#6a3dd1]" />
+          </div>
+        </div>
+      </div>
+    ),
+  },
 ];
 
 const AboutSection = ({ setSelectedPage }) => {
@@ -143,7 +255,7 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="mt-4 flex h-full w-fit flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 px-1 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#1c0f39] dark:bg-black/40 dark:shadow-md md:w-5/6 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
+          className="mt-4 flex h-full w-full flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 px-1 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#1c0f39] dark:bg-black/40 dark:shadow-md md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
         >
           <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#1c0f39] dark:bg-[#03000A]/60 lg:mx-0">
             {TAB_CONTENT.map((tabContent, index) => (
