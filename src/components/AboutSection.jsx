@@ -229,7 +229,7 @@ const AboutSection = ({ setSelectedPage }) => {
         id="about"
         className="relative grid grid-cols-1 items-start justify-items-center gap-x-6 py-28 lg:grid-cols-12"
       >
-        <div className="size-[100px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full blur-[4rem] dark:bg-[#502e77] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div>
+        {/* <div className="size-[100px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full blur-[4rem] dark:bg-[#502e77] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div> */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -252,9 +252,9 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="mt-4 flex h-full w-full flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 px-1 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#1c0f39] dark:bg-black/40 dark:shadow-md md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
+          className="mt-4 flex h-full w-full flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 px-1 py-6 backdrop-blur-lg dark:border-[1px] dark:border-[#6a3dd1]/30 dark:bg-[#11091b] dark:shadow-lg md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
         >
-          <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#1c0f39] dark:bg-[#03000A]/60 lg:mx-0">
+          <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#6a3dd1]/30 dark:bg-[#03000A]/60 lg:mx-0">
             {TAB_CONTENT.map((tabContent, index) => (
               <Tab
                 className={index}
