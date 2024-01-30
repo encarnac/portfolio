@@ -35,7 +35,7 @@ const Navbar = ({
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
-          className="text-2xl font-semibold text-stone-600 dark:text-[#6a3dd1] md:text-4xl"
+          className="text-2xl font-semibold text-stone-600 dark:text-[#7943ed] md:text-4xl"
         >
           <CodeBracketSquareIcon className="inline w-6" /> ce
         </a>
