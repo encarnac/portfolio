@@ -91,7 +91,7 @@ const TAB_CONTENT = [
             <LuGraduationCap className="size-5 text-[#F38BBB]/60 dark:text-[#6a3dd1]/60" />
           </div>
           <div className="w-full">
-            <div className="flex flex-wrap justify-between font-semibold">
+            <div className="flex justify-between font-semibold">
               <h4>Oregon State University</h4>
               <p>
                 <span className="hidden md:inline">2021 - </span>2023
@@ -108,7 +108,7 @@ const TAB_CONTENT = [
             <LuGraduationCap className="size-5 text-[#F38BBB]/60 dark:text-[#6a3dd1]/60" />
           </div>
           <div className="w-full">
-            <div className="flex flex-wrap justify-between font-semibold">
+            <div className="flex justify-between font-semibold">
               <h4>California State Long Beach</h4>
               <p>
                 <span className="hidden md:inline">2015 - </span>2019
@@ -252,9 +252,9 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="mt-4 h-full w-full rounded-3xl border-[1px] border-slate-200 bg-slate-100 p-px dark:border-none dark:bg-gradient-to-b dark:from-[#3034C2] dark:to-[#7943ed] dark:shadow-2xl dark:shadow-[#33186C]/20 md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-none lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-['']"
+          className="relative mt-4 h-full w-full rounded-3xl border-[1px] border-slate-200 bg-slate-100 p-px dark:border-none dark:bg-gradient-to-b dark:from-[#3034C2] dark:to-[#7943ed] dark:shadow-2xl dark:shadow-[#33186C]/20 md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-none lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-['']"
         >
-          <div className="flex h-full w-full flex-col items-center gap-y-2 rounded-3xl py-4 dark:bg-[#11091b]">
+          <div className="flex h-full w-full flex-col items-center gap-y-2 rounded-3xl py-4 dark:bg-[#11091b] lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none">
             {" "}
             <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#3034C2]/80 dark:bg-[#0D0714]/90 lg:mx-0">
               {TAB_CONTENT.map((tabContent, index) => (
