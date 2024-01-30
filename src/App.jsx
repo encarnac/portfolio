@@ -51,7 +51,11 @@ export default function App() {
       />
       <div className="container mx-auto mt-24 px-12 py-4">
         <HeroSection />
+      </div>
+      <div className="bg-[#eaedf1] dark:bg-[#181320]">
+        {" "}
         <motion.div
+          className="container mx-auto px-12 py-4"
           margin="0 0 -200px 0"
           amount=".2"
           viewport={{ amount: 0.7 }}
