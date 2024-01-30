@@ -70,16 +70,16 @@ const TAB_CONTENT = [
             <LuGraduationCap className="size-5 text-[#F38BBB]/60 dark:text-[#6a3dd1]/60" />
           </div>
           <div className="w-full">
-            <div className="flex justify-between font-semibold">
+            <div className="flex flex-wrap justify-between font-semibold">
               <h4>Oregon State University</h4>
               <p>
                 <span className="hidden md:inline">2021 - </span>2023
               </p>
             </div>
-            <p className="px-2 md:px-4 lg:px-6">
+            <p className="px-2 md:px-4">
               Bachelor of Science: Computer Science
             </p>
-            <p className="px-2 md:px-4 lg:px-6">GPA: 3.8</p>
+            <p className="px-2 md:px-4">GPA: 3.8</p>
           </div>
         </li>
         <li className="relative flex gap-2 md:gap-4">
@@ -87,14 +87,14 @@ const TAB_CONTENT = [
             <LuGraduationCap className="size-5 text-[#F38BBB]/60 dark:text-[#6a3dd1]/60" />
           </div>
           <div className="w-full">
-            <div className="flex justify-between font-semibold">
+            <div className="flex flex-wrap justify-between font-semibold">
               <h4>California State Long Beach</h4>
               <p>
                 <span className="hidden md:inline">2015 - </span>2019
               </p>
             </div>
-            <p className="px-2 md:px-4 lg:px-6">Bachelor of Arts: Psychology</p>
-            <p className="px-2 md:px-4 lg:px-6">GPA: 3.5</p>
+            <p className="px-2 md:px-4">Bachelor of Arts: Psychology</p>
+            <p className="px-2 md:px-4">GPA: 3.5</p>
           </div>
         </li>
       </ul>
@@ -120,7 +120,6 @@ const AboutSection = ({ setSelectedPage }) => {
         id="about"
         className="relative grid grid-cols-1 items-start justify-items-center gap-x-6 py-28 lg:grid-cols-12"
       >
-        <div className="absolute z-[0] h-full w-screen bg-[#eaedf1] py-48 dark:bg-[#181320]"></div>
         <div className="size-[100px] md:size-[140px] absolute bottom-0 left-1/4 z-0 -translate-y-40 translate-x-1/4 rounded-full blur-[4rem] dark:bg-[#502e77] md:blur-[5rem] lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2"></div>
         <motion.div
           initial="hidden"
@@ -144,7 +143,7 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="my-4 flex h-full min-w-fit flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#1c0f39] dark:bg-black/40 dark:shadow-md md:w-9/12 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
+          className="mt-4 flex h-full w-fit flex-col items-center gap-y-2 rounded-3xl border-[1px] border-slate-200 bg-slate-100 px-1 py-6 backdrop-blur-xl backdrop-filter dark:border-[1px] dark:border-[#1c0f39] dark:bg-black/40 dark:shadow-md md:w-5/6 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[10%] lg:before:h-0 lg:before:w-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-90 lg:before:content-[''] dark:lg:before:border-none"
         >
           <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#1c0f39] dark:bg-[#03000A]/60 lg:mx-0">
             {TAB_CONTENT.map((tabContent, index) => (
