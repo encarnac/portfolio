@@ -52,7 +52,7 @@ export default function App() {
       <div className="container mx-auto mt-24 px-12 py-4">
         <HeroSection />
       </div>
-      <div className="bg-[#eaedf1] dark:bg-[#181320]">
+      <div className="bg-[#e3e8ee] dark:bg-[#181320]">
         {" "}
         <motion.div
           className="container mx-auto px-12 py-4"
