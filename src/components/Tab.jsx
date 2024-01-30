@@ -8,8 +8,8 @@ export const Tab = ({ active, selectTab, tabName }) => {
       onClick={() => selectTab(tabName)}
       className={`${
         active === tabName
-          ? "text-stone-700 dark:text-white"
-          : "dark:text-slate-400 text-stone-500 hover:text-stone-700 dark:hover:text-white"
+          ? "text-stone-600 dark:text-white"
+          : "dark:text-slate-300 text-stone-500 transition duration-300 hover:text-stone-700 dark:hover:text-white"
       } relative h-9 text-sm rounded-full px-3 transition focus-visible:outline-2`}
       style={{
         WebkitTapHighlightColor: "transparent",
