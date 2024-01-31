@@ -36,7 +36,7 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={motionVariants("right")}
           className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-4 lg:justify-self-end"
         >
-          <h2 className="text-center text-2xl font-extrabold text-stone-700 dark:text-slate-100 lg:text-3xl">
+          <h2 className="text-center text-2xl font-extrabold text-stone-700 dark:text-[#b7b0c2] lg:text-3xl">
             About Me
           </h2>
           <div className="size-[200px] lg:size-[250px] relative my-2 rounded-full bg-[#F38BBB] pt-12 dark:bg-[#6a3dd1]">
@@ -50,9 +50,8 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="dark:lg:before:border-r-slate-950/6 p-px] lg:border-x-none mt-4 flex h-full w-full flex-col items-center rounded-3xl bg-slate-100 py-6 shadow-sm backdrop-blur-lg before:absolute before:-top-[0.93rem] before:h-0 before:w-0 before:border-x-[10px] before:border-b-[15px] before:border-x-[#fff]/[.01] before:border-t-slate-100 before:border-opacity-70 before:content-[''] dark:bg-[#211b2d]/80 dark:before:border-[#211b2d] dark:before:border-x-[#000]/[.01] md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[40%] lg:before:h-0 lg:before:w-0 lg:before:border-x-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-70 lg:before:content-[''] dark:lg:before:border-[#211b2d] dark:lg:before:border-y-[#000]/[.01]"
+          className="lg:before:border-x-none mt-4 flex h-full w-full flex-col items-center rounded-3xl bg-slate-100 p-px py-6 shadow-sm backdrop-blur-lg before:absolute before:-top-[0.93rem] before:h-0 before:w-0 before:border-x-[10px] before:border-b-[15px] before:border-x-[#fff]/[.01] before:border-t-slate-100 before:border-opacity-70 before:content-[''] dark:bg-[#221c2d] dark:bg-opacity-80 dark:before:border-[#211b2d] dark:before:border-x-[#000]/[.01] md:w-3/4 lg:col-span-8 lg:mt-0 lg:before:absolute lg:before:-left-[0.93rem] lg:before:top-[40%] lg:before:h-0 lg:before:w-0 lg:before:border-x-0 lg:before:border-y-[10px] lg:before:border-r-[15px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-70 lg:before:content-[''] dark:lg:before:border-[#211b2d] dark:lg:before:border-y-[#000]/[.01]"
         >
-          {/* 221c2d */}
           <div className="shadow-900/20 relative flex h-11 w-max flex-row items-center rounded-full bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#6a3dd1]/30 dark:bg-[#1b1625] lg:mx-0">
             {AboutMeData.map((tabContent, index) => (
               <Tab
@@ -63,7 +62,7 @@ const AboutSection = ({ setSelectedPage }) => {
               />
             ))}
           </div>
-          <div className="mt-4 place-self-stretch px-4 py-2 text-sm text-stone-600 dark:text-slate-100 lg:text-base">
+          <div className="mt-4 place-self-stretch px-4 py-2 text-sm text-stone-600 dark:text-[#b7b0c2] lg:text-base">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
