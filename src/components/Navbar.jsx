@@ -3,6 +3,7 @@ import { Link } from "./Link";
 import { NavDrawer } from "./NavDrawer";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
 import { HiOutlineCodeBracketSquare } from "react-icons/hi2";
+import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
   { title: "about", href: "#about" },
@@ -18,14 +19,12 @@ const Navbar = ({
   setSelectedPage,
 }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarBgColor = isTopOfPage
-    ? "border-b dark:border-[#220C3D] border-[#d9dbdf]"
-    : "bg-[#e3e8ee] dark:bg-[#181320]";
+  // const navbarBgColor = isTopOfPage
+  //   ? "border-b dark:border-[#220C3D] border-[#d9dbdf]"
+  //   : "bg-[#e3e8ee] dark:bg-[#181320]";
 
   return (
-    <nav
-      className={`${navbarBgColor} transition duration-300 backdrop-blur-md fixed left-0 right-0 top-0 z-10 `}
-    >
+    <nav className="fixed left-0 right-0 top-0 z-10 bg-[#e3e8ee] transition duration-300 dark:bg-[#181320]">
       <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-4">
         <a
           href="#hero"
@@ -45,17 +44,23 @@ const Navbar = ({
               <FiSun className="h-5 w-5" />
             )}
           </button>
-
-          <button
-            onClick={() => setNavbarOpen(!navbarOpen)}
-            className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
-          >
-            {navbarOpen ? (
-              <FiX className="h-5 w-5" />
-            ) : (
-              <FiMenu className="h-5 w-5" />
-            )}
-          </button>
+          <AnimatePresence mode="wait">
+            <motion.button
+              onClick={() => setNavbarOpen(!navbarOpen)}
+              className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
+              key={navbarOpen}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
+            >
+              {navbarOpen ? (
+                <FiX className="h-5 w-5" />
+              ) : (
+                <FiMenu className="h-5 w-5" />
+              )}
+            </motion.button>
+          </AnimatePresence>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
@@ -82,13 +87,23 @@ const Navbar = ({
           </ul>
         </div>
       </div>
-      {navbarOpen ? (
-        <NavDrawer
-          pages={pages}
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-        />
-      ) : null}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={navbarOpen}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.15 }}
+        >
+          {navbarOpen ? (
+            <NavDrawer
+              pages={pages}
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          ) : null}
+        </motion.div>
+      </AnimatePresence>
     </nav>
   );
 };
