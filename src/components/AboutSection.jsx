@@ -69,9 +69,9 @@ const AboutSection = ({ setSelectedPage }) => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={tab}
-                  initial={{ y: 10, opacity: 0 }}
+                  initial={{ y: -25, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -10, opacity: 0 }}
+                  exit={{ y: 25, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   {AboutMeData.find((t) => t.name === tab).content}

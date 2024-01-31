@@ -44,23 +44,22 @@ const Navbar = ({
               <FiSun className="h-5 w-5" />
             )}
           </button>
-          <AnimatePresence mode="wait">
-            <motion.button
-              onClick={() => setNavbarOpen(!navbarOpen)}
-              className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
-              key={navbarOpen}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.15 }}
-            >
-              {navbarOpen ? (
-                <FiX className="h-5 w-5" />
-              ) : (
-                <FiMenu className="h-5 w-5" />
-              )}
-            </motion.button>
-          </AnimatePresence>
+
+          <motion.div
+            onClick={() => setNavbarOpen(!navbarOpen)}
+            key={navbarOpen}
+            layoutId="nav-drawer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
+          >
+            {navbarOpen ? (
+              <FiX className="h-5 w-5" />
+            ) : (
+              <FiMenu className="h-5 w-5" />
+            )}
+          </motion.div>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
@@ -90,10 +89,14 @@ const Navbar = ({
       <AnimatePresence mode="wait">
         <motion.div
           key={navbarOpen}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.15 }}
+          initial="collapsed"
+          animate="open"
+          exit="collapsed"
+          variants={{
+            open: { opacity: 1, height: "auto" },
+            collapsed: { opacity: 0, height: 0 },
+          }}
+          transition={{ duration: 0.3 }}
         >
           {navbarOpen ? (
             <NavDrawer
