@@ -37,7 +37,7 @@ export default function App() {
   return (
     <main
       id="hero"
-      className="relative flex min-h-screen flex-col bg-[#e3e8ee] transition duration-200 ease-linear dark:bg-[#181320]"
+      className="relative flex min-h-screen flex-col bg-[#e3e8ee] transition duration-300 dark:bg-[#181320]"
     >
       {/* Navbar and Drawer */}
       <Navbar
