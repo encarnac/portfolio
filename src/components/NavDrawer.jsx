@@ -6,6 +6,7 @@ export const NavDrawer = ({ pages, selectedPage, setSelectedPage }) => {
       {pages.map((page, index) => (
         <li className={index}>
           <Link
+            mobile={true}
             page={page}
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
