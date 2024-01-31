@@ -3,7 +3,6 @@ import { Link } from "./Link";
 import { NavDrawer } from "./NavDrawer";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
 import { HiOutlineCodeBracketSquare } from "react-icons/hi2";
-import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
   { title: "about", href: "#about" },
@@ -38,37 +37,29 @@ const Navbar = ({
         <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
+            className="p-0 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
           >
-            <motion.div
-              key={theme}
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 2 }}
-            >
-              {theme === "dark" ? (
-                <FiMoon className="h-5 w-5" />
-              ) : (
-                <FiSun className="h-5 w-5" />
-              )}
-            </motion.div>
+            {theme === "dark" ? (
+              <FiMoon className="h-5 w-5" />
+            ) : (
+              <FiSun className="h-5 w-5" />
+            )}
           </button>
 
-          {navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
-            >
-              <FiX className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
-            >
-              <FiMenu className="h-5 w-5" />
-            </button>
-          )}
+          <button
+            onClick={() => setNavbarOpen(!navbarOpen)}
+            className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
+          >
+            {/* TO DO: ANIMATE TRANSITION */}
+            <span className="transition-opacity duration-300">
+              {" "}
+              {navbarOpen ? (
+                <FiX className="h-5 w-5" />
+              ) : (
+                <FiMenu className="h-5 w-5" />
+              )}
+            </span>
+          </button>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">

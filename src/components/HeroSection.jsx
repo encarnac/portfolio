@@ -1,5 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
 import HeaderPhoto from "../assets/header-pfp.png";
 
 export default function Header() {
