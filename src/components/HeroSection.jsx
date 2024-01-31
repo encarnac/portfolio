@@ -5,7 +5,7 @@ import HeaderPhoto from "../assets/header-pfp.png";
 export default function Header() {
   return (
     <>
-      <section>
+      <section className="relative">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,14 +50,14 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-5 mt-6 place-self-center lg:my-24">
-            <div className="lg:before:border-blue z-0 before:max-w-[400px] lg:relative lg:before:absolute lg:before:-left-12 lg:before:-top-12 lg:before:z-[-1] lg:before:h-full lg:before:w-full lg:before:rounded-full lg:before:border-2">
+          <div className="col-span-5 mt-10 place-self-center lg:my-24">
+            <div className="relative z-0 before:absolute before:bottom-1 before:left-4 before:h-full before:w-full before:rounded-full before:bg-[#afc6e2] before:mix-blend-multiply dark:before:bg-[#7a229c]/60 lg:before:bottom-2 lg:before:left-8 lg:before:h-[315px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               {" "}
-              <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-full bg-[#ad99db] dark:bg-[#6a3dd1]">
+              <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-full bg-[#ad99db]/60 dark:bg-[#6a3dd1]/60">
                 <img
                   src={HeaderPhoto}
                   alt="profile photo"
-                  className="size-11/12 absolute inset-x-0 bottom-0 rounded-bl-[50%]"
+                  className="absolute inset-x-0 bottom-0 w-11/12 rounded-bl-[50%]"
                 />
               </div>
             </div>
