@@ -30,7 +30,7 @@ const Navbar = ({
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
-          className="text-2xl font-semibold text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-[#b7b0c2] dark:hover:text-[#6a5596] md:text-4xl"
+          className="text-2xl font-semibold text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-[#b7b0c2] dark:hover:text-[#7943ed] md:text-4xl"
         >
           <HiOutlineCodeBracketSquare className="inline w-6" /> ce
         </a>
