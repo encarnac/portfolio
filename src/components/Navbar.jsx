@@ -50,15 +50,17 @@ const Navbar = ({
             onClick={() => setNavbarOpen(!navbarOpen)}
             className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
           >
-            {/* TO DO: ANIMATE TRANSITION */}
-            <span className="transition-opacity duration-300">
-              {" "}
-              {navbarOpen ? (
-                <FiX className="h-5 w-5" />
-              ) : (
-                <FiMenu className="h-5 w-5" />
-              )}
-            </span>
+            {" "}
+            <FiX
+              className={`${
+                navbarOpen ? "inline opacity-100" : "opacity-8"
+              } transition-opacity duration-300 h-5 w-5`}
+            />
+            <FiMenu
+              className={`${
+                !navbarOpen ? "inline opacity-100" : "opacity-0"
+              } transition-opacity duration-300 h-5 w-5`}
+            />
           </button>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
