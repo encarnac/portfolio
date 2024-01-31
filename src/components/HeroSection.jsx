@@ -9,7 +9,7 @@ export default function Header() {
         <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
           <div className="col-span-7 place-self-center text-center sm:text-left">
             <h1 className="mb-4 text-5xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-7xl">
-              <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:to-[#7943ed]">
+              <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                 Hello, I'm
               </span>
               <br />
@@ -34,12 +34,14 @@ export default function Header() {
               // Scroll down to learn more about what I do
             </p>
             <div className="">
-              <button className="mr-4 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
+              <button className="mr-4 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
                 Hire Me
               </button>
-              <button className="mt-3 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white hover:bg-zinc-800 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
-                <span className="block rounded-full bg-[#d2c6da] px-5 py-2 hover:bg-[#d4c3df] dark:bg-[#10031A] dark:hover:bg-[#150423]">
-                  Download CV
+              <button className="mt-3 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
+                <span className="block rounded-full bg-[#e3e8ee] px-5 py-2 transition duration-300 dark:bg-[#181320]">
+                  <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+                    Download CV
+                  </span>
                 </span>
               </button>
             </div>
