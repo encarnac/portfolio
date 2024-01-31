@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
+import { DividerShape } from "./components/DividerShape";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -12,10 +13,6 @@ export default function App() {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-
-  // const selectPage = (page) => {
-  //   setSelectedPage(page.title);
-  // };
 
   useEffect(() => {
     if (theme === "dark") {
@@ -40,8 +37,9 @@ export default function App() {
   return (
     <main
       id="hero"
-      className="flex min-h-screen flex-col bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#17121b] dark:to-[#11091b]"
+      className="relative flex min-h-screen flex-col bg-[#e3e8ee] dark:bg-[#181320]"
     >
+      {/* Navbar and Drawer */}
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -49,11 +47,22 @@ export default function App() {
         theme={theme}
         toggleTheme={toggleTheme}
       />
-      <div className="container mx-auto mt-24 px-12 py-4">
-        <HeroSection />
+
+      {/* Hero Section with Divider */}
+      <div className="relative">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto mt-24 px-12 py-4"
+        >
+          <HeroSection />
+        </motion.div>
+        <DividerShape shape={"canyon"} />
       </div>
-      <div className="bg-[#e3e8ee] dark:bg-[#181320]">
-        {" "}
+
+      {/* About Me Section */}
+      <div className="relative bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#201328] dark:from-20% dark:to-[#18172f]">
         <motion.div
           className="container mx-auto px-12 py-4"
           margin="0 0 -200px 0"
