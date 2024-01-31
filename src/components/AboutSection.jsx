@@ -14,6 +14,7 @@ import {
   BiLogoGit,
   BiLogoGithub,
   BiLogoGoogleCloud,
+  BiLogoTailwindCss,
 } from "react-icons/bi";
 import {
   RiJavascriptFill,
@@ -22,7 +23,6 @@ import {
   RiReactjsLine,
   RiBootstrapFill,
 } from "react-icons/ri";
-import { BiLogoTailwindCss } from "react-icons/bi";
 import { TbBrandNextjs, TbBrandFramerMotion } from "react-icons/tb";
 import { SiExpress, SiJirasoftware, SiPostman, SiMysql } from "react-icons/si";
 
