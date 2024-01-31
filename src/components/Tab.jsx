@@ -18,7 +18,7 @@ export const Tab = ({ active, selectTab, tabName }) => {
       {active === tabName && (
         <motion.div
           layoutId="active-pill"
-          className="absolute inset-0 bg-white dark:bg-[#271a44]"
+          className="absolute inset-0 bg-white dark:bg-[#211b2d]"
           style={{ borderRadius: 9999 }}
           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
         ></motion.div>
