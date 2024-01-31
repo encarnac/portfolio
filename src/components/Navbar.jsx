@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { Link } from "./Link";
 import { NavDrawer } from "./NavDrawer";
-import { MoonIcon as MoonIconSolid } from "@heroicons/react/24/solid";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  CodeBracketSquareIcon,
-  MoonIcon,
-} from "@heroicons/react/24/outline";
+import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
+import { HiOutlineCodeBracketSquare } from "react-icons/hi2";
+import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
   { title: "about", href: "#about" },
@@ -35,34 +31,42 @@ const Navbar = ({
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
-          className="text-2xl font-semibold text-stone-600 dark:text-[#7943ed] md:text-4xl"
+          className="text-2xl font-semibold text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-[#b7b0c2] dark:hover:text-[#6a5596] md:text-4xl"
         >
-          <CodeBracketSquareIcon className="inline w-6" /> ce
+          <HiOutlineCodeBracketSquare className="inline w-6" /> ce
         </a>
-        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#7943ed] md:hidden">
+        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-500 hover:text-[#DC659C] dark:text-[#7943ed] dark:hover:text-[#AB86FF]"
+            className="p-0 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
           >
-            {theme === "dark" ? (
-              <MoonIconSolid className="h-5 w-5" />
-            ) : (
-              <MoonIcon className="h-5 w-5" />
-            )}
+            <motion.div
+              key={theme}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+            >
+              {theme === "dark" ? (
+                <FiMoon className="h-5 w-5" />
+              ) : (
+                <FiSun className="h-5 w-5" />
+              )}
+            </motion.div>
           </button>
+
           {navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#AB86FF]"
+              className="flex items-center rounded px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
             >
-              <XMarkIcon className="h-5 w-5" />
+              <FiX className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#AB86FF]"
+              className="flex items-center px-3 py-2 transition duration-500 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
             >
-              <Bars3Icon className="h-5 w-5" />
+              <FiMenu className="h-5 w-5" />
             </button>
           )}
         </div>
@@ -80,12 +84,12 @@ const Navbar = ({
             ))}
             <button
               onClick={toggleTheme}
-              className="p-0 text-stone-500 transition duration-500 hover:text-[#DC659C] dark:text-[#7943ed] dark:hover:text-[#AB86FF]"
+              className="p-0 text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-[#b7b0c2] dark:hover:text-[#7943ed]"
             >
               {theme === "dark" ? (
-                <MoonIconSolid className="h-5 w-5" />
+                <FiMoon className="h-5 w-5" />
               ) : (
-                <MoonIcon className="h-5 w-5" />
+                <FiSun className="h-5 w-5" />
               )}
             </button>
           </ul>
