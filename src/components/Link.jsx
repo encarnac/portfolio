@@ -17,14 +17,14 @@ export const Link = ({ mobile, page, selectedPage, setSelectedPage }) => {
         } transition duration-500 block rounded py-2 pl-3 pr-4 hover:text-[#DC659C] dark:hover:text-[#7943ed] sm:text-xl md:p-0`}
       >
         {page.title}
-        {page.title == selectedPage && !mobile ? (
-          <motion.div
-            layout
-            className="h-[2px] w-0 bg-[#DC659C] dark:bg-[#7943ed]"
-            animate={{ width: "100%" }}
-          />
-        ) : null}
       </a>
+      {page.title == selectedPage && !mobile ? (
+        <motion.div
+          layout
+          className="h-[2px] w-0 bg-[#DC659C] dark:bg-[#7943ed]"
+          animate={{ width: "100%" }}
+        />
+      ) : null}
     </div>
   );
 };
