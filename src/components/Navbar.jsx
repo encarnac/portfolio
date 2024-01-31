@@ -61,8 +61,8 @@ const Navbar = ({
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
             {pages.map((page, index) => (
               <li className={index}>
-                {/* <NavLink href={link.href} title={link.title}></NavLink> */}
                 <Link
+                  mobile={false}
                   page={page}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
