@@ -22,7 +22,7 @@ export const Tab = ({ active, selectTab, tabName }) => {
           style={{ borderRadius: 9999 }}
           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
         ></motion.div>
-      )}{" "}
+      )}
       <span className="relative">{tabName}</span>
     </button>
   );
