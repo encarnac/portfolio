@@ -6,12 +6,7 @@ export default function Header() {
   return (
     <>
       <section className="relative">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1"
-        >
+        <div className="mb-48 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
           <div className="col-span-7 place-self-center text-center sm:text-left">
             <h1 className="mb-4 text-5xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-7xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:to-[#7943ed]">
@@ -51,7 +46,7 @@ export default function Header() {
           </div>
 
           <div className="col-span-5 mt-10 place-self-center lg:my-24">
-            <div className="relative z-0 before:absolute before:bottom-1 before:left-4 before:h-full before:w-full before:rounded-full before:bg-[#afc6e2] before:mix-blend-multiply dark:before:bg-[#7a229c]/60 lg:before:bottom-2 lg:before:left-8 lg:before:h-[315px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
+            <div className="relative z-0 before:absolute before:bottom-1 before:left-4 before:h-full before:w-full before:rounded-full before:bg-[#afc6e2] before:mix-blend-multiply dark:before:bg-[#8630a5] lg:before:bottom-2 lg:before:left-8 lg:before:h-[315px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               {" "}
               <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-full bg-[#ad99db]/60 dark:bg-[#6a3dd1]/60">
                 <img
@@ -62,7 +57,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </section>
     </>
   );
