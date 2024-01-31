@@ -2,3 +2,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+  .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(209% + 1.3px);
+    height: 97px;
+  }
+
+  .canyon-dark {
+    fill: #1B162E;
+  }
+
+  .canyon-light {
+    fill: #D8C5DA;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom svg {
+      width: calc(300% + 1.3px);
+      height: 133px;
+    }
+  }
+
+  /** For mobile devices **/
+  @media (max-width: 767px) {
+    .custom-shape-divider-bottom svg {
+      width: calc(196% + 1.3px);
+      height: 57px;
+    }
+  }
+}
