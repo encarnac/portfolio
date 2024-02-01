@@ -114,7 +114,7 @@ export const AboutMeData = [
     content: (
       <ul className="space-y-4 px-1 md:px-4 lg:px-8">
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:z-[-1] before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
             <LuGraduationCap className="size-5 text-[#F38BBB]/70 dark:text-[#6a3dd1]/50" />
           </div>
           <div className="w-full">
@@ -131,7 +131,7 @@ export const AboutMeData = [
           </div>
         </li>
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:z-[-1] before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
             <LuGraduationCap className="size-5 text-[#F38BBB]/70 dark:text-[#6a3dd1]/50" />
           </div>
           <div className="w-full">
