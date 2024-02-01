@@ -3,6 +3,7 @@ import { Tab } from "./Tab";
 import { AboutMeData } from "../constants/AboutMeData";
 import AboutPhoto from "../assets/about-pfp.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaCode } from "react-icons/fa";
 
 const motionVariants = (direction) => {
   return {
@@ -39,8 +40,23 @@ const AboutSection = ({ setSelectedPage }) => {
           <h2 className="text-center text-2xl font-extrabold tracking-wide text-stone-800/80 dark:text-[#b7b0c2] lg:text-3xl">
             about me
           </h2>
-          <div className="size-[200px] lg:size-[250px] relative my-2 rounded-full bg-[#F38BBB] pt-12 dark:bg-[#6a3dd1]">
-            <img src={AboutPhoto} className="absolute inset-x-0 bottom-0" />
+          <div className="size-[200px] lg:size-[250px] relative my-2 rounded-full bg-[#F38BBB] pt-12 dark:bg-[#4d2e96]">
+            <img
+              src={AboutPhoto}
+              className="absolute inset-x-0 bottom-0 shadow-sm"
+            />
+            <div className="absolute -right-14 top-24 z-50 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl border-b-[2px] border-r-[2px] border-b-[#dfc1cf] border-r-[#b2cceb] bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 p-1 shadow-md backdrop-blur-2xl backdrop-filter dark:border-b-[#815b90]/90 dark:border-r-[#6567a5] dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] dark:shadow-xl dark:shadow-[#3a3d8d]/50">
+              <span className="block w-full rounded-xl px-2 py-1 text-sm text-slate-200 transition duration-300">
+                front-end
+                {/* <FaCode className="size-12 text-stone-100 dark:text-white" /> */}
+              </span>
+            </div>
+            <div className="dark: absolute -left-14 top-8 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl border-b-[2px] border-l-[2px] border-b-[#dfc1cf] border-l-[#b2cceb] bg-gradient-to-br from-[#68A3EB]/60 to-[#F38BBB]/60 p-1 shadow-md backdrop-blur-2xl dark:border-b-[#815b90]/90 dark:border-l-[#6567a5] dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] dark:shadow-xl dark:shadow-[#3a3d8d]/50">
+              <span className="text-wrap block rounded-xl px-2 py-1 text-sm text-slate-200 transition duration-300">
+                full-stack
+                {/* <FaCode className="size-12 text-stone-100 dark:text-white" /> */}
+              </span>
+            </div>
           </div>
         </motion.div>
 
@@ -50,7 +66,7 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="mt-8 flex h-full w-full min-w-fit flex-col items-center rounded-3xl bg-slate-100 p-px pt-6 backdrop-blur-lg before:absolute before:-top-5 before:h-0 before:w-0 before:border-x-[15px] before:border-b-[20px] before:border-slate-100 before:border-x-[#fff]/[.01] before:border-opacity-70 before:content-[''] dark:bg-[#221c2d] dark:bg-opacity-80 dark:before:border-[#211b2d] dark:before:border-x-[#000]/[.01] md:w-11/12 lg:col-span-8 lg:mt-0 lg:min-w-min lg:before:absolute lg:before:-left-[1.2rem] lg:before:top-16 lg:before:border-x-0 lg:before:border-y-[15px] lg:before:border-r-[25px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-70 lg:before:content-[''] dark:lg:before:border-[#221c2d] dark:lg:before:border-y-[#000]/[.01] xl:w-5/6"
+          className="mt-8 flex h-full w-full min-w-fit flex-col items-center rounded-3xl bg-slate-100 p-px pt-6 backdrop-blur-lg before:absolute before:-top-5 before:h-0 before:w-0 before:border-x-[15px] before:border-b-[20px] before:border-slate-100 before:border-x-[#fff]/[.01] before:border-opacity-70 before:content-[''] dark:bg-[#221c2d] dark:bg-opacity-80 dark:before:border-[#211b2d] dark:before:border-x-[#000]/[.01] md:w-10/12 lg:col-span-8 lg:mt-0 lg:min-w-min lg:before:absolute lg:before:-left-[1.2rem] lg:before:top-16 lg:before:border-x-0 lg:before:border-y-[15px] lg:before:border-r-[25px] lg:before:border-y-[#fff]/[.01] lg:before:border-r-slate-100 lg:before:border-opacity-70 lg:before:content-[''] dark:lg:before:border-[#221c2d] dark:lg:before:border-y-[#000]/[.01] xl:w-9/12"
         >
           <div className="shadow-900/20 relative mx-2 mt-1 flex h-11 w-max flex-row items-center rounded-3xl bg-slate-300/30 px-1 shadow-inner backdrop-blur backdrop-filter transition dark:border-[1px] dark:border-[#6a3dd1]/10 dark:bg-[#181421] lg:mx-0">
             {AboutMeData.map((tabContent, index) => (
