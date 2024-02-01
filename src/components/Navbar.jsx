@@ -19,9 +19,6 @@ const Navbar = ({
   setSelectedPage,
 }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  // const navbarBgColor = isTopOfPage
-  //   ? "border-b dark:border-[#220C3D] border-[#d9dbdf]"
-  //   : "bg-[#e3e8ee] dark:bg-[#181320]";
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-10 bg-[#e3e8ee] transition duration-300 dark:bg-[#181320]">

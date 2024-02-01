@@ -1,13 +1,21 @@
 import {
+  FiUser,
+  FiMapPin,
+  FiAward,
+  FiMail,
+  FiLinkedin,
+  FiGithub,
+} from "react-icons/fi";
+import {
   BiUser,
   BiTrophy,
   BiMap,
+  BiLogoLinkedin,
+  BiLogoGithub,
   BiLogoFigma,
-  BiLogoNodejs,
   BiLogoPython,
   BiLogoMongodb,
   BiLogoGit,
-  BiLogoGithub,
   BiLogoGoogleCloud,
   BiLogoTailwindCss,
 } from "react-icons/bi";
@@ -26,45 +34,71 @@ export const AboutMeData = [
   {
     name: "Info",
     content: (
-      <div className="px-2 md:gap-x-8 md:px-4 lg:grid lg:grid-cols-12">
-        <div className="lg:col-span-4">
-          <ul>
+      <div className="flex flex-col items-stretch px-1 md:px-4 lg:px-8">
+        <ul className="grid grid-cols-1 md:grid-cols-2">
+          <div className="col-span-1">
             <li>
-              <div className="mb-2 flex justify-start space-x-3">
-                <BiUser className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
+              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
+                <FiUser className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
                 <span>Colene Encarnado</span>
               </div>
             </li>
-
             <li>
-              <div className="mb-2 flex justify-start space-x-3">
-                <BiMap className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
+              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
+                <FiMapPin className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
                 <span>Los Angeles, CA</span>
               </div>
             </li>
             <li>
-              <div className="flex justify-start space-x-3">
-                <BiTrophy className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
+              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
+                <FiAward className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
                 <span>&lt; 1 YOE</span>
               </div>
             </li>
-          </ul>
-        </div>
-        <div className="mt-3 lg:col-span-8 lg:mt-0">
+          </div>
+          <div className="col-span-1">
+            <li>
+              <div className="mb-2 mr-2 flex items-start justify-start space-x-3">
+                <FiMail className="size-5 mt-1 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
+                <span className="">
+                  coleneencarnado&#8203;@&#8203;gmail.com
+                </span>
+              </div>
+            </li>
+            <li>
+              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
+                <FiGithub className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
+                <p>
+                  <span className="hidden lg:inline"></span>encarnac
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
+                <FiLinkedin className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
+                <p>
+                  <span className="hidden lg:inline"></span>
+                  encarnac
+                </p>
+              </div>
+            </li>
+          </div>
+        </ul>
+        <div className="mt-3">
           <p className="mb-2">
             My journey as a developer began in 2021 when I made a career switch
             to Computer Science. Since then, I've continued to grow and evolve
             as a <span className="font-bold">full-stack</span> and
             <span className="font-bold"> front-end developer</span>,
-            specializing in{" "}
-            <span className="font-bold">React.js and Node.js</span>.
+            specializing in <span className="font-bold">React.js</span> and{" "}
+            <span className="font-bold"> Node.js</span>.
           </p>
           <p className="">
-            I strive to write code that accurately implements pixel-perfect
-            designs. I craft interactive and responsive web applications that
-            provide users with a memorable, seamless experience. I am a quick
-            learner and always looking to expand my knowledge, taking on new
-            challenges by learning the latest technologies.
+            I strive to write code that accurately implements designs for
+            interactive and responsive web applications, providing users with a
+            memorable, seamless experience. I am a quick learner and always
+            looking to expand my knowledge, taking on new challenges by learning
+            the latest technologies.
           </p>
           <p></p>
         </div>
@@ -74,16 +108,16 @@ export const AboutMeData = [
   {
     name: "Education",
     content: (
-      <ul className="space-y-4 px-0 md:px-10 xl:px-12">
+      <ul className="space-y-4 px-1 md:px-4 lg:px-8">
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:z-[-1] before:h-4/6 before:w-[2px] before:bg-[#F38BBB]/30 dark:before:bg-[#6a3dd1]/30">
-            <LuGraduationCap className="size-5 text-[#F38BBB]/60 dark:text-[#6a3dd1]/60" />
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:z-[-1] before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
+            <LuGraduationCap className="size-5 text-[#F38BBB]/70 dark:text-[#6a3dd1]/50" />
           </div>
           <div className="w-full">
-            <div className="flex justify-between font-semibold">
-              <h4>Oregon State University</h4>
-              <p>
-                <span className="hidden md:inline">2021 - </span>2023
+            <div className="flex items-start justify-between md:items-center">
+              <h4 className="font-semibold">Oregon State University</h4>
+              <p className="rounded-full bg-[#F38BBB]/70 px-3 py-0 text-sm text-stone-100 dark:bg-[#6a3dd1]/70 dark:text-[#b7b0c2]">
+                <span className="hidden sm:inline">2021 - </span>2023
               </p>
             </div>
             <p className="px-2 md:px-4">
@@ -93,14 +127,18 @@ export const AboutMeData = [
           </div>
         </li>
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:z-[-1] before:h-4/6 before:w-[2px] before:bg-[#F38BBB]/30 dark:before:bg-[#6a3dd1]/30">
-            <LuGraduationCap className="size-5 text-[#F38BBB]/60 dark:text-[#6a3dd1]/60" />
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:z-[-1] before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
+            <LuGraduationCap className="size-5 text-[#F38BBB]/70 dark:text-[#6a3dd1]/50" />
           </div>
           <div className="w-full">
-            <div className="flex justify-between font-semibold">
-              <h4>California State Long Beach</h4>
-              <p>
-                <span className="hidden md:inline">2015 - </span>2019
+            <div className="flex items-start justify-between md:items-center">
+              <h4 className="font-semibold">
+                <span className="inline sm:hidden">Cal </span>
+                <span className="hidden sm:inline">California </span>State Long
+                Beach
+              </h4>
+              <p className="rounded-full bg-[#F38BBB]/70 px-3 py-0 text-sm text-stone-100 dark:bg-[#6a3dd1]/70 dark:text-[#b7b0c2]">
+                <span className="hidden sm:inline">2015 - </span>2019
               </p>
             </div>
             <p className="px-2 md:px-4">Bachelor of Arts: Psychology</p>
@@ -117,82 +155,82 @@ export const AboutMeData = [
         <h3 className="text-center font-bold md:text-start">Front-End</h3>
         <div className="mb-5 flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">HTML5</p>
+            <p className="">HTML5</p>
             <RiHtml5Line className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">CSS3</p>
+            <p className="">CSS3</p>
             <RiCss3Fill className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Javascript</p>
+            <p className="">Javascript</p>
             <RiJavascriptFill className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">React</p>
+            <p className="">React</p>
             <RiReactjsLine className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Next.js</p>
+            <p className="">Next.js</p>
             <TbBrandNextjs className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Bootstrap</p>
+            <p className="">Bootstrap</p>
             <RiBootstrapFill className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Tailwind</p>
+            <p className="">Tailwind</p>
             <BiLogoTailwindCss className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Figma</p>
+            <p className="">Figma</p>
             <BiLogoFigma className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Motion</p>
+            <p className="">Motion</p>
             <TbBrandFramerMotion className="size-10 text-[#6a3dd1]" />
           </div>
         </div>
         <h3 className="text-center font-bold md:text-start">Back-End</h3>
         <div className="mb-5 flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Python</p>
+            <p className="text-[#b7b0c2]">Python</p>
             <BiLogoPython className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Express</p>
+            <p className="text-[#b7b0c2]">Express</p>
             <SiExpress className="size-10 text-[#6a3dd1]" />
           </div>
 
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">MongoDB</p>
+            <p className="text-[#b7b0c2]">MongoDB</p>
             <BiLogoMongodb className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">MySQL</p>
+            <p className="text-[#b7b0c2]">MySQL</p>
             <SiMysql className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">GCP</p>
+            <p className="text-[#b7b0c2]">GCP</p>
             <BiLogoGoogleCloud className="size-10 text-[#6a3dd1]" />
           </div>
         </div>
         <h3 className="text-center font-bold md:text-start">Development</h3>
         <div className="flex flex-row flex-wrap justify-evenly space-x-2 px-2 text-xs">
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Git</p>
+            <p className="text-[#b7b0c2]">Git</p>
             <BiLogoGit className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">GitHub</p>
+            <p className="text-[#b7b0c2]">GitHub</p>
             <BiLogoGithub className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Jira</p>
+            <p className="text-[#b7b0c2]">Jira</p>
             <SiJirasoftware className="size-10 text-[#6a3dd1]" />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-[#9d97a6]">Postman</p>
+            <p className="text-[#b7b0c2]">Postman</p>
             <SiPostman className="size-10 text-[#6a3dd1]" />
           </div>
         </div>
