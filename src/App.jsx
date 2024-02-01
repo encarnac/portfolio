@@ -37,7 +37,7 @@ export default function App() {
   return (
     <main
       id="hero"
-      className="relative flex min-h-screen flex-col bg-[#e3e8ee] transition duration-300 dark:bg-[#181320]"
+      className="relative flex min-h-screen flex-col bg-[#e3e8ee] transition duration-300 dark:bg-[#251e32]"
     >
       {/* Navbar and Drawer */}
       <Navbar
@@ -62,7 +62,7 @@ export default function App() {
       </div>
 
       {/* About Me Section */}
-      <div className="relative bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#201328] dark:from-20% dark:to-[#18172f]">
+      <div className="relative bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#371E43] dark:from-20% dark:to-[#1E223C]">
         <motion.div
           className="container mx-auto px-12 py-4"
           margin="0 0 -200px 0"

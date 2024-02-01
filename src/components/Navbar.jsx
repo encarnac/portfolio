@@ -21,7 +21,7 @@ const Navbar = ({
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 bg-[#e3e8ee] transition duration-300 dark:bg-[#181320]">
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-[#e3e8ee] transition duration-300 dark:bg-[#251e32]">
       <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-4">
         <a
           href="#hero"
