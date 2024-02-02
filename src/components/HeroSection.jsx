@@ -48,7 +48,7 @@ export default function Header() {
 
           <div className="col-span-5 mt-12 place-self-center lg:my-24">
             <div className="relative z-0 before:absolute before:bottom-2 before:left-3 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#5A32AF] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
-              <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db]/60 dark:bg-[#7943ed]">
+              <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
                 <img
                   src={HeaderPhoto}
                   alt="profile photo"
