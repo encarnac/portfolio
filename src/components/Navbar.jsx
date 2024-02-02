@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
   { title: "about", href: "#about" },
+  { title: "skills", href: "#skills" },
   { title: "projects", href: "#projects" },
   { title: "contact", href: "#contact" },
 ];
