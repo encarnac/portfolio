@@ -13,8 +13,8 @@ export const AboutMeData = [
   {
     name: "About",
     content: (
-      <div className="flex flex-col items-stretch px-1 py-4 sm:px-8 lg:px-2 xl:px-12">
-        <ul className="grid grid-cols-1 md:grid-cols-2">
+      <div className="flex flex-col items-stretch px-0 py-4 sm:px-1 md:px-6">
+        <ul className="">
           <div className="col-span-1">
             <li>
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
@@ -32,33 +32,6 @@ export const AboutMeData = [
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
                 <FiAward className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
                 <span>&lt; 1 YOE</span>
-              </div>
-            </li>
-          </div>
-          <div className="col-span-1">
-            <li>
-              <div className="mb-2 mr-2 flex items-start justify-start space-x-3">
-                <FiMail className="size-5 mt-1 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
-                <span className="">
-                  coleneencarnado&#8203;@&#8203;gmail.com
-                </span>
-              </div>
-            </li>
-            <li>
-              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiGithub className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />
-                <p>
-                  <span className="hidden lg:inline"></span>encarnac
-                </p>
-              </div>
-            </li>
-            <li>
-              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiLinkedin className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
-                <p>
-                  <span className="hidden lg:inline"></span>
-                  encarnac
-                </p>
               </div>
             </li>
           </div>
@@ -87,7 +60,7 @@ export const AboutMeData = [
   {
     name: "Education",
     content: (
-      <ul className="space-y-4 px-1 py-4 sm:px-8 lg:px-2 xl:px-12">
+      <ul className="space-y-4 px-0 py-4 sm:px-1 md:px-6">
         <li className="relative flex gap-2 md:gap-4">
           <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/60 dark:before:bg-[#7943ed]/50">
             <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
