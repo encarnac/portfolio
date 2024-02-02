@@ -8,22 +8,19 @@ export const Tab = ({ active, selectTab, tabName }) => {
       onClick={() => selectTab(tabName)}
       className={`${
         active === tabName
-          ? "text-stone-600 dark:text-[#b7b0c2]"
-          : "dark:text-[#b7b0c2]/70 text-stone-500 transition duration-300 hover:text-stone-700 dark:hover:text-[#b7b0c2]"
-      } relative h-9  rounded-3xl px-2 sm:px-4 md:px-8 transition focus-visible:outline-2`}
-      style={{
-        WebkitTapHighlightColor: "transparent",
-      }}
+          ? "text-[#6F6977] dark:text-[#b7b0c2]"
+          : "dark:text-[#b7b0c2]/70 text-[#726C7B]/70   hover:text-[#726C7B] dark:hover:text-[#6F6977]"
+      }  transition duration-300  px-2 md:px-8 relative text-lg font-bold md:text-xl py-2`}
     >
+      <span className="relative">{tabName} </span>
+
       {active === tabName && (
         <motion.div
-          layoutId="active-pill"
-          className="absolute inset-0 bg-white shadow-sm dark:bg-[#251e32]"
-          style={{ borderRadius: 18 }}
-          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-        ></motion.div>
+          layout
+          className="absolute -bottom-[.2rem] left-0 h-[.3rem] w-fit rounded-3xl bg-[#F38BBB] dark:bg-[#7943ed]"
+          animate={{ width: "100%", transition: { duration: 0.3 } }}
+        />
       )}
-      <span className="relative">{tabName}</span>
     </button>
   );
 };
