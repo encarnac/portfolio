@@ -15,7 +15,10 @@ export default {
           "Noto Color Emoji",
         ],
       },
-      borderRadius: { "custom-1": "61% 39% 61% 39% / 50% 64% 36% 50% " },
+      borderRadius: {
+        "custom-1": "71% 29% 44% 56% / 28% 65% 35% 72% ",
+        "custom-2": "29% 71% 32% 68% / 64% 52% 48% 36% ",
+      },
       colors: {
         // ...
       },
