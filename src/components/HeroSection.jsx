@@ -46,9 +46,8 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-5 mt-10 place-self-center lg:my-24">
-            <div className="relative z-0 before:absolute before:bottom-6 before:left-2 before:h-full before:w-full before:rounded-custom-1 before:bg-[#afc6e2] before:mix-blend-multiply dark:before:bg-[#8630a5] lg:before:bottom-8 lg:before:left-8 lg:before:h-[315px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
-              {" "}
+          <div className="col-span-5 mt-12 place-self-center lg:my-24">
+            <div className="relative z-0 before:absolute before:bottom-4 before:left-6 before:h-full before:w-full before:rounded-custom-1 before:bg-[#afc6e2] before:mix-blend-multiply dark:before:bg-[#8630a5] lg:before:bottom-8 lg:before:left-8 lg:before:h-[315px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-1 bg-[#ad99db]/60 dark:bg-[#7943ed]/70">
                 <img
                   src={HeaderPhoto}
