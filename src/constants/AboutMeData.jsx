@@ -5,57 +5,32 @@ import {
   FiMail,
   FiLinkedin,
   FiGithub,
-  FiChevronDown,
 } from "react-icons/fi";
-import {
-  BiUser,
-  BiTrophy,
-  BiMap,
-  BiLogoLinkedin,
-  BiLogoGithub,
-  BiLogoFigma,
-  BiLogoPython,
-  BiLogoMongodb,
-  BiLogoGit,
-  BiLogoGoogleCloud,
-  BiLogoTailwindCss,
-  BiCodeBlock,
-  BiSolidData,
-  BiSolidCog,
-} from "react-icons/bi";
-import {
-  RiJavascriptFill,
-  RiHtml5Line,
-  RiCss3Fill,
-  RiReactjsLine,
-  RiBootstrapFill,
-} from "react-icons/ri";
-import { SiExpress, SiJirasoftware, SiPostman, SiMysql } from "react-icons/si";
-import { TbBrandNextjs, TbBrandFramerMotion } from "react-icons/tb";
+
 import { LuGraduationCap } from "react-icons/lu";
 
 export const AboutMeData = [
   {
-    name: "Info",
+    name: "About",
     content: (
-      <div className="flex flex-col items-stretch px-1 md:px-4 lg:px-8">
+      <div className="flex flex-col items-stretch px-1 py-4 sm:px-8 lg:px-2 xl:px-12">
         <ul className="grid grid-cols-1 md:grid-cols-2">
           <div className="col-span-1">
             <li>
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiUser className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
+                <FiUser className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />
                 <span>Colene Encarnado</span>
               </div>
             </li>
             <li>
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiMapPin className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
+                <FiMapPin className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />
                 <span>Los Angeles, CA</span>
               </div>
             </li>
             <li>
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiAward className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
+                <FiAward className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
                 <span>&lt; 1 YOE</span>
               </div>
             </li>
@@ -63,7 +38,7 @@ export const AboutMeData = [
           <div className="col-span-1">
             <li>
               <div className="mb-2 mr-2 flex items-start justify-start space-x-3">
-                <FiMail className="size-5 mt-1 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
+                <FiMail className="size-5 mt-1 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
                 <span className="">
                   coleneencarnado&#8203;@&#8203;gmail.com
                 </span>
@@ -71,7 +46,7 @@ export const AboutMeData = [
             </li>
             <li>
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiGithub className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />
+                <FiGithub className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />
                 <p>
                   <span className="hidden lg:inline"></span>encarnac
                 </p>
@@ -79,7 +54,7 @@ export const AboutMeData = [
             </li>
             <li>
               <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiLinkedin className="size-5 shrink-0 text-[#F38BBB]/70 dark:text-[#6a3dd1]/70" />{" "}
+                <FiLinkedin className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
                 <p>
                   <span className="hidden lg:inline"></span>
                   encarnac
@@ -112,15 +87,15 @@ export const AboutMeData = [
   {
     name: "Education",
     content: (
-      <ul className="space-y-4 px-1 md:px-4 lg:px-8">
+      <ul className="space-y-4 px-1 py-4 sm:px-8 lg:px-2 xl:px-12">
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
-            <LuGraduationCap className="size-5 text-[#F38BBB]/70 dark:text-[#6a3dd1]/50" />
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/60 dark:before:bg-[#7943ed]/50">
+            <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
           </div>
           <div className="w-full">
             <div className="flex items-start justify-between md:items-center">
               <h4 className="font-semibold">Oregon State University</h4>
-              <p className="dark: rounded-full bg-[#F38BBB]/70 px-3 py-0 text-sm text-stone-100 dark:bg-[#6a3dd1]/70">
+              <p className="rounded-lg bg-[#F38BBB]/50 bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 px-3 py-px text-sm text-stone-100 dark:from-[#3034C2]/80 dark:via-[#6A3DD1]/80 dark:to-[#9329BE]/80">
                 <span className="hidden sm:inline">2021 - </span>2023
               </p>
             </div>
@@ -131,8 +106,8 @@ export const AboutMeData = [
           </div>
         </li>
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/70 dark:before:bg-[#6a3dd1]/50">
-            <LuGraduationCap className="size-5 text-[#F38BBB]/70 dark:text-[#6a3dd1]/50" />
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-4/6 before:w-[1px] before:bg-[#F38BBB]/60 dark:before:bg-[#7943ed]/50">
+            <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
           </div>
           <div className="w-full">
             <div className="flex items-start justify-between md:items-center">
@@ -141,7 +116,7 @@ export const AboutMeData = [
                 <span className="hidden sm:inline">California </span>State Long
                 Beach
               </h4>
-              <p className="dark: rounded-full bg-[#F38BBB]/70 px-3 py-0 text-sm text-stone-100 dark:bg-[#6a3dd1]/70">
+              <p className="rounded-lg bg-[#F38BBB]/50 bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 px-3 py-px text-sm text-stone-100 dark:from-[#3034C2]/80 dark:via-[#6A3DD1]/80 dark:to-[#9329BE]/80">
                 <span className="hidden sm:inline">2015 - </span>2019
               </p>
             </div>
@@ -150,167 +125,6 @@ export const AboutMeData = [
           </div>
         </li>
       </ul>
-    ),
-  },
-  {
-    name: "Skills",
-    content: (
-      <>
-        <div className="flex-col space-y-1 px-1 md:px-4 lg:px-8">
-          <div className="flex flex-row justify-between border-b-[1px] border-stone-600/20 py-1 dark:border-[#6a3dd1]/30">
-            <h4 className="font-semibold tracking-wide">
-              Front-End Development
-            </h4>
-            {/* <FiChevronDown className="text-2xl" /> */}
-          </div>
-          <div className="mb-5 flex flex-row flex-wrap justify-center space-x-2 px-8 text-xs sm:justify-start">
-            <div className="flex flex-col items-center">
-              <p className="">HTML5</p>
-              <RiHtml5Line className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">CSS3</p>
-              <RiCss3Fill className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Javascript</p>
-              <RiJavascriptFill className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">React</p>
-              <RiReactjsLine className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Next.js</p>
-              <TbBrandNextjs className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Bootstrap</p>
-              <RiBootstrapFill className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Tailwind</p>
-              <BiLogoTailwindCss className="size-12" />
-            </div>
-
-            <div className="flex flex-col items-center">
-              <p className="">Motion</p>
-              <TbBrandFramerMotion className="size-12" />
-            </div>
-          </div>
-          <div className="flex flex-row justify-between border-b-[1px] border-stone-600/20 py-1 dark:border-[#6a3dd1]/30">
-            <h4 className="font-semibold tracking-wide">
-              Back-End Development
-            </h4>
-            {/* <FiChevronDown className="text-2xl" /> */}
-          </div>
-          <div className="mb-5 flex flex-row flex-wrap justify-center space-x-2 px-8 text-xs sm:justify-start">
-            <div className="flex flex-col items-center">
-              <p className="">Python</p>
-              <BiLogoPython className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Express</p>
-              <SiExpress className="size-12" />
-            </div>
-
-            <div className="flex flex-col items-center">
-              <p className="">MongoDB</p>
-              <BiLogoMongodb className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">MySQL</p>
-              <SiMysql className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">GCP</p>
-              <BiLogoGoogleCloud className="size-12" />
-            </div>
-          </div>
-          <div className="flex flex-row justify-between border-b-[1px] border-stone-600/20 py-1 dark:border-[#6a3dd1]/30">
-            <h4 className="font-semibold tracking-wide">Development Tools</h4>
-            {/* <FiChevronDown className="text-2xl" /> */}
-          </div>
-          <div className="mb-5 flex flex-row flex-wrap justify-center space-x-2 px-8 text-xs sm:justify-start">
-            <div className="flex flex-col items-center">
-              <p className="">Git</p>
-              <BiLogoGit className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">GitHub</p>
-              <BiLogoGithub className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Figma</p>
-              <BiLogoFigma className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Jira</p>
-              <SiJirasoftware className="size-12" />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="">Postman</p>
-              <SiPostman className="size-12" />
-            </div>
-          </div>
-        </div>
-
-        {/* // !!!!!!!!!!!!!! VERSION 2 !!!!!!!!!!!!!!!!!!! */}
-        {/* <div className="flex h-full flex-col px-8 pb-4">
-          <div className="grid grid-cols-12 gap-x-4 py-2">
-            <div className="col-span-3 flex flex-col items-center">
-              <h4 className="text-sm font-semibold">Front-End</h4>
-              <BiCodeBlock className="text-7xl" />
-            </div>
-            <div className="col-span-9 flex flex-col">
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>TailwindCSS</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-b-[1px] border-b-stone-600/20 bg-transparent"></div>
-          <div className="grid grid-cols-12 gap-x-4 py-2">
-            <div className="col-span-3 flex flex-col items-center">
-              <h4 className="text-sm font-semibold">Back-End</h4>
-
-              <BiSolidData className="text-7xl" />
-            </div>
-            <div className="col-span-9">
-              {" "}
-              <ul>
-                <li>Python</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>MySQL</li>
-                <li>GCP</li>
-              </ul>
-            </div>
-          </div>
-          <div className="my-0 border-b-[1px] border-b-stone-600/20 bg-transparent"></div>
-          <div className="grid grid-cols-12 gap-x-4 py-2">
-            <div className="col-span-3 flex flex-col items-center">
-              <h4 className="text-sm font-semibold">Tools</h4>
-
-              <BiSolidCog className="text-7xl" />
-            </div>
-            <div className="col-span-9">
-              {" "}
-              <ul>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Jira</li>
-                <li>Postman</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-          </div> */}
-      </>
     ),
   },
 ];
