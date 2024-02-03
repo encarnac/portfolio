@@ -6,7 +6,7 @@ export const AboutMeData = [
     content: (
       <div className="flex flex-col px-0 py-px sm:px-1 md:px-6">
         <div className="">
-          <p className="text-pretty mb-2">
+          <p className="text-pretty mb-2 indent-2">
             My journey as a developer began in 2021 when I made a career switch
             from Psychology to Computer Science. Since then, I've continued to
             grow and evolve as a{" "}
@@ -15,7 +15,7 @@ export const AboutMeData = [
             specializing in <span className="font-extrabold">React.js</span> and{" "}
             <span className="font-extrabold"> Express</span>.
           </p>
-          <p className="text-pretty">
+          <p className="text-pretty indent-2">
             I have a holistic understanding of web design and development, and I
             strive to write code that accurately implements designs for
             interactive and responsive web applications. I am a quick learner
