@@ -1,58 +1,34 @@
-import {
-  FiUser,
-  FiMapPin,
-  FiAward,
-  FiMail,
-  FiLinkedin,
-  FiGithub,
-} from "react-icons/fi";
-
+import { FiUser, FiMapPin, FiAward } from "react-icons/fi";
 import { LuGraduationCap } from "react-icons/lu";
+import {
+  HiOutlineAcademicCap,
+  HiMiniUser,
+  HiMapPin,
+  HiMiniChartBar,
+} from "react-icons/hi2";
 
 export const AboutMeData = [
   {
-    name: "About",
+    name: "My Story",
     content: (
-      <div className="flex flex-col items-stretch px-0 py-4 sm:px-1 md:px-6">
-        <ul className="">
-          <div className="col-span-1">
-            <li>
-              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiUser className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />
-                <span>Colene Encarnado</span>
-              </div>
-            </li>
-            <li>
-              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiMapPin className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />
-                <span>Los Angeles, CA</span>
-              </div>
-            </li>
-            <li>
-              <div className="mb-2 mr-2 flex items-center justify-start space-x-3">
-                <FiAward className="size-5 shrink-0 text-[#E38EC0] dark:text-[#7943ed]" />{" "}
-                <span>&lt; 1 YOE</span>
-              </div>
-            </li>
-          </div>
-        </ul>
-        <div className="mt-3">
-          <p className="mb-2">
+      <div className="flex flex-col px-0 py-px sm:px-1 md:px-6">
+        <div className="">
+          <p className="text-pretty mb-2">
             My journey as a developer began in 2021 when I made a career switch
-            to Computer Science. Since then, I've continued to grow and evolve
-            as a <span className="font-bold">full-stack</span> and
-            <span className="font-bold"> front-end developer</span>,
-            specializing in <span className="font-bold">React.js</span> and{" "}
-            <span className="font-bold"> Node.js</span>.
+            from Psychology to Computer Science. Since then, I've continued to
+            grow and evolve as a{" "}
+            <span className="font-extrabold">front-end</span> and
+            <span className="font-extrabold"> full-stack</span> developer,
+            specializing in <span className="font-extrabold">React.js</span> and{" "}
+            <span className="font-extrabold"> Express</span>.
           </p>
-          <p className="">
-            I strive to write code that accurately implements designs for
-            interactive and responsive web applications, providing users with a
-            memorable, seamless experience. I am a quick learner and always
-            looking to expand my knowledge, taking on new challenges by learning
-            the latest technologies.
+          <p className="text-pretty">
+            I have a holistic understanding of web design and development, and I
+            strive to write code that accurately implements designs for
+            interactive and responsive web applications. I am a quick learner
+            and always looking to expand my knowledge, taking on new challenges
+            by learning the latest technologies.
           </p>
-          <p></p>
         </div>
       </div>
     ),
@@ -60,7 +36,7 @@ export const AboutMeData = [
   {
     name: "Education",
     content: (
-      <ul className="space-y-4 px-0 py-4 sm:px-1 md:px-6">
+      <ul className="space-y-4 px-0 py-px sm:px-1 md:px-6">
         <li className="relative flex gap-2 md:gap-4">
           <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/60 dark:before:bg-[#7943ed]/50">
             <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
