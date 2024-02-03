@@ -36,19 +36,18 @@ const AboutSection = ({ setSelectedPage }) => {
   };
 
   return (
-    <section className="mb-12 w-full">
-      <h3 className="text-center text-3xl font-bold text-[#797382] dark:text-white sm:text-4xl">
-        {/* <span className="font-normal">//</span> */}
-        <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
-          About&#160;
-        </span>
-        Me
-      </h3>
-
-      <div
-        id="about"
-        className="items-enter mt-4 grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 py-10 lg:mt-0 lg:grid-cols-12 lg:gap-y-0"
-      >
+    <section id="about" className="mb-12 w-full">
+      <div className="relative mb-4 flex flex-col items-center justify-center py-3">
+        <h3 className="font-sans text-4xl font-extrabold tracking-wider sm:text-5xl lg:text-6xl">
+          <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+            About
+          </span>
+        </h3>
+        <h4 className="absolute bottom-1 font-mono text-lg tracking-tighter text-[#797382]/70 dark:text-white/60 sm:text-xl lg:text-2xl">
+          [01]who i am
+        </h4>
+      </div>
+      <div className="items-enter mt-4 grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 py-10 lg:mt-0 lg:grid-cols-12 lg:gap-y-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -94,7 +93,7 @@ const AboutSection = ({ setSelectedPage }) => {
           }}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-10 xl:w-11/12"
         >
-          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0">
+          <div className="relative mb-4 flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
             {AboutMeData.map((tabContent, index) => (
               <Tab
                 className={index}
