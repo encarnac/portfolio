@@ -3,7 +3,7 @@ import { Tab } from "./Tab";
 import { AboutMeData } from "../constants/AboutMeData";
 import AboutPhoto from "../assets/about-pfp.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiCode, HiOutlineGlobeAlt } from "react-icons/hi";
+import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
 
 const motionVariants = (direction) => {
   return {
@@ -13,7 +13,7 @@ const motionVariants = (direction) => {
 };
 
 const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("About");
+  const [tab, setTab] = useState("My Story");
   const [isPending, startTransition] = useTransition();
 
   const selectTab = (nextTab) => {
@@ -23,11 +23,18 @@ const AboutSection = ({ setSelectedPage }) => {
   };
 
   return (
-    <>
-      {" "}
+    <section className="mb-12 w-full">
+      <h3 className="text-center text-3xl font-bold text-[#857e8f] dark:text-white sm:text-4xl">
+        {/* <span className="font-normal">//</span> */}
+        <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+          About&#160;
+        </span>
+        Me
+      </h3>
+
       <div
         id="about"
-        className="grid grid-cols-1 items-start justify-items-center gap-x-0 py-2 lg:grid-cols-12"
+        className="items-enter mt-4 grid grid-cols-1 justify-items-center gap-x-0 py-10 lg:mt-0 lg:grid-cols-12"
       >
         <motion.div
           initial="hidden"
@@ -35,19 +42,21 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ type: "tween", duration: 0.6 }}
           variants={motionVariants("right")}
-          className="flex flex-col items-center justify-items-center gap-y-2 py-0 lg:col-span-5 lg:py-14"
+          className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
-          <div className="size-[200px] sm:size-[250px] md:size-[275px] xl:size-[350px] before:size-[190px] sm:before:size-[240px] md:before:size-[260px] relative my-2 rounded-custom-1 bg-[#afc6e2] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
-            <img src={AboutPhoto} className="absolute inset-x-0 -bottom-4" />
-            <div className="absolute -right-4 top-24 w-fit rounded-br-2xl rounded-tl-2xl rounded-tr-2xl border-b-[2px] border-r-[2px] border-b-[#dfc1cf] border-r-[#b2cceb] bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 p-1 shadow-md backdrop-blur-2xl backdrop-filter dark:border-b-[#815b90] dark:border-r-[#6567a5] dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] dark:shadow-xl dark:shadow-[#3a3d8d]/50">
-              <span className="block break-words rounded-xl px-2 py-1 text-sm text-slate-200 transition duration-300">
-                <HiOutlineGlobeAlt className="size-7 lg:size-10 text-stone-100 dark:text-white" />
-              </span>
+          <div className="size-[200px] sm:size-[250px] md:size-[275px] xl:size-[350px] before:size-[190px] sm:before:size-[240px] md:before:size-[260px] relative rounded-custom-1 bg-[#afc6e2] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
+            <img src={AboutPhoto} className="absolute inset-x-0 -bottom-3" />
+            <div className="absolute inset-x-28 -top-9 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#857E8F] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-white dark:shadow-md sm:py-2 sm:text-xs xl:inset-x-44 xl:text-sm">
+              <HiUser className="size-6 sm:size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
+              <span className="">Colene Encarnado</span>
             </div>
-            <div className="absolute -left-2 top-8 w-fit rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl border-b-[2px] border-l-[2px] border-b-[#dfc1cf] border-l-[#b2cceb] bg-gradient-to-br from-[#68A3EB]/60 to-[#F38BBB]/60 p-1 shadow-md backdrop-blur-2xl dark:border-b-[#815b90] dark:border-l-[#6567a5] dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] dark:shadow-xl dark:shadow-[#3a3d8d]/50">
-              <span className="text-wrap block rounded-xl px-2 py-1 text-sm text-slate-200 transition duration-300">
-                <HiCode className="size-7 lg:size-10 text-stone-100 dark:text-white" />
-              </span>
+            <div className="absolute -left-9 -top-3 flex h-fit w-28 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-px text-[.65rem] font-bold text-[#857E8F] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-white dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2 sm:text-xs xl:text-sm">
+              <HiMapPin className="size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
+              <span className="">Los Angeles, CA</span>
+            </div>
+            <div className="absolute -right-9 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#857E8F] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-white dark:shadow-md sm:py-2 sm:text-xs xl:text-sm">
+              <HiLightBulb className="size-4 sm:size-5 text-[#E38EC0] dark:text-[#a32dd2]" />
+              <span className="">&lt; 1 YOE</span>
             </div>
           </div>
         </motion.div>
@@ -58,9 +67,9 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ type: "tween", duration: 0.8 }}
           variants={motionVariants("left")}
-          className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center px-0 py-6 lg:col-span-7 lg:mt-0 lg:min-w-min xl:w-11/12"
+          className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-10 xl:w-11/12"
         >
-          <div className="relative mt-1 flex w-max flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/40 px-8 transition dark:border-b-[#b7b0c2]/70 lg:mx-0">
+          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-5 transition dark:border-b-[#b7b0c2]/10 lg:mx-0">
             {AboutMeData.map((tabContent, index) => (
               <Tab
                 className={index}
@@ -70,7 +79,7 @@ const AboutSection = ({ setSelectedPage }) => {
               />
             ))}
           </div>
-          <div className="mt-6 place-self-stretch pb-2 text-base text-[#6F6977] dark:text-[#b7b0c2] md:mb-6">
+          <div className="place-self-stretch text-sm text-[#5E5965] dark:text-[#C7BFD3] sm:text-base md:text-lg">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
@@ -85,7 +94,7 @@ const AboutSection = ({ setSelectedPage }) => {
           </div>
         </motion.div>
       </div>
-    </>
+    </section>
   );
 };
 
