@@ -47,7 +47,7 @@ const AboutSection = ({ setSelectedPage }) => {
 
       <div
         id="about"
-        className="items-enter mt-4 grid grid-cols-1 justify-items-center gap-x-0 py-10 lg:mt-0 lg:grid-cols-12"
+        className="items-enter mt-4 grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 py-10 lg:mt-0 lg:grid-cols-12 lg:gap-y-0"
       >
         <motion.div
           initial="hidden"
