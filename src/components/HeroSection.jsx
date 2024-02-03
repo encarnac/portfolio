@@ -7,7 +7,7 @@ export default function Header() {
       <section className="relative mb-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-5xl font-extrabold text-[#857e8f] dark:text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mb-4 text-5xl font-extrabold text-[#797382] dark:text-white sm:text-6xl lg:text-7xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                 Hello, I'm
               </span>
@@ -47,7 +47,7 @@ export default function Header() {
           </div>
 
           <div className="col-span-5 mt-12 place-self-center lg:my-24">
-            <div className="relative z-0 before:absolute before:bottom-2 before:left-3 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#5A32AF] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
+            <div className="relative z-0 before:absolute before:bottom-2 before:left-3 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
                 <img
                   src={HeaderPhoto}

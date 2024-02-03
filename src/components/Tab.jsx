@@ -8,9 +8,9 @@ export const Tab = ({ active, selectTab, tabName }) => {
       onClick={() => selectTab(tabName)}
       className={`${
         active === tabName
-          ? "text-[#5E5965] dark:text-[#C7BFD3]"
-          : "dark:text-[#b7b0c2]/70 text-[#726C7B]/70   hover:text-[#5E5965] dark:hover:text-[#C7BFD3]"
-      }  transition duration-300 px-px md:px-8 relative text-sm sm:text-base md:text-lg font-bold py-2`}
+          ? "text-[#6B6573] dark:text-[#CCC3D7]"
+          : "dark:text-[#b7b0c2]/70 text-[#726C7B]/70   hover:text-[#6B6573] dark:hover:text-[#CCC3D7]"
+      }  transition duration-300 px-2 md:px-8 relative text-sm sm:text-base md:text-lg font-bold py-2`}
     >
       <span className="relative">{tabName} </span>
 
