@@ -14,6 +14,17 @@ export default {
           "Segoe UI Symbol",
           "Noto Color Emoji",
         ],
+        mono: [
+          "Roboto Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
       },
       borderRadius: {
         "custom-1": "66% 34% 70% 30% / 30% 68% 32% 70% ",

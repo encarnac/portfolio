@@ -27,9 +27,10 @@ export default function Header() {
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
+                className="font-mono"
               />
             </h1>
-            <p className="mb-6 text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
+            <p className="mb-6 font-mono text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
               // Scroll down to learn more about what I do
             </p>
             <div className="">
