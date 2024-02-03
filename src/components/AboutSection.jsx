@@ -5,11 +5,24 @@ import AboutPhoto from "../assets/about-pfp.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
 
-const motionVariants = (direction) => {
-  return {
-    hidden: { x: direction === "right" ? -50 : 50, opacity: 0 },
-    visible: { opacity: 1, x: 0 },
-  };
+const aboutPhoto = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delayChildren: 0.7,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const statBubble = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
 };
 
 const AboutSection = ({ setSelectedPage }) => {
@@ -24,7 +37,7 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section className="mb-12 w-full">
-      <h3 className="text-center text-3xl font-bold text-[#857e8f] dark:text-white sm:text-4xl">
+      <h3 className="text-center text-3xl font-bold text-[#797382] dark:text-white sm:text-4xl">
         {/* <span className="font-normal">//</span> */}
         <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
           About&#160;
@@ -39,25 +52,34 @@ const AboutSection = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ type: "tween", duration: 0.6 }}
-          variants={motionVariants("right")}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ type: "tween", duration: 0.8 }}
+          variants={aboutPhoto}
           className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
-          <div className="size-[200px] sm:size-[250px] md:size-[275px] xl:size-[350px] before:size-[190px] sm:before:size-[240px] md:before:size-[260px] relative rounded-custom-1 bg-[#afc6e2] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
+          <div className="size-[200px] sm:size-[250px] md:size-[275px] xl:size-[350px] before:size-[190px] sm:before:size-[240px] md:before:size-[260px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
             <img src={AboutPhoto} className="absolute inset-x-0 -bottom-3" />
-            <div className="absolute inset-x-28 -top-9 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#857E8F] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-white dark:shadow-md sm:py-2 sm:text-xs xl:inset-x-44 xl:text-sm">
+            <motion.div
+              variants={statBubble}
+              className="absolute inset-x-28 -top-9 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 sm:text-xs xl:inset-x-44 xl:text-sm"
+            >
               <HiUser className="size-6 sm:size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Colene Encarnado</span>
-            </div>
-            <div className="absolute -left-9 -top-3 flex h-fit w-28 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-px text-[.65rem] font-bold text-[#857E8F] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-white dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2 sm:text-xs xl:text-sm">
+            </motion.div>
+            <motion.div
+              variants={statBubble}
+              className="absolute -left-9 -top-3 flex h-fit w-28 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-px text-[.65rem] font-bold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2 sm:text-xs xl:text-sm"
+            >
               <HiMapPin className="size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Los Angeles, CA</span>
-            </div>
-            <div className="absolute -right-9 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#857E8F] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-white dark:shadow-md sm:py-2 sm:text-xs xl:text-sm">
+            </motion.div>
+            <motion.div
+              variants={statBubble}
+              className="absolute -right-9 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#797382] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 sm:text-xs xl:text-sm"
+            >
               <HiLightBulb className="size-4 sm:size-5 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">&lt; 1 YOE</span>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -65,11 +87,14 @@ const AboutSection = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.6 }}
-          transition={{ type: "tween", duration: 0.8 }}
-          variants={motionVariants("left")}
+          transition={{ type: "tween", duration: 0.4 }}
+          variants={{
+            hidden: { x: 50, opacity: 0 },
+            visible: { opacity: 1, x: 0 },
+          }}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-10 xl:w-11/12"
         >
-          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-5 transition dark:border-b-[#b7b0c2]/10 lg:mx-0">
+          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0">
             {AboutMeData.map((tabContent, index) => (
               <Tab
                 className={index}
@@ -79,7 +104,7 @@ const AboutSection = ({ setSelectedPage }) => {
               />
             ))}
           </div>
-          <div className="place-self-stretch text-sm text-[#5E5965] dark:text-[#C7BFD3] sm:text-base md:text-lg">
+          <div className="place-self-stretch text-sm text-[#6B6573] dark:text-[#CCC3D7] sm:text-base md:text-lg">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
