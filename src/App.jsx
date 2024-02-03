@@ -54,7 +54,7 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="container mx-auto my-36 px-5 py-4 sm:px-10"
+          className="container mx-auto mb-36 mt-24 px-5 py-4 sm:px-10"
         >
           <HeroSection />
         </motion.div>
