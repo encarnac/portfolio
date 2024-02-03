@@ -54,7 +54,7 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="container mx-auto mt-24 px-10 py-4"
+          className="container mx-auto my-24 px-5 py-4 sm:px-10"
         >
           <HeroSection />
         </motion.div>
@@ -64,7 +64,7 @@ export default function App() {
       {/* About Me Section */}
       <div className="relative bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#371E43] dark:from-20% dark:to-[#1E223C]">
         <motion.div
-          className="container mx-auto px-10 py-4"
+          className="container mx-auto my-24 px-5 py-4 sm:px-10"
           margin="0 0 -200px 0"
           amount=".2"
           viewport={{ amount: 0.7 }}
@@ -72,6 +72,7 @@ export default function App() {
         >
           <AboutSection />
         </motion.div>
+        <DividerShape shape={"canyon"} />
       </div>
     </main>
   );
