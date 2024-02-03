@@ -1,11 +1,4 @@
-import { FiUser, FiMapPin, FiAward } from "react-icons/fi";
 import { LuGraduationCap } from "react-icons/lu";
-import {
-  HiOutlineAcademicCap,
-  HiMiniUser,
-  HiMapPin,
-  HiMiniChartBar,
-} from "react-icons/hi2";
 
 export const AboutMeData = [
   {
