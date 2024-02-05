@@ -1,128 +1,79 @@
-import {
-  BiUser,
-  BiTrophy,
-  BiMap,
-  BiLogoLinkedin,
-  BiLogoGithub,
-  BiLogoFigma,
-  BiLogoPython,
-  BiLogoMongodb,
-  BiLogoGit,
-  BiLogoGoogleCloud,
-  BiLogoTailwindCss,
-  BiCodeBlock,
-  BiSolidData,
-  BiSolidCog,
-} from "react-icons/bi";
-import {
-  RiJavascriptFill,
-  RiHtml5Line,
-  RiCss3Fill,
-  RiReactjsLine,
-  RiBootstrapFill,
-} from "react-icons/ri";
-import { SiExpress, SiJirasoftware, SiPostman, SiMysql } from "react-icons/si";
-import { TbBrandNextjs, TbBrandFramerMotion } from "react-icons/tb";
+import frontend from "../assets/frontend.svg";
+import backend from "../assets/backend.svg";
+import tools from "../assets/tools.svg";
+import { motion } from "framer-motion";
 
-const SKILLS_CONTENT = {
-  name: "Skills",
-  content: (
-    <div className="flex-col space-y-1 px-1 md:px-4 lg:px-8">
-      <div className="flex flex-row justify-between border-b-[1px] border-stone-600/20 py-1 dark:border-[#6a3dd1]/30">
-        <h4 className="font-semibold tracking-wide">Front-End Development</h4>
-        {/* <FiChevronDown className="text-2xl" /> */}
-      </div>
-      <div className="mb-5 flex flex-row flex-wrap justify-center space-x-2 px-8 text-xs sm:justify-start">
-        <div className="flex flex-col items-center">
-          <p className="">HTML5</p>
-          <RiHtml5Line className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">CSS3</p>
-          <RiCss3Fill className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Javascript</p>
-          <RiJavascriptFill className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">React</p>
-          <RiReactjsLine className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Next.js</p>
-          <TbBrandNextjs className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Bootstrap</p>
-          <RiBootstrapFill className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Tailwind</p>
-          <BiLogoTailwindCss className="size-12" />
-        </div>
-
-        <div className="flex flex-col items-center">
-          <p className="">Motion</p>
-          <TbBrandFramerMotion className="size-12" />
-        </div>
-      </div>
-      <div className="flex flex-row justify-between border-b-[1px] border-stone-600/20 py-1 dark:border-[#6a3dd1]/30">
-        <h4 className="font-semibold tracking-wide">Back-End Development</h4>
-        {/* <FiChevronDown className="text-2xl" /> */}
-      </div>
-      <div className="mb-5 flex flex-row flex-wrap justify-center space-x-2 px-8 text-xs sm:justify-start">
-        <div className="flex flex-col items-center">
-          <p className="">Python</p>
-          <BiLogoPython className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Express</p>
-          <SiExpress className="size-12" />
-        </div>
-
-        <div className="flex flex-col items-center">
-          <p className="">MongoDB</p>
-          <BiLogoMongodb className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">MySQL</p>
-          <SiMysql className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">GCP</p>
-          <BiLogoGoogleCloud className="size-12" />
-        </div>
-      </div>
-      <div className="flex flex-row justify-between border-b-[1px] border-stone-600/20 py-1 dark:border-[#6a3dd1]/30">
-        <h4 className="font-semibold tracking-wide">Development Tools</h4>
-        {/* <FiChevronDown className="text-2xl" /> */}
-      </div>
-      <div className="mb-5 flex flex-row flex-wrap justify-center space-x-2 px-8 text-xs sm:justify-start">
-        <div className="flex flex-col items-center">
-          <p className="">Git</p>
-          <BiLogoGit className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">GitHub</p>
-          <BiLogoGithub className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Figma</p>
-          <BiLogoFigma className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Jira</p>
-          <SiJirasoftware className="size-12" />
-        </div>
-        <div className="flex flex-col items-center">
-          <p className="">Postman</p>
-          <SiPostman className="size-12" />
-        </div>
-      </div>
-    </div>
-  ),
-};
 export const SkillsSection = () => {
-  return <div>SkillsSection</div>;
+  return (
+    <section id="#skills" className="mb-12 w-full">
+      <div className="relative mb-10 flex flex-col items-center justify-center py-3">
+        <h3 className="font-sans text-4xl font-extrabold tracking-wider sm:text-5xl lg:text-6xl">
+          <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+            Skills
+          </span>
+        </h3>
+        <h4 className="absolute bottom-1 font-mono text-lg tracking-tighter text-[#797382]/70 dark:text-white/60 sm:text-xl lg:text-2xl">
+          [02]what i do
+        </h4>
+      </div>
+      <div className="grid grid-cols-1 gap-y-4 px-12 sm:px-24 md:px-36 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-4 lg:px-10 xl:px-48">
+        <motion.div
+          layout
+          className="box-content flex flex-col items-center justify-start gap-y-4 rounded-xl border-[#d6e0eb] bg-[#d6e0eb] px-0 py-8 backdrop-blur-sm transition duration-300 hover:border-b-8 hover:border-l-8 hover:border-[#AD99DB]/80 dark:border-[#1f1c24] dark:bg-[#1f1c24] dark:hover:border-[#7943ED] lg:col-span-4"
+        >
+          <div className="mb-1 rounded-full bg-[#bbc8dd] p-4 dark:bg-[#312b3f]">
+            <img src={frontend} className="w-10" />
+          </div>
+          <h4 className="relative pb-4 font-bold after:absolute after:inset-x-4 after:bottom-0 after:h-1 after:w-2/3 after:rounded-3xl after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
+            Front-End
+          </h4>
+          <ul className="place-self-center text-[#6B6573] dark:text-[#CCC3D7]">
+            <li className="">HTML5</li>
+            <li className="">CSS3</li>
+            <li className="">Javascript</li>
+            <li className="">React.js</li>
+            <li className="">Next.js</li>
+            <li className="">Bootstrap</li>
+            <li className="">TailwindCSS</li>
+          </ul>
+        </motion.div>
+        <motion.div
+          layout
+          className="box-border flex flex-col items-center justify-start gap-y-4 rounded-xl border-[#d6e0eb] bg-[#d6e0eb] px-2 py-8 backdrop-blur-sm transition duration-300 hover:border-b-8 hover:border-l-8 hover:border-[#AD99DB]/80 dark:border-[#1f1c24] dark:bg-[#1f1c24] dark:hover:border-[#7943ED] lg:col-span-4"
+        >
+          <div className="mb-1 rounded-full bg-[#bbc8dd] p-4 dark:bg-[#312b3f]">
+            <img src={backend} className="w-10" />
+          </div>
+          <h4 className="relative pb-4 font-bold after:absolute after:inset-x-4 after:bottom-0 after:h-1 after:w-2/3 after:rounded-3xl after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
+            Back-End
+          </h4>
+          <ul className="place-self-center text-[#6B6573] dark:text-[#CCC3D7]">
+            <li className="">Python</li>
+            <li className="">Express</li>
+            <li className="">MongoDB</li>
+            <li className="">MySQL</li>
+            <li className="">GCP</li>
+          </ul>
+        </motion.div>{" "}
+        <motion.div
+          layout
+          className="box-content flex flex-col items-center justify-start gap-y-4 rounded-xl border-[#d6e0eb] bg-[#d6e0eb] px-2 py-8 backdrop-blur-sm transition duration-300 hover:border-b-8 hover:border-l-8 hover:border-[#AD99DB]/80 dark:border-[#1f1c24] dark:bg-[#1f1c24] dark:hover:border-[#7943ED] lg:col-span-4"
+        >
+          <div className="mb-1 rounded-full bg-[#bbc8dd] p-4 dark:bg-[#312b3f]">
+            <img src={tools} className="w-10" />
+          </div>
+          <h4 className="relative pb-4 font-bold after:absolute after:inset-x-4 after:bottom-0 after:h-1 after:w-2/3 after:rounded-3xl after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
+            Dev Tools
+          </h4>
+          <ul className="place-self-center text-[#6B6573] dark:text-[#CCC3D7]">
+            <li className="">Git</li>
+            <li className="">GitHub</li>
+            <li className="">Jira</li>
+            <li className="">Figma</li>
+            <li className="">Postman</li>
+          </ul>
+        </motion.div>
+      </div>
+    </section>
+  );
 };
