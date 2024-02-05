@@ -73,9 +73,13 @@ export default function App() {
         >
           <AboutSection />
         </motion.div>
-        <div className="container mx-auto mb-40 mt-36 px-5 py-4 sm:px-10">
+        <motion.div
+          className="container mx-auto mb-40 mt-36 px-5 py-4 sm:px-10"
+          viewport={{ amount: 0.7 }}
+          onViewportEnter={() => setSelectedPage("skills")}
+        >
           <SkillsSection />
-        </div>
+        </motion.div>
 
         <DividerShape shape={"solid"} />
       </div>
