@@ -60,23 +60,23 @@ const AboutSection = ({ setSelectedPage }) => {
             <img src={AboutPhoto} className="absolute inset-x-0 -bottom-3" />
             <motion.div
               variants={statBubble}
-              className="absolute inset-x-28 -top-9 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 sm:text-xs xl:inset-x-44 xl:text-sm"
+              className="absolute inset-x-24 -top-10 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-base font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
             >
-              <HiUser className="size-6 sm:size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
+              <HiUser className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Colene Encarnado</span>
             </motion.div>
             <motion.div
               variants={statBubble}
-              className="absolute -left-9 -top-3 flex h-fit w-28 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-px text-[.65rem] font-bold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2 sm:text-xs xl:text-sm"
+              className="absolute -left-20 top-4 flex h-fit w-36 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-base font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2"
             >
-              <HiMapPin className="size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
+              <HiMapPin className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Los Angeles, CA</span>
             </motion.div>
             <motion.div
               variants={statBubble}
-              className="absolute -right-9 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-[.65rem] font-bold text-[#797382] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 sm:text-xs xl:text-sm"
+              className="absolute -right-10 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-base font-semibold text-[#797382] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2"
             >
-              <HiLightBulb className="size-4 sm:size-5 text-[#E38EC0] dark:text-[#a32dd2]" />
+              <HiLightBulb className="size-5 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">&lt; 1 YOE</span>
             </motion.div>
           </div>
@@ -103,7 +103,7 @@ const AboutSection = ({ setSelectedPage }) => {
               />
             ))}
           </div>
-          <div className="place-self-stretch text-sm text-[#6B6573] dark:text-[#CCC3D7] sm:text-base md:text-lg">
+          <div className="place-self-stretch text-base text-[#6B6573] dark:text-[#CCC3D7] md:text-lg">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
