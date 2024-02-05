@@ -65,7 +65,7 @@ export default function App() {
       {/* About Me Section */}
       <div className="relative bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#371E43] dark:from-20% dark:to-[#1E223C]">
         <motion.div
-          className="container mx-auto mt-36 px-5 py-4 sm:px-10"
+          className="container mx-auto my-36 px-5 py-4 sm:px-10"
           margin="0 0 -200px 0"
           amount=".2"
           viewport={{ amount: 0.7 }}
@@ -74,7 +74,7 @@ export default function App() {
           <AboutSection />
         </motion.div>
         <motion.div
-          className="container mx-auto mb-40 mt-36 px-5 py-4 sm:px-10"
+          className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("skills")}
         >
