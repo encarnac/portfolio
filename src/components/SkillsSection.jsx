@@ -36,7 +36,7 @@ export const SkillsSection = () => {
           [02]what i do
         </h4>
       </div>
-      <div className="justify--content-center grid grid-cols-1 gap-x-0 gap-y-8 px-6 md:grid-cols-12 md:gap-x-3 md:gap-y-0 lg:gap-x-12 xl:gap-x-16">
+      <div className="justify-content-center grid grid-cols-1 gap-x-0 gap-y-8 px-4 sm:px-0 md:grid-cols-12 md:gap-x-3 md:gap-y-0 lg:gap-x-12 xl:gap-x-16">
         <motion.div
           layout
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
