@@ -3,8 +3,8 @@ export const DividerShape = ({ shape }) => {
     shape === "layers"
       ? "dark:fill-[#251E32] fill-[#E3E8EE]"
       : shape === "solid"
-      ? "dark:fill-[#272335] fill-[#eff1f2]"
-      : "dark:fill-[#272335] fill-[#eff1f2]";
+      ? "dark:fill-[#2e2552]/60 fill-[#eff1f2]/50"
+      : "dark:fill-[#2e2552]/90 fill-[#eff1f2]/10";
   return (
     <>
       {shape === "layers" && (
