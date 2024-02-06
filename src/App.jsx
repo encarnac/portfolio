@@ -40,7 +40,7 @@ export default function App() {
   return (
     <main
       id="hero"
-      className="relative flex min-h-screen flex-col bg-[#e3e8ee] transition duration-300 dark:bg-[#251e32]"
+      className="relative flex min-h-screen flex-col bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] transition duration-300 dark:from-[#371E43] dark:from-5% dark:to-[#1E223C]"
     >
       {/* Navbar and Drawer */}
       <Navbar
@@ -52,7 +52,7 @@ export default function App() {
       />
 
       {/* Hero Section with Divider */}
-      <div className="relative">
+      <div className="relative bg-[#e3e8ee] dark:bg-[#251e32]">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -65,7 +65,7 @@ export default function App() {
 
       {/* About Me Section */}
 
-      <div className="relative bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#371E43] dark:from-5% dark:to-[#1E223C]">
+      <div className="relative">
         <motion.div
           className="container mx-auto my-36 px-5 py-4 sm:px-10"
           margin="0 0 -200px 0"
@@ -89,7 +89,7 @@ export default function App() {
       </div>
 
       {/* Projects Section */}
-      <div className="relative bg-[#eff1f2] dark:bg-[#272335]">
+      <div className="relative bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2e2552]/60">
         <motion.div
           className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
@@ -100,7 +100,14 @@ export default function App() {
       </div>
 
       <div className="relative bg-[#E3E8EE] dark:bg-[#251e32]">
-        <ContactSection />
+        <motion.div
+          className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
+          viewport={{ amount: 0.7 }}
+          onViewportEnter={() => setSelectedPage("projects")}
+        >
+          <ContactSection />
+        </motion.div>
+
         {/* <DividerShape shape={"curve"} /> */}
       </div>
     </main>
