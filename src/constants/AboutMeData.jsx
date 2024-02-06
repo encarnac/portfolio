@@ -1,10 +1,11 @@
 import { LuGraduationCap } from "react-icons/lu";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export const AboutMeData = [
   {
     name: "My Story",
     content: (
-      <div className="flex flex-col px-0 py-px sm:px-1 md:px-6">
+      <div className="flex flex-col gap-y-4 px-0 py-px sm:px-1 md:px-6">
         <div className="">
           <p className="text-pretty mb-2">
             My journey as a developer began in 2021 when I made a career switch
@@ -22,6 +23,15 @@ export const AboutMeData = [
             and always looking to expand my knowledge, taking on new challenges
             by learning the latest technologies.
           </p>
+        </div>
+        <div className="flex flex-row items-center justify-stretch gap-x-4">
+          <button className="rounded-3xl bg-[#F38BBB] px-6 py-2 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:bg-[#7943ED]">
+            Download CV
+          </button>
+          <hr class="h-px w-12 border-0 bg-[#6B6573] dark:bg-[#CCC3D7]"></hr>
+          <p className="text-sm font-light">Follow me </p>
+          <SiGithub className="size-7" />
+          <SiLinkedin className="size-7" />
         </div>
       </div>
     ),
