@@ -29,7 +29,7 @@ const statBubble = {
 };
 
 const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("My Story");
+  const [tab, setTab] = useState("Background");
   const [isPending, startTransition] = useTransition();
 
   const selectTab = (nextTab) => {
@@ -40,16 +40,29 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section id="about" className="mb-12 w-full">
-      <div className="relative mb-8 flex flex-col items-start justify-start py-3">
-        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
-          [01]about
-        </h4>
-        <h3 className="font-sans text-4xl font-bold lg:text-5xl">
-          <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
-            Who I Am
-          </span>
-        </h3>
+      <div className="grid grid-cols-1 items-center justify-items-start lg:grid-cols-12">
+        <div className="relative mb-8 flex flex-col items-start justify-start lg:col-span-5">
+          <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
+            [01]about
+          </h4>
+          <h3 className="font-sans text-4xl font-bold lg:text-5xl">
+            <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+              Who I Am
+            </span>
+          </h3>
+        </div>
+        <div className="relative flex h-fit w-fit flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-6 transition dark:border-b-[#b7b0c2]/10 lg:col-span-7 lg:mx-0 lg:my-0">
+          {AboutMeData.map((tabContent, index) => (
+            <Tab
+              className={index}
+              active={tab}
+              selectTab={() => selectTab(tabContent.name)}
+              tabName={tabContent.name}
+            />
+          ))}
+        </div>
       </div>
+
       <div className="mt-4 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-8 lg:mt-0 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
         <motion.div
           initial="hidden"
@@ -57,31 +70,10 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ type: "spring", stiffness: 80 }}
           variants={aboutPhoto}
-          className="relative mt-6 flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
+          className="relative flex flex-col items-center justify-items-center gap-y-2 lg:col-span-5"
         >
           <div className="size-[250px] md:size-[300px] xl:size-[350px] before:size-[235px] md:before:size-[285px] xl:before:size-[325px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[335px]">
             <img src={AboutPhoto} className="absolute inset-x-4 -bottom-3" />
-            <motion.div
-              variants={statBubble}
-              className="absolute inset-x-24 -top-6 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
-            >
-              <HiUser className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
-              <span className="">Colene Encarnado</span>
-            </motion.div>
-            <motion.div
-              variants={statBubble}
-              className="absolute -left-12 top-6 flex h-fit w-28 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-20 sm:top-14 sm:w-fit sm:py-2"
-            >
-              <HiMapPin className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
-              <span className="">Los Angeles, CA</span>
-            </motion.div>
-            <motion.div
-              variants={statBubble}
-              className="absolute -right-10 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2"
-            >
-              <HiLightBulb className="size-5 text-[#E38EC0] dark:text-[#a32dd2]" />
-              <span className="">&lt; 1 YOE</span>
-            </motion.div>
           </div>
         </motion.div>
 
@@ -93,16 +85,6 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutContent}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
-          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[2px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
-            {AboutMeData.map((tabContent, index) => (
-              <Tab
-                className={index}
-                active={tab}
-                selectTab={() => selectTab(tabContent.name)}
-                tabName={tabContent.name}
-              />
-            ))}
-          </div>
           <div className="place-self-stretch text-base text-[#6B6573] dark:text-[#CCC3D7] md:text-lg">
             <AnimatePresence mode="wait">
               <motion.div
