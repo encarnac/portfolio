@@ -42,10 +42,10 @@ const skillsContainer = {
   },
 };
 
-export const SkillsSection = () => {
+const SkillsSection = () => {
   return (
     <section id="skills" className="mb-12 w-full">
-      <div className="relative mb-8 flex flex-row items-center justify-between py-3">
+      <div className="relative mb-8 flex flex-row items-center justify-center py-3">
         <h3 className="font-sans text-4xl font-bold lg:text-5xl">
           <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
             Skills
@@ -186,3 +186,5 @@ export const SkillsSection = () => {
     </section>
   );
 };
+
+export default SkillsSection;
