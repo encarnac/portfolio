@@ -1,7 +1,8 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
-import { SkillsSection } from "./components/SkillsSection";
+import SkillsSection from "./components/SkillsSection";
+import ProjectsSection from "./components/ProjectsSection";
 import { DividerShape } from "./components/DividerShape";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -83,6 +84,17 @@ export default function App() {
         </motion.div>
 
         <DividerShape shape={"solid"} />
+      </div>
+
+      {/* Projects Section */}
+      <div className="relative bg-[#e3e8ee] dark:bg-[#251e32]">
+        <motion.div
+          className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
+          viewport={{ amount: 0.7 }}
+          onViewportEnter={() => setSelectedPage("projects")}
+        >
+          <ProjectsSection />
+        </motion.div>
       </div>
     </main>
   );
