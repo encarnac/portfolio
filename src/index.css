@@ -7,7 +7,7 @@
 @layer utilities {
   .custom-shape-divider-layers {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -18,8 +18,8 @@
   .custom-shape-divider-layers svg {
     position: relative;
     display: block;
-    width: calc(209% + 1.3px);
-    height: 97px;
+    width: calc(103% + 1.3px);
+    height: 29px;
   }
 
 
@@ -52,6 +52,24 @@
     display: block;
     width: calc(127% + 1.3px);
     height: 56px;
+  }
+
+  .custom-shape-divider-top-curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-top-curve svg {
+    position: relative;
+    display: block;
+    width: calc(260% + 1.3px);
+    height: 142px;
+    transform: rotateY(180deg);
   }
 
 }
