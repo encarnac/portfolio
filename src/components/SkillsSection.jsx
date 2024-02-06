@@ -67,7 +67,7 @@ const SkillsSection = () => {
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={frontend} className="w-11" />
             </div>
@@ -111,7 +111,7 @@ const SkillsSection = () => {
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={backend} className="w-11" />
             </div>
@@ -151,7 +151,7 @@ const SkillsSection = () => {
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={tools} className="h-11" />
             </div>
