@@ -1,16 +1,27 @@
+import watch_soon from "../assets/watch-soon.png";
 const ProjectsSection = () => {
   return (
-    <section id="skills" className="mb-12 w-full">
-      <div className="relative mb-8 flex flex-row items-center justify-end py-3">
+    <section id="projects" className="mb-12 w-full">
+      <div className="relative mb-8 flex flex-col items-end justify-end py-3">
+        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
+          [03]projects
+        </h4>
         <h3 className="font-sans text-4xl font-bold lg:text-5xl">
           <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
-            Projects
+            What I Made
           </span>
         </h3>
-        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
-          [03]what i made
-        </h4>
-      </div>{" "}
+      </div>
+      <div className="flex flex-col items-center justify-center text-[#797382] dark:text-white">
+        <div className="grid grid-cols-1 overflow-clip rounded-2xl border-[.01rem] border-[#797382] pl-6 dark:border-white md:grid-cols-12">
+          <div className="flex flex-col items-end justify-stretch px-8 py-4 md:col-span-6">
+            <h3>Watch Soon</h3>
+          </div>
+          <div className="md:col-span-6">
+            <img src={watch_soon} className="w-fit" />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

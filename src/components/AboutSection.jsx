@@ -40,15 +40,15 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section id="about" className="mb-12 w-full">
-      <div className="relative mb-8 flex flex-row items-center justify-start py-3">
+      <div className="relative mb-8 flex flex-col items-start justify-start py-3">
+        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
+          [01]about
+        </h4>
         <h3 className="font-sans text-4xl font-bold lg:text-5xl">
           <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
-            About
+            Who I Am
           </span>
         </h3>
-        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
-          [01]who i am
-        </h4>
       </div>
       <div className="mt-4 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-8 lg:mt-0 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
         <motion.div
