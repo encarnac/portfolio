@@ -1,4 +1,6 @@
 import watch_soon from "../assets/watch-soon.png";
+import adopt_a_pal from "../assets/adopt-a-pal(1).jpeg";
+import portfolio from "../assets/portfolio.png";
 const ProjectsSection = () => {
   return (
     <section id="projects" className="mb-12 w-full">
@@ -12,14 +14,22 @@ const ProjectsSection = () => {
           </span>
         </h3>
       </div>
-      <div className="flex flex-col items-center justify-center text-[#797382] dark:text-white">
-        <div className="grid grid-cols-1 overflow-clip rounded-2xl border-[.01rem] border-[#797382] pl-6 dark:border-white md:grid-cols-12">
-          <div className="flex flex-col items-end justify-stretch px-8 py-4 md:col-span-6">
-            <h3>Watch Soon</h3>
-          </div>
-          <div className="md:col-span-6">
-            <img src={watch_soon} className="w-fit" />
-          </div>
+      <div className="grid grid-cols-1 gap-x-4 text-[#797382] dark:text-white lg:grid-cols-12">
+        {/* FIRST CARD */}
+        <div className="col-span-1 lg:col-span-4">
+          <img src={adopt_a_pal} className="h-5/6 rounded-t-2xl" />
+          <h3 className="text-xl">Adopt-a-Pal</h3>
+          <h4>Pet Adoption "Dating" App</h4>
+        </div>
+        <div className="col-span-1 lg:col-span-4">
+          <img src={watch_soon} className="h-5/6 rounded-t-2xl" />
+          <h3 className="text-xl">Watch-Soon</h3>
+          <h4>Tv and Movie Reminder</h4>
+        </div>
+        <div className="col-span-1 lg:col-span-4">
+          <img src={portfolio} className="h-5/6 rounded-t-2xl" />
+          <h3 className="text-xl">Portfolio</h3>
+          <h4>React Portfolio Website</h4>
         </div>
       </div>
     </section>
