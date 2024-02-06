@@ -6,17 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
 
 const aboutPhoto = {
-  hidden: { opacity: 0, scale: 0 },
+  hidden: { x: -50, opacity: 0 },
   visible: {
-    scale: 1,
     opacity: 1,
+    x: 0,
     transition: {
-      delayChildren: 0.7,
-      staggerChildren: 0.2,
+      delayChildren: 0.9,
+      staggerChildren: 0.4,
     },
   },
 };
-
+const aboutContent = {
+  hidden: { x: 50, opacity: 0 },
+  visible: { opacity: 1, x: 0 },
+};
 const statBubble = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -51,8 +54,8 @@ const AboutSection = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ type: "tween", duration: 0.8 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ type: "spring", stiffness: 300 }}
           variants={aboutPhoto}
           className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
@@ -85,12 +88,9 @@ const AboutSection = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ type: "tween", duration: 0.4 }}
-          variants={{
-            hidden: { x: 50, opacity: 0 },
-            visible: { opacity: 1, x: 0 },
-          }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ type: "spring", stiffness: 80 }}
+          variants={aboutContent}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-10 xl:w-11/12"
         >
           <div className="relative mb-4 flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
