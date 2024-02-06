@@ -57,13 +57,13 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ type: "spring", stiffness: 80 }}
           variants={aboutPhoto}
-          className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
+          className="relative mt-6 flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
           <div className="size-[250px] md:size-[300px] xl:size-[350px] before:size-[235px] md:before:size-[285px] xl:before:size-[325px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[335px]">
             <img src={AboutPhoto} className="absolute inset-x-4 -bottom-3" />
             <motion.div
               variants={statBubble}
-              className="absolute inset-x-24 -top-10 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
+              className="absolute inset-x-24 -top-6 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
             >
               <HiUser className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Colene Encarnado</span>
