@@ -54,28 +54,25 @@ export default function App() {
       {/* Hero Section with Divider */}
       <div className="relative bg-[#e3e8ee] dark:bg-[#251e32]">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
           className="container mx-auto mb-36 mt-24 px-5 py-4 sm:px-10"
+          viewport={{ amount: 0.7 }}
+          onViewportEnter={() => setSelectedPage("hero")}
         >
           <HeroSection />
         </motion.div>
       </div>
 
-      {/* About Me Section */}
-
       <div className="relative">
+        {/* About Me Section */}
         <motion.div
           className="container mx-auto my-36 px-5 py-4 sm:px-10"
-          margin="0 0 -200px 0"
-          amount=".2"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("about")}
         >
-          <DividerShape shape={"layers"} />
+          <DividerShape shape={"first"} />
           <AboutSection />
         </motion.div>
+
         {/* Skills Section */}
         <motion.div
           className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
@@ -83,19 +80,19 @@ export default function App() {
           onViewportEnter={() => setSelectedPage("skills")}
         >
           <SkillsSection />
+          <DividerShape shape={"second"} />
         </motion.div>
-
-        <DividerShape shape={"solid"} />
       </div>
 
       {/* Projects Section */}
-      <div className="relative bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2e2552]/60">
+      <div className="relative bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2b2544]/70">
         <motion.div
           className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("projects")}
         >
           <ProjectsSection />
+          <DividerShape shape={"third"} />
         </motion.div>
       </div>
 
@@ -107,8 +104,6 @@ export default function App() {
         >
           <ContactSection />
         </motion.div>
-
-        {/* <DividerShape shape={"curve"} /> */}
       </div>
     </main>
   );

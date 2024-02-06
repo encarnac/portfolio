@@ -5,7 +5,7 @@
 
 
 @layer utilities {
-  .custom-shape-divider-layers {
+  .custom-shape-divider-first {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     transform: rotate(180deg);
   }
 
-  .custom-shape-divider-layers svg {
+  .custom-shape-divider-first svg {
     position: relative;
     display: block;
     width: calc(103% + 1.3px);
@@ -23,22 +23,8 @@
   }
 
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .custom-shape-divider-layers svg {
-      width: calc(300% + 1.3px);
-      height: 133px;
-    }
-  }
 
-  /** For mobile devices **/
-  @media (max-width: 767px) {
-    .custom-shape-divider-layers svg {
-      width: calc(196% + 1.3px);
-      height: 57px;
-    }
-  }
-
-  .custom-shape-divider-solid {
+  .custom-shape-divider-second {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -47,16 +33,16 @@
     line-height: 0;
   }
 
-  .custom-shape-divider-solid svg {
+  .custom-shape-divider-second svg {
     position: relative;
     display: block;
     width: calc(127% + 1.3px);
     height: 56px;
   }
 
-  .custom-shape-divider-top-curve {
+  .custom-shape-divider-third {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -64,12 +50,11 @@
     transform: rotate(180deg);
   }
 
-  .custom-shape-divider-top-curve svg {
+  .custom-shape-divider-third svg {
     position: relative;
     display: block;
-    width: calc(260% + 1.3px);
-    height: 142px;
-    transform: rotateY(180deg);
+    width: calc(100% + 1.3px);
+    height: 49px;
   }
 
 }
