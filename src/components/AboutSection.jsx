@@ -50,7 +50,7 @@ const AboutSection = ({ setSelectedPage }) => {
           [01]who i am
         </h4>
       </div>
-      <div className="items-enter mt-4 grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 py-10 lg:mt-0 lg:grid-cols-12 lg:gap-y-0">
+      <div className="mt-4 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-10 lg:mt-0 lg:grid-cols-12 lg:gap-y-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -59,8 +59,8 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutPhoto}
           className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
-          <div className="size-[250px] md:size-[275px] xl:size-[350px] before:size-[240px] md:before:size-[260px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
-            <img src={AboutPhoto} className="absolute inset-x-0 -bottom-3" />
+          <div className="size-[250px] md:size-[300px] xl:size-[350px] before:size-[235px] md:before:size-[285px] xl:before:size-[325px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[335px]">
+            <img src={AboutPhoto} className="absolute inset-x-4 -bottom-3" />
             <motion.div
               variants={statBubble}
               className="absolute inset-x-24 -top-10 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
@@ -70,7 +70,7 @@ const AboutSection = ({ setSelectedPage }) => {
             </motion.div>
             <motion.div
               variants={statBubble}
-              className="absolute -left-16 top-4 flex h-fit w-36 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2"
+              className="absolute -left-12 top-6 flex h-fit w-28 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-20 sm:top-14 sm:w-fit sm:py-2"
             >
               <HiMapPin className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Los Angeles, CA</span>
@@ -91,9 +91,9 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ type: "spring", stiffness: 80 }}
           variants={aboutContent}
-          className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-10 xl:w-11/12"
+          className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
-          <div className="relative mb-4 flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
+          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
             {AboutMeData.map((tabContent, index) => (
               <Tab
                 className={index}
