@@ -50,7 +50,7 @@ const AboutSection = ({ setSelectedPage }) => {
           [01]who i am
         </h4>
       </div>
-      <div className="mt-4 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-10 lg:mt-0 lg:grid-cols-12 lg:gap-y-0">
+      <div className="mt-4 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-8 lg:mt-0 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -93,7 +93,7 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutContent}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
-          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[1px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
+          <div className="relative flex w-fit flex-row items-stretch justify-center border-b-[2px] border-b-[#726C7B]/20 px-8 transition dark:border-b-[#b7b0c2]/10 lg:mx-0 lg:my-0">
             {AboutMeData.map((tabContent, index) => (
               <Tab
                 className={index}
