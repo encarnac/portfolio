@@ -7,7 +7,7 @@ export const AboutMeData = [
     name: "Background",
     content: (
       <div className="flex flex-col gap-y-4 px-0 py-px sm:px-1 md:px-6">
-        <div className="flex flex-row flex-wrap justify-center gap-x-2 gap-y-2 sm:justify-start md:gap-y-0">
+        <div className="flex flex-row flex-wrap justify-stretch gap-x-2 gap-y-2 sm:justify-start md:gap-y-0">
           <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 text-base font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
             <HiUser className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
             <p>Colene Encarnado</p>
@@ -23,7 +23,7 @@ export const AboutMeData = [
         </div>
 
         <div className="">
-          <p className="text-pretty mb-2">
+          <p className="text-balance mb-2">
             My journey as a developer began in 2021 when I made a career switch
             from Psychology to Computer Science. Since then, I've continued to
             grow and evolve as a
@@ -32,7 +32,7 @@ export const AboutMeData = [
             specializing in <span className="font-extrabold">React.js</span> and
             <span className="font-extrabold"> Express</span>.
           </p>
-          <p className="text-pretty">
+          <p className="text-balance">
             I have a holistic understanding of web design and development, and I
             strive to write code that accurately implements designs for
             interactive and responsive web applications. I am a quick learner
