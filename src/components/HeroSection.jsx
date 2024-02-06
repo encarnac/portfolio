@@ -7,7 +7,7 @@ export default function Header() {
       <section className="relative mb-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-5xl font-extrabold text-[#797382] dark:text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mb-4 text-6xl font-extrabold text-[#797382] dark:text-white lg:text-8xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                 Hello, I'm
               </span>
@@ -27,7 +27,7 @@ export default function Header() {
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
-                className="font-mono"
+                className="font-mono text-6xl lg:text-7xl"
               />
             </h1>
             <p className="mb-6 font-mono text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
