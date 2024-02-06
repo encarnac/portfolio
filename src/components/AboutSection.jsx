@@ -59,25 +59,25 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutPhoto}
           className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
-          <div className="size-[200px] sm:size-[250px] md:size-[275px] xl:size-[350px] before:size-[190px] sm:before:size-[240px] md:before:size-[260px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
+          <div className="size-[250px] md:size-[275px] xl:size-[350px] before:size-[240px] md:before:size-[260px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:h-[325px] xl:before:w-[335px]">
             <img src={AboutPhoto} className="absolute inset-x-0 -bottom-3" />
             <motion.div
               variants={statBubble}
-              className="absolute inset-x-24 -top-10 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-base font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
+              className="absolute inset-x-24 -top-10 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2 xl:inset-x-44"
             >
               <HiUser className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Colene Encarnado</span>
             </motion.div>
             <motion.div
               variants={statBubble}
-              className="absolute -left-20 top-4 flex h-fit w-36 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-base font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2"
+              className="absolute -left-16 top-4 flex h-fit w-36 flex-row items-center justify-between space-x-1 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-md dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:-left-24 sm:top-14 sm:w-fit sm:py-2"
             >
               <HiMapPin className="size-8 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">Los Angeles, CA</span>
             </motion.div>
             <motion.div
               variants={statBubble}
-              className="absolute -right-10 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-base font-semibold text-[#797382] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2"
+              className="absolute -right-10 bottom-1/2 flex h-fit w-fit flex-row items-center justify-between space-x-1 rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-white/40 px-2 py-1 text-sm font-semibold text-[#797382] shadow-sm backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] dark:shadow-md sm:py-2"
             >
               <HiLightBulb className="size-5 text-[#E38EC0] dark:text-[#a32dd2]" />
               <span className="">&lt; 1 YOE</span>
