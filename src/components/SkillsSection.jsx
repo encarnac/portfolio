@@ -36,8 +36,8 @@ const skillsContainer = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.5,
+      delayChildren: 0.2,
+      staggerChildren: 0.4,
     },
   },
 };
@@ -45,13 +45,13 @@ const skillsContainer = {
 export const SkillsSection = () => {
   return (
     <section id="skills" className="mb-12 w-full">
-      <div className="relative mb-10 flex flex-col items-center justify-center py-3">
-        <h3 className="font-sans text-4xl font-extrabold tracking-wider sm:text-5xl lg:text-6xl">
+      <div className="relative mb-8 flex flex-row items-center justify-between py-3">
+        <h3 className="font-sans text-4xl font-extrabold tracking-wide sm:text-5xl lg:text-6xl">
           <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
             Skills
           </span>
         </h3>
-        <h4 className="absolute bottom-1 font-mono text-lg tracking-tighter text-[#797382]/70 dark:text-white/60 sm:text-xl lg:text-2xl">
+        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
           [02]what i do
         </h4>
       </div>
@@ -67,11 +67,11 @@ export const SkillsSection = () => {
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-14 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F]">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={frontend} className="w-11" />
             </div>
-            <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-1 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
+            <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-2 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
               Front-End
             </h4>
             <ul className="flex-rows flex flex-wrap justify-center gap-x-1 gap-y-2 px-8 text-[#6B6573] dark:text-[#CCC3D7]">
@@ -111,11 +111,11 @@ export const SkillsSection = () => {
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-14 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F]">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={backend} className="w-11" />
             </div>
-            <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-1 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
+            <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-2 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
               Back-End
             </h4>
             <ul className="flex-rows flex flex-wrap justify-center gap-x-1 gap-y-2 px-8 text-[#6B6573] dark:text-[#CCC3D7]">
@@ -151,11 +151,11 @@ export const SkillsSection = () => {
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-14 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F]">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#dae0e7] px-0 py-8 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={tools} className="h-11" />
             </div>
-            <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-1 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
+            <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-2 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
               Dev Tools
             </h4>
             <ul className="flex-rows flex flex-wrap justify-center gap-x-1 gap-y-2 px-8 text-[#6B6573] dark:text-[#CCC3D7]">

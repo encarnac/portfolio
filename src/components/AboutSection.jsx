@@ -11,7 +11,7 @@ const aboutPhoto = {
     opacity: 1,
     x: 0,
     transition: {
-      delayChildren: 0.9,
+      delayChildren: 0.8,
       staggerChildren: 0.4,
     },
   },
@@ -40,13 +40,13 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section id="about" className="mb-12 w-full">
-      <div className="relative mb-4 flex flex-col items-center justify-center py-3">
-        <h3 className="font-sans text-4xl font-extrabold tracking-wider sm:text-5xl lg:text-6xl">
+      <div className="relative mb-8 flex flex-col items-center justify-center py-3">
+        <h3 className="font-sans text-4xl font-extrabold tracking-wide sm:text-5xl lg:text-6xl">
           <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
             About
           </span>
         </h3>
-        <h4 className="absolute bottom-1 font-mono text-lg tracking-tighter text-[#797382]/70 dark:text-white/60 sm:text-xl lg:text-2xl">
+        <h4 className="absolute bottom-1 font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
           [01]who i am
         </h4>
       </div>
