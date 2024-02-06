@@ -55,7 +55,7 @@ const AboutSection = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ type: "spring", stiffness: 300 }}
+          transition={{ type: "spring", stiffness: 80 }}
           variants={aboutPhoto}
           className="relative flex flex-col items-center justify-items-center gap-y-4 lg:col-span-5"
         >
@@ -89,7 +89,7 @@ const AboutSection = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ type: "spring", stiffness: 80 }}
+          transition={{ type: "spring", stiffness: 70 }}
           variants={aboutContent}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
