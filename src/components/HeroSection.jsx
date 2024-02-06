@@ -1,13 +1,44 @@
 import { TypeAnimation } from "react-type-animation";
 import HeaderPhoto from "../assets/header-pfp.png";
+import react from "../assets/react.svg";
+import python from "../assets/python.svg";
+import nodejs from "../assets/nodejs.svg";
+import { motion } from "framer-motion";
+
+const heroContainer = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      delayChildren: 0.6,
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const logo = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 export default function Header() {
   return (
     <>
       <section className="relative mb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={heroContainer}
+          className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1"
+        >
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-6xl font-extrabold text-[#797382] dark:text-white lg:text-8xl">
+            <h1 className="mb-4 text-5xl font-extrabold text-[#797382] dark:text-white sm:text-6xl lg:text-8xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                 Hello, I'm
               </span>
@@ -27,7 +58,7 @@ export default function Header() {
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
-                className="font-mono text-6xl lg:text-7xl"
+                className="font-mono text-4xl sm:text-5xl lg:text-7xl"
               />
             </h1>
             <p className="mb-6 font-mono text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
@@ -47,18 +78,39 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-5 mt-12 place-self-center lg:my-24">
-            <div className="relative z-0 before:absolute before:bottom-2 before:left-3 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
+          <div className="col-span-5 my-24 place-self-center">
+            <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
                 <img
                   src={HeaderPhoto}
                   alt="profile photo"
-                  className="size-[250px] md:size-[325px] xl:size-[390px] absolute inset-x-0 bottom-0 rounded-bl-[50%]"
+                  className="size-[250px] md:size-[325px] xl:size-[390px] absolute inset-x-0 bottom-0 z-10 rounded-bl-[50%]"
                 />
+                <motion.div
+                  transition={{ type: "spring", stiffness: 200 }}
+                  variants={logo}
+                  className="absolute -bottom-9 right-9 z-50 rounded-3xl border-[1px] border-[#DAE0E7] bg-[#DAE0E7]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80"
+                >
+                  <img src={react} className="size-16 md:size-24" />
+                </motion.div>
+                <motion.div
+                  transition={{ type: "spring", stiffness: 200 }}
+                  variants={logo}
+                  className="absolute -left-3 top-1/4 z-[1] rounded-2xl border-[1px] border-[#DAE0E7] bg-[#DAE0E7]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80 md:rounded-3xl"
+                >
+                  <img src={nodejs} className="size-12 md:size-16" />
+                </motion.div>
+                <motion.div
+                  transition={{ type: "spring", stiffness: 200 }}
+                  variants={logo}
+                  className="absolute right-0 h-fit rounded-3xl border-[1px] border-[#DAE0E7] bg-[#DAE0E7]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80"
+                >
+                  <img src={python} className="size-9 md:size-14" />
+                </motion.div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
