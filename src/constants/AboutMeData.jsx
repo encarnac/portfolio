@@ -6,7 +6,7 @@ export const AboutMeData = [
     content: (
       <div className="flex flex-col px-0 py-px sm:px-1 md:px-6">
         <div className="">
-          <p className="text-pretty mb-2 indent-1">
+          <p className="text-pretty mb-2">
             My journey as a developer began in 2021 when I made a career switch
             from Psychology to Computer Science. Since then, I've continued to
             grow and evolve as a{" "}
@@ -15,7 +15,7 @@ export const AboutMeData = [
             specializing in <span className="font-extrabold">React.js</span> and{" "}
             <span className="font-extrabold"> Express</span>.
           </p>
-          <p className="text-pretty indent-1">
+          <p className="text-pretty">
             I have a holistic understanding of web design and development, and I
             strive to write code that accurately implements designs for
             interactive and responsive web applications. I am a quick learner
@@ -31,7 +31,7 @@ export const AboutMeData = [
     content: (
       <ul className="space-y-4 px-0 py-px sm:px-1 md:px-6">
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[1px] before:bg-[#F38BBB]/60 dark:before:bg-[#7943ed]/50">
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[.15rem] before:bg-[#F38BBB]/90 dark:before:bg-[#7943ed]/90">
             <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
           </div>
           <div className="w-full">
@@ -48,7 +48,7 @@ export const AboutMeData = [
           </div>
         </li>
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-4/6 before:w-[1px] before:bg-[#F38BBB]/60 dark:before:bg-[#7943ed]/50">
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[.15rem] before:bg-[#F38BBB]/90 dark:before:bg-[#7943ed]/90">
             <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
           </div>
           <div className="w-full">
