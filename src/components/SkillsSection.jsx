@@ -23,6 +23,25 @@ import {
   SiPostman,
 } from "react-icons/si";
 
+const skillCard = {
+  hidden: { y: 40, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const skillsContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
 export const SkillsSection = () => {
   return (
     <section id="skills" className="mb-12 w-full">
@@ -36,13 +55,20 @@ export const SkillsSection = () => {
           [02]what i do
         </h4>
       </div>
-      <div className="justify-content-center grid grid-cols-1 gap-x-0 gap-y-8 px-4 sm:px-0 md:grid-cols-12 md:gap-x-3 md:gap-y-0 lg:gap-x-12 xl:gap-x-16">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        variants={skillsContainer}
+        className="justify-content-center grid grid-cols-1 gap-x-0 gap-y-8 px-4 sm:px-0 md:grid-cols-12 md:gap-x-3 md:gap-y-0 lg:gap-x-12 xl:gap-x-16"
+      >
         <motion.div
-          layout
-          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
+          transition={{ type: "spring", stiffness: 150 }}
+          variants={skillCard}
+          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#e5ebee] px-0 py-14 dark:bg-[#231F2F]">
-            <div className="mb-1 rounded-full bg-[#d4dee2] p-5 dark:bg-[#2b2841]">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#e5ebee] px-0 py-14 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F]">
+            <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={frontend} className="w-11" />
             </div>
             <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-1 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
@@ -81,11 +107,12 @@ export const SkillsSection = () => {
           </div>
         </motion.div>
         <motion.div
-          layout
-          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
+          transition={{ type: "spring", stiffness: 150 }}
+          variants={skillCard}
+          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#e5ebee] px-0 py-14 dark:bg-[#231F2F]">
-            <div className="mb-1 rounded-full bg-[#d4dee2] p-5 dark:bg-[#2b2841]">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#DEE3E9] px-0 py-14 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F]">
+            <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={backend} className="w-11" />
             </div>
             <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-1 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
@@ -120,11 +147,12 @@ export const SkillsSection = () => {
           </div>
         </motion.div>
         <motion.div
-          layout
-          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
+          transition={{ type: "spring", stiffness: 150 }}
+          variants={skillCard}
+          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#e5ebee] px-0 py-14 dark:bg-[#231F2F]">
-            <div className="mb-1 rounded-full bg-[#d4dee2] p-5 dark:bg-[#2b2841]">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#DEE3E9] px-0 py-14 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F]">
+            <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={tools} className="h-11" />
             </div>
             <h4 className="relative pb-4 text-xl font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-1 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED]">
@@ -154,7 +182,7 @@ export const SkillsSection = () => {
             </ul>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
