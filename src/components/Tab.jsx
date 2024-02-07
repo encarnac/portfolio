@@ -10,14 +10,14 @@ export const Tab = ({ active, selectTab, tabName }) => {
         active === tabName
           ? "text-[#5B5662] dark:text-[#CCC3D7]"
           : "dark:text-[#b7b0c2]/70 text-[#726C7B]/70   hover:text-[#5B5662] dark:hover:text-[#CCC3D7]"
-      }  transition duration-300 px-1 md:px-4 relative text-lg md:text-xl font-bold py-3`}
+      }  transition duration-300 px-1 md:px-4  relative text-[1.09rem] sm:text-lg md:text-xl font-bold py-3`}
     >
       <span className="relative">{tabName} </span>
 
       {active === tabName && (
         <motion.div
           layout
-          className="absolute -bottom-[.2rem] left-0 h-[.4rem] w-fit rounded-sm bg-[#F38BBB] dark:bg-[#7943ed]"
+          className="absolute -bottom-[.22rem] left-0 h-[.45rem] w-fit rounded-md bg-[#F38BBB] dark:bg-[#7943ed]"
           animate={{ width: "100%", transition: { duration: 0.4 } }}
         />
       )}
