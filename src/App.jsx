@@ -54,7 +54,7 @@ export default function App() {
       {/* Hero Section with Divider */}
       <div className="relative bg-[#e3e8ee] dark:bg-[#251e32]">
         <motion.div
-          className="container mx-auto mb-36 mt-24 px-5 py-4 sm:px-10"
+          className="container mx-auto mb-36 mt-20 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("hero")}
         >

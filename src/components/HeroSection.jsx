@@ -30,7 +30,7 @@ const logo = {
 export default function Header() {
   return (
     <>
-      <section className="relative mb-12">
+      <header className="relative mb-12">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -86,7 +86,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-5 my-24 place-self-center">
+          <div className="col-span-5 my-12 place-self-center">
             <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
                 <img
@@ -119,7 +119,7 @@ export default function Header() {
             </div>
           </div>
         </motion.div>
-      </section>
+      </header>
     </>
   );
 }
