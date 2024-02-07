@@ -3,6 +3,7 @@ import HeaderPhoto from "../assets/header-pfp.png";
 import react from "../assets/react.svg";
 import python from "../assets/python.svg";
 import nodejs from "../assets/nodejs.svg";
+import resume from "../assets/Resume_ColeneEnc.pdf";
 import { motion } from "framer-motion";
 
 const heroContainer = {
@@ -65,16 +66,23 @@ export default function Header() {
               // Scroll down to learn more about what I do
             </p>
             <div className="">
-              <button className="mr-4 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
+              <a
+                href="#contact"
+                className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
+              >
                 Hire Me
-              </button>
-              <button className="mt-3 w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit">
+              </a>
+              <a
+                href={resume}
+                download
+                className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
+              >
                 <span className="block rounded-full bg-[#e3e8ee] px-5 py-2 transition duration-300 dark:bg-[#251e32]">
                   <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                     Download CV
                   </span>
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -89,21 +97,21 @@ export default function Header() {
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
                   variants={logo}
-                  className="absolute -bottom-9 right-9 z-50 rounded-3xl border-[1px] border-[#DAE0E7] bg-[#DAE0E7]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80"
+                  className="absolute -bottom-9 right-9 z-50 rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80 sm:rounded-[2rem]"
                 >
                   <img src={react} className="size-16 md:size-24" />
                 </motion.div>
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
                   variants={logo}
-                  className="absolute -left-3 top-1/4 z-[1] rounded-2xl border-[1px] border-[#DAE0E7] bg-[#DAE0E7]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80 md:rounded-3xl"
+                  className="absolute -left-3 top-1/4 z-[1] rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80"
                 >
                   <img src={nodejs} className="size-12 md:size-16" />
                 </motion.div>
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
                   variants={logo}
-                  className="absolute right-0 h-fit rounded-3xl border-[1px] border-[#DAE0E7] bg-[#DAE0E7]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80"
+                  className="absolute right-0 h-fit rounded-2xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80 sm:rounded-3xl"
                 >
                   <img src={python} className="size-9 md:size-14" />
                 </motion.div>

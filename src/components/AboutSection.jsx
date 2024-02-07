@@ -51,7 +51,7 @@ const AboutSection = ({ setSelectedPage }) => {
             </span>
           </h3>
         </div>
-        <div className="relative flex h-fit w-fit flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-6 transition dark:border-b-[#b7b0c2]/10 lg:col-span-7 lg:mx-0 lg:my-0">
+        <div className="relative flex h-fit w-fit flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 transition dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0">
           {AboutMeData.map((tabContent, index) => (
             <Tab
               className={index}
