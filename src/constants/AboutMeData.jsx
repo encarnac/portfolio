@@ -63,7 +63,7 @@ export const AboutMeData = [
     ),
   },
   {
-    name: "Qualifications",
+    name: "Education",
     content: (
       <ul className="space-y-4 px-0 py-px sm:px-1 md:px-6">
         <li className="relative flex gap-2 md:gap-4">
