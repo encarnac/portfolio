@@ -1,5 +1,5 @@
 import watch_soon from "../assets/watch-soon.png";
-import adopt_a_pal from "../assets/adopt-a-pal(1).jpeg";
+import adopt_a_pal from "../assets/adopt-a-pal.png";
 import portfolio from "../assets/portfolio.png";
 const ProjectsSection = () => {
   return (
