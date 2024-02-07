@@ -1,6 +1,7 @@
 import { LuGraduationCap } from "react-icons/lu";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
+import resume from "../assets/Resume_ColeneEnc.pdf";
 
 export const AboutMeData = [
   {
@@ -41,14 +42,22 @@ export const AboutMeData = [
           </p>
         </div>
 
-        <div className="flex flex-row items-center justify-stretch gap-x-1 md:gap-x-4">
-          <button className="rounded-3xl bg-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 dark:bg-[#7943ED] sm:text-base md:px-6 md:py-3">
+        <div className="flex flex-row items-center justify-stretch gap-x-2 md:gap-x-3">
+          <a
+            href={resume}
+            download
+            className="inline-block rounded-3xl bg-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-[#FA8FC1] dark:bg-[#7943ED] dark:hover:bg-[#8248FF] sm:text-base md:px-6 md:py-3"
+          >
             Download CV
-          </button>
+          </a>
           <hr class="h-px w-8 border-0 bg-[#6B6573] dark:bg-[#CCC3D7] sm:w-12"></hr>
           <p className="hidden text-sm font-light sm:inline">Follow me</p>
-          <SiGithub className="size-6 sm:size-7" />
-          <SiLinkedin className="size-6 sm:size-7" />
+          <a href="https://github.com/encarnac">
+            <SiGithub className="size-7 sm:size-8 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
+          </a>
+          <a href="https://www.linkedin.com/in/encarnac/">
+            <SiLinkedin className="size-7 sm:size-8 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
+          </a>
         </div>
       </div>
     ),
