@@ -29,7 +29,7 @@ const ProjectsSection = () => {
                 animations and a dark/light mode theme.
               </p>
             </div>
-            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 gap-y-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 React
               </li>
@@ -43,7 +43,7 @@ const ProjectsSection = () => {
                 GCP
               </li>
             </ul>
-            <div className="mt-4 flex flex-row items-center justify-start space-x-4">
+            <div className="mt-3 flex flex-row items-center justify-start space-x-4">
               <a href="">
                 <LuGithub className="size-5" />
               </a>
@@ -101,7 +101,7 @@ const ProjectsSection = () => {
                 Railway
               </li>
             </ul>{" "}
-            <div className="mt-4 flex flex-row items-center justify-end space-x-4">
+            <div className="mt-3 flex flex-row items-center justify-end space-x-4">
               <a href="">
                 <LuGithub className="size-5" />
               </a>
@@ -124,7 +124,7 @@ const ProjectsSection = () => {
                 collection of potential pets.
               </p>
             </div>
-            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 gap-y-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 React
               </li>
@@ -138,7 +138,7 @@ const ProjectsSection = () => {
                 GCP
               </li>
             </ul>
-            <div className="mt-4 flex flex-row items-center justify-start space-x-4">
+            <div className="mt-3 flex flex-row items-center justify-start space-x-4">
               <a href="">
                 <LuGithub className="size-5" />
               </a>
