@@ -23,7 +23,7 @@ const Navbar = ({
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-[#e3e8ee] transition duration-300 dark:bg-[#251e32]">
-      <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-4">
+      <div className="container mx-auto flex flex-wrap items-center justify-between border-[#d9dbdf] px-4 py-2">
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
