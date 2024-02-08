@@ -16,7 +16,7 @@ const ProjectsSection = () => {
           </span>
         </h3>
       </div>
-      <div className="space-y-8 text-[#3f3b43] dark:text-white">
+      <div className="space-y-8 text-[#6B6573] dark:text-white">
         {/* FIRST PROJECT CARD */}
         <div class="group grid grid-cols-10 items-center">
           {/* PROJECT DESCRIPTION */}
@@ -61,11 +61,11 @@ const ProjectsSection = () => {
           </div>
 
           {/* PROJECT PHOTO */}
-          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-2xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out group-hover:border-2 group-hover:border-[#eaa3c2] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-6 md:col-end-10 md:h-fit">
+          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out group-hover:border-2 group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-6 md:col-end-10 md:h-fit">
             <img
               src={portfolio}
               alt="adopt-a-pal mockups"
-              className="opacity30 h-full w-full rounded-xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
+              className="opacity30 h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
             />
           </div>
         </div>
@@ -73,11 +73,11 @@ const ProjectsSection = () => {
         {/* SECOND PROJECT CARD */}
         <div class="group grid grid-cols-10 items-center">
           {/* PROJECT PHOTO */}
-          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-2xl border-[1px] border-white p-2 transition duration-300 ease-in-out group-hover:border-2 group-hover:border-[#eaa3c2] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-2 md:col-end-6 md:h-fit">
+          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-3xl border-[1px] border-white p-2 transition duration-300 ease-in-out group-hover:border-2 group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-2 md:col-end-6 md:h-fit">
             <img
               src={watch_soon}
               alt="adopt-a-pal mockups"
-              className="h-full w-full rounded-xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
+              className="h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-10 md:opacity-100 md:group-hover:opacity-100"
             />
           </div>
 
@@ -177,11 +177,11 @@ const ProjectsSection = () => {
           </div>
 
           {/* PROJECT PHOTO */}
-          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-2xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out group-hover:border-2 group-hover:border-[#eaa3c2] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-6 md:col-end-10 md:h-fit">
+          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out group-hover:border-2 group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-6 md:col-end-10 md:h-fit">
             <img
               src={adopt_a_pal}
               alt="adopt-a-pal mockups"
-              className="h-full w-full rounded-xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
+              className="h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
             />
           </div>
         </div>
