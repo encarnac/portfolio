@@ -1,21 +1,161 @@
 import watch_soon from "../assets/watch-soon.png";
 import adopt_a_pal from "../assets/adopt-a-pal.png";
 import portfolio from "../assets/portfolio.png";
+import { LuGithub, LuExternalLink } from "react-icons/lu";
+
 const ProjectsSection = () => {
   return (
     <section id="projects" className="mb-12 w-full">
       <div className="relative mb-8 flex flex-col items-end justify-end py-3">
-        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
+        <h4 className="text-md font-mono tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl md:text-2xl">
           [03]projects
         </h4>
-        <h3 className="font-sans text-4xl font-bold lg:text-5xl">
+        <h3 className="font-sans text-4xl font-bold md:text-5xl">
           <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
             What I Made
           </span>
         </h3>
       </div>
-      <div className="grid grid-cols-1 gap-x-4 text-[#797382] dark:text-white lg:grid-cols-12">
-        {/* FIRST CARD */}
+      <div className="flex flex-col items-center space-y-8 text-[#3f3b43] dark:text-white">
+        {/* FIRST PROJECT CARD */}
+        <div class="grid grid-cols-10 items-center">
+          <div class="col-span-full row-span-full p-3 px-4 text-start md:col-span-5 md:col-start-2 md:px-0">
+            <h4 class="font-mono text-sm">React Portfolio Website</h4>
+            <h3 class="mb-2 mt-0 text-2xl font-bold">Portfolio</h3>
+            <div class="">
+              <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
+                A responsive and interactive website to showcase my background,
+                skills, and projects. Used as a learning tool for using
+                animations and a dark/light mode theme.
+              </p>
+            </div>
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                React
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Tailwind
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Framer Motion
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                GCP
+              </li>
+            </ul>
+            <div className="mt-4 flex flex-row items-center justify-start space-x-4">
+              <a href="">
+                <LuGithub className="size-5" />
+              </a>
+              <a href="">
+                <LuExternalLink className="size-5" />
+              </a>
+            </div>
+          </div>
+
+          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-2xl border-[1px] border-[#797382]/40 p-2 dark:border-[#807C8E]/50 md:col-start-6 md:col-end-10 md:h-fit">
+            <img
+              src={portfolio}
+              alt="adopt-a-pal mockups"
+              className="h-full rounded-xl opacity-30 md:opacity-100"
+            />
+          </div>
+        </div>
+
+        {/* SECOND PROJECT CARD */}
+        <div class="grid grid-cols-10 items-center">
+          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-2xl border-[1px] border-[#797382]/40 p-2 dark:border-[#807C8E]/50 md:col-start-2 md:col-end-6 md:h-fit">
+            <img
+              src={watch_soon}
+              alt="adopt-a-pal mockups"
+              className="h-full rounded-xl object-cover opacity-20 md:opacity-100"
+            />
+          </div>
+          <div class="col-span-full row-span-full p-3 px-4 text-end md:col-span-5 md:col-start-5 md:px-0">
+            <h4 class="font-mono text-sm">TV and Movie Reminder App</h4>
+            <h3 class="mb-2 mt-0 text-2xl font-bold">Watch Soon</h3>
+            <div class="">
+              <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
+                Search for tv shows or movies by title using the The Movie
+                Database API, and add content to your watchlist to receive
+                future release reminders on your Google Calendar.
+              </p>
+            </div>
+            <ul className="mt-4 flex flex-row flex-wrap items-center justify-end gap-x-2 gap-y-2 pl-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                React
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Bootstrap
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Express
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                MongoDB
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                GCP
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Railway
+              </li>
+            </ul>{" "}
+            <div className="mt-4 flex flex-row items-center justify-end space-x-4">
+              <a href="">
+                <LuGithub className="size-5" />
+              </a>
+              <a href="">
+                <LuExternalLink className="size-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* THIRD PROJECT CARD */}
+        <div class="grid grid-cols-10 items-center">
+          <div class="col-span-full row-span-full p-3 px-4 text-start md:col-span-5 md:col-start-2 md:px-0">
+            <h4 class="font-mono text-sm">Pet Adoption "Dating" App</h4>
+            <h3 class="mb-2 mt-0 text-2xl font-bold">Adopt-a-Pal</h3>
+            <div class="">
+              <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
+                A web application for a "dating" service to connect potential
+                adopters with pets posted by animal shelters. Users can swipe
+                through listings posted by shelters and "like" pets to create a
+                collection of potential pets.
+              </p>
+            </div>
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                React
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Tailwind
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                Flask
+              </li>
+              <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
+                GCP
+              </li>
+            </ul>
+            <div className="mt-4 flex flex-row items-center justify-start space-x-4">
+              <a href="">
+                <LuGithub className="size-5" />
+              </a>
+              <a href="">
+                <LuExternalLink className="size-5" />
+              </a>
+            </div>
+          </div>
+
+          <div class="relative z-[-1] col-span-full row-span-full h-full rounded-2xl border-[1px] border-[#797382]/40 p-2 dark:border-[#807C8E]/50 md:col-start-6 md:col-end-10 md:h-fit">
+            <img
+              src={adopt_a_pal}
+              alt="adopt-a-pal mockups"
+              className="h-full rounded-xl object-cover opacity-30 md:opacity-100"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
