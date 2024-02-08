@@ -67,7 +67,7 @@ const ProjectsSection = () => {
             <img
               src={portfolio}
               alt="adopt-a-pal mockups"
-              className="opacity30 h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
+              className="opacity30 h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-10 md:opacity-100 md:group-hover:opacity-100"
             />
           </div>
         </div>
@@ -187,7 +187,7 @@ const ProjectsSection = () => {
             <img
               src={adopt_a_pal}
               alt="adopt-a-pal mockups"
-              className="h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-20 md:opacity-100 md:group-hover:opacity-100"
+              className="h-full w-full rounded-2xl object-cover transition duration-300 ease-linear group-hover:opacity-10 md:opacity-100 md:group-hover:opacity-100"
             />
           </div>
         </div>
