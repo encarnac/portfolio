@@ -62,8 +62,8 @@ export default function Header() {
                 className="font-mono text-4xl sm:text-5xl lg:text-7xl"
               />
             </h1>
-            <p className="mb-6 font-mono text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
-              // Scroll down to learn more about what I do
+            <p className="mb-3 font-mono text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
+              // I enjoy building and designing for the web
             </p>
             <div className="">
               <a
@@ -86,7 +86,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-5 my-12 place-self-center">
+          <div className="col-span-5 mt-6 place-self-center sm:mt-12">
             <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
                 <img
