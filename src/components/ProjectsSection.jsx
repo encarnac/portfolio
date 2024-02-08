@@ -21,7 +21,9 @@ const ProjectsSection = () => {
         <div class="group grid grid-cols-10 items-center">
           {/* PROJECT DESCRIPTION */}
           <div class="col-span-full row-span-full p-8 px-4 text-start opacity-0 transition duration-300 hover:opacity-100 md:col-span-5 md:col-start-2 md:p-0 md:opacity-100">
-            <h4 class="font-mono text-sm">React Portfolio Website</h4>
+            <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
+              React Portfolio Website
+            </h4>
             <h3 class="mb-2 mt-0 text-2xl font-bold">Portfolio</h3>
             <div class="">
               <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
@@ -83,7 +85,9 @@ const ProjectsSection = () => {
 
           {/* PROJECT DESCRIPTION */}
           <div class="col-span-full row-span-full p-8 px-4 text-end opacity-0 transition duration-300 hover:opacity-100 md:col-span-5 md:col-start-5 md:p-0 md:opacity-100">
-            <h4 class="font-mono text-sm">TV and Movie Reminder App</h4>
+            <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
+              TV and Movie Reminder App
+            </h4>
             <h3 class="mb-2 mt-0 text-2xl font-bold">Watch Soon</h3>
             <div class="">
               <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
@@ -133,7 +137,9 @@ const ProjectsSection = () => {
         <div class="group grid grid-cols-10 items-center">
           {/* PROJECT DESCRIPTION */}
           <div class="col-span-full row-span-full p-8 px-4 text-start opacity-0 transition duration-300 hover:opacity-100 md:col-span-5 md:col-start-2 md:p-0 md:opacity-100">
-            <h4 class="font-mono text-sm">Pet Adoption "Dating" App</h4>
+            <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
+              Pet Adoption "Dating" App
+            </h4>
             <h3 class="mb-2 mt-0 text-2xl font-bold">Adopt-a-Pal</h3>
             <div class="">
               <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
