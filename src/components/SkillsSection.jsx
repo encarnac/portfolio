@@ -60,7 +60,7 @@ const SkillsSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
         variants={skillsContainer}
-        className="justify-content-center grid grid-cols-1 gap-x-0 gap-y-4 px-0 sm:px-16 md:grid-cols-12 md:gap-x-4 md:gap-y-0 md:px-0 lg:gap-x-6 xl:gap-x-20 2xl:gap-x-28"
+        className="grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 px-0 sm:px-16 md:grid-cols-12 md:gap-x-4 md:gap-y-0 md:px-0 lg:gap-x-6 xl:gap-x-20 2xl:gap-x-28"
       >
         <motion.div
           transition={{ type: "spring", stiffness: 150 }}
