@@ -92,7 +92,7 @@ const ProjectsSection = () => {
                 future release reminders on your Google Calendar.
               </p>
             </div>
-            <ul className="mt-4 flex flex-row flex-wrap items-center justify-end gap-x-2 gap-y-2 pl-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+            <ul className="mt-4 flex flex-row flex-wrap items-center justify-end gap-x-2 gap-y-2 pl-24 text-sm text-[#3f3b43]/90 dark:text-white/80">
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 React
               </li>
