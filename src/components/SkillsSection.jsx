@@ -60,14 +60,14 @@ const SkillsSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
         variants={skillsContainer}
-        className="justify-content-center grid grid-cols-1 gap-x-0 gap-y-4 md:grid-cols-12 md:gap-x-4 md:gap-y-0 lg:gap-x-12 xl:gap-x-16"
+        className="justify-content-center grid grid-cols-1 gap-x-0 gap-y-4 px-0 sm:px-16 md:grid-cols-12 md:gap-x-4 md:gap-y-0 md:px-0 lg:gap-x-6 xl:gap-x-20 2xl:gap-x-28"
       >
         <motion.div
           transition={{ type: "spring", stiffness: 150 }}
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 pb-16 pt-12 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-10 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={frontend} className="w-11" />
             </div>
@@ -109,9 +109,9 @@ const SkillsSection = () => {
         <motion.div
           transition={{ type: "spring", stiffness: 150 }}
           variants={skillCard}
-          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
+          className="relative h-full rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 pb-16 pt-12 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-10 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={backend} className="w-11" />
             </div>
@@ -149,9 +149,9 @@ const SkillsSection = () => {
         <motion.div
           transition={{ type: "spring", stiffness: 150 }}
           variants={skillCard}
-          className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
+          className="relative h-full rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
-          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 pb-16 pt-12 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
+          <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-10 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-14">
             <div className="mb-1 rounded-full bg-[#cfd7e5] p-5 dark:bg-[#2b2841]">
               <img src={tools} className="h-11" />
             </div>
