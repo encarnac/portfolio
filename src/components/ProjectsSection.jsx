@@ -45,7 +45,7 @@ const sliderVariants = {
 };
 
 const ProjectsSection = () => {
-  const [[card, direction], setCard] = useState([0, 0]);
+  const [[card, direction], setCard] = useState([1, 0]);
 
   const nextSlide = () => {
     setCard([card === PROJECTS_DATA.length - 1 ? 0 : card + 1, 1]);
@@ -54,6 +54,7 @@ const ProjectsSection = () => {
   const prevSlide = () => {
     setCard([card === 0 ? PROJECTS_DATA.length - 1 : card - 1, -1]);
   };
+
   return (
     <section id="projects" className="mb-12 w-full">
       <div className="relative mb-8 flex flex-col items-end justify-end py-3">
@@ -73,20 +74,32 @@ const ProjectsSection = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={projectCard}
         transition={{ type: "tween", duration: 0.9 }}
-        className="relative flex h-full flex-col items-center justify-center pb-40 pt-72 text-[#6B6573] dark:text-white md:hidden"
+        className="relative flex h-[34rem] flex-col items-center justify-center text-[#6B6573] dark:text-white md:hidden"
       >
-        <LuChevronLeft
-          className="size-8 absolute -left-2 top-1/2 z-10 transition duration-300 hover:scale-110"
-          onClick={prevSlide}
-        />
-        <LuChevronRight
-          className="size-8 absolute -right-2 top-1/2 z-10 transition duration-300 hover:scale-110"
-          onClick={nextSlide}
-        />
-        <div className="absolute top-0 flex flex-row justify-center gap-x-2">
-          <div className="size-3 rounded-full border-[1px] border-[#6B6573] p-0 dark:border-white"></div>{" "}
-          <div className="size-3 rounded-full border-[1px] border-[#6B6573] p-0 dark:border-white"></div>{" "}
-          <div className="size-3 rounded-full border-[1px] border-[#6B6573] p-0 dark:border-white"></div>
+        {card !== 0 && (
+          <LuChevronLeft
+            className="size-7 absolute -left-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/30 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/20 hover:dark:text-white"
+            onClick={prevSlide}
+          />
+        )}
+        {card !== PROJECTS_DATA.length - 1 && (
+          <LuChevronRight
+            className="size-7 absolute -right-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/30 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/20 hover:dark:text-white"
+            onClick={nextSlide}
+          />
+        )}
+        <div className="absolute bottom-3 flex flex-row justify-center gap-x-2">
+          {PROJECTS_DATA.map((project, index) => (
+            <span
+              key={index}
+              onClick={() => setCard([index, index > card ? 1 : -1])}
+              className={`size-3 transition-colors linear duration-500 bg-none rounded-full border-[1px] hover:bg-[#6B6573] hover:dark:bg-white border-[#6B6573]/30 p-0 dark:border-white/20 cursor-pointer ${
+                card === index
+                  ? "bg-[#6B6573] dark:bg-white"
+                  : "bg-[#6B6573]/20 dark:bg-white/20"
+              }`}
+            ></span>
+          ))}
         </div>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -100,19 +113,19 @@ const ProjectsSection = () => {
               x: { type: "spring", stiffness: 200, damping: 30 },
               opacity: { duration: 0.8 },
             }}
-            className="absolute left-0 right-0 px-8"
+            className="absolute left-0 right-0 top-0 px-6"
           >
-            <div class="group relative rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
+            <div class="group relative rounded-2xl border-[1px] border-[#797382]/40 border-white p-[5px] transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={PROJECTS_DATA[card].github}
-                  className="rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-105"
+                  className="cursor-pointer rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-105"
                 >
                   <LuCode2 className="size-8" />
                 </a>
                 <a
                   href={PROJECTS_DATA[card].demo}
-                  className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-105"
+                  className="cursor-pointer rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-105"
                 >
                   <LuEye className="size-8" />
                 </a>
@@ -120,7 +133,7 @@ const ProjectsSection = () => {
               <img
                 src={PROJECTS_DATA[card].image}
                 alt={`${PROJECTS_DATA[card].title} mock-up`}
-                className="h-full w-full rounded-2xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
+                className="h-full w-full rounded-xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
               />
             </div>
             {/* DESCRIPTION */}
@@ -132,15 +145,15 @@ const ProjectsSection = () => {
                 {PROJECTS_DATA[card].title}
               </h3>
               <div class="">
-                <p className="rounded-2xl text-sm">
+                <p className="text-pretty text-sm">
                   {PROJECTS_DATA[card].description}
                 </p>
               </div>
-              <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-xs text-[#3f3b43]/90 dark:text-white/80">
+              <ul className="mt-2 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm text-white">
                 {PROJECTS_DATA[card].tags.map((tag, index) => (
                   <li
                     key={index}
-                    className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90"
+                    className="rounded-md bg-[#797382]/40 px-1 py-px dark:bg-[#807C8E]/50"
                   >
                     {tag}
                   </li>
@@ -167,7 +180,7 @@ const ProjectsSection = () => {
             class="col-span-4 flex flex-col items-center"
           >
             {/* PHOTO */}
-            <div class="group relative rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
+            <div class="group relative rounded-2xl border-[1px] border-[#797382]/40 border-white p-1 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit lg:p-2 xl:rounded-3xl">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={project.github}
@@ -185,7 +198,7 @@ const ProjectsSection = () => {
               <img
                 src={project.image}
                 alt={`${project.title} mock-up`}
-                className="h-full w-full rounded-2xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
+                className="h-full w-full rounded-xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60 xl:rounded-2xl"
               />
             </div>
             {/* DESCRIPTION */}
@@ -199,11 +212,11 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
               </div>
-              <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm text-[#3f3b43]/90 dark:text-white/80">
+              <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm text-white">
                 {project.tags.map((tag, index) => (
                   <li
                     key={index}
-                    className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90"
+                    className="rounded-lg bg-[#797382]/40 px-2 py-px dark:bg-[#807C8E]/50"
                   >
                     {tag}
                   </li>
