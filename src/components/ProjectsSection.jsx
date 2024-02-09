@@ -41,28 +41,50 @@ const ProjectsSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
         variants={projectsContainer}
-        className="space-y-8 text-[#6B6573] dark:text-white"
+        className="grid grid-cols-1 gap-y-8 text-[#6B6573] dark:text-white md:grid-cols-12 md:gap-x-6 md:gap-y-0"
       >
         {/* PROJECT 1 CARD */}
         <motion.div
           transition={{ type: "tween", duration: 0.4 }}
           variants={projectCard}
-          class="group grid grid-cols-10 items-center"
+          class="col-span-4 flex flex-col items-center"
         >
+          {/* PROJECT 1 PHOTO */}
+          <div class="group relative rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
+            <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
+              <a
+                href="https://github.com/encarnac/portfolio"
+                className="rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-105"
+              >
+                <LuCode2 className="size-8" />
+              </a>
+              <a
+                href="https://encarnac.netlify.app/"
+                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-105"
+              >
+                <LuEye className="size-8" />
+              </a>
+            </div>
+            <img
+              src={portfolio}
+              alt="adopt-a-pal mockups"
+              className="h-full w-full rounded-2xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
+            />
+          </div>
           {/* PROJECT 1 DESCRIPTION */}
-          <div class="visible relative z-50 col-span-full row-span-full p-8 px-4 text-start transition duration-300 group-hover:invisible md:visible md:col-span-5 md:col-start-2 md:p-0 md:group-hover:visible">
+          <div class="visible relative z-50 px-2 py-2 text-start transition duration-300">
             <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
               React Portfolio Website
             </h4>
             <h3 class="mb-2 mt-0 text-2xl font-bold">Portfolio</h3>
             <div class="">
-              <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
+              <p className="line-clamp-4 rounded-2xl text-base hover:line-clamp-none">
                 A responsive and interactive website to showcase my background,
                 skills, and projects. Used as a learning tool for using
                 animations and a dark/light mode theme.
               </p>
             </div>
-            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 gap-y-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm text-[#3f3b43]/90 dark:text-white/80">
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 React
               </li>
@@ -77,49 +99,26 @@ const ProjectsSection = () => {
               </li>
             </ul>
           </div>
-
-          {/* PROJECT 1 PHOTO */}
-          <div class="relative col-span-full row-span-full h-full rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-6 md:col-end-10 md:h-fit">
-            <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
-              <a
-                href="https://github.com/encarnac/portfolio"
-                className="rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuCode2 className="size-8" />
-              </a>
-              <a
-                href="https://encarnac.netlify.app/"
-                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuEye className="size-8" />
-              </a>
-            </div>
-            <img
-              src={portfolio}
-              alt="adopt-a-pal mockups"
-              className="h-full w-full rounded-2xl object-cover opacity-10 transition duration-300 ease-linear group-hover:opacity-100 md:opacity-100 md:group-hover:opacity-70"
-            />
-          </div>
         </motion.div>
 
         {/* PROJECT 2 CARD */}
         <motion.div
           transition={{ type: "tween", duration: 0.4 }}
           variants={projectCard}
-          class="group grid grid-cols-10 items-center"
+          class="col-span-4 flex flex-col items-center"
         >
           {/* PROJECT 2 PHOTO */}
-          <div class="relative col-span-full row-span-full h-full rounded-3xl border-[1px] border-white p-2 transition duration-300 ease-in-out group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-2 md:col-end-6 md:h-fit">
-            <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 bg-opacity-0 text-white group-hover:flex">
+          <div class="group relative rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
+            <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
               <a
-                href="https://github.com/encarnac/tv-movie-reminder"
-                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-110"
+                href="https://github.com/encarnac/portfolio"
+                className="rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-105"
               >
                 <LuCode2 className="size-8" />
               </a>
               <a
-                href="https://watch-soon.up.railway.app/ "
-                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-110"
+                href="https://encarnac.netlify.app/"
+                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-105"
               >
                 <LuEye className="size-8" />
               </a>
@@ -127,24 +126,23 @@ const ProjectsSection = () => {
             <img
               src={watch_soon}
               alt="adopt-a-pal mockups"
-              className="h-full w-full rounded-2xl object-cover opacity-10 transition duration-300 ease-linear group-hover:opacity-100 md:opacity-100 md:group-hover:opacity-70"
+              className="h-full w-full rounded-2xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
             />
           </div>
-
           {/* PROJECT 2 DESCRIPTION */}
-          <div class="visible relative z-50 col-span-full row-span-full p-8 px-4 text-end transition duration-300 group-hover:invisible md:visible md:col-span-5 md:col-start-5 md:p-0 md:group-hover:visible">
+          <div class="visible relative z-50 px-2 py-2 text-start transition duration-300">
             <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
-              TV and Movie Reminder App
+              TV & Movie Reminder App
             </h4>
             <h3 class="mb-2 mt-0 text-2xl font-bold">Watch Soon</h3>
             <div class="">
-              <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
+              <p className="line-clamp-4 rounded-2xl text-base hover:line-clamp-none">
                 Search for tv shows or movies by title using the The Movie
                 Database API, and add content to your watchlist to receive
-                future release reminders on your Google Calendar.
+                future release reminders on Google Calendar.
               </p>
             </div>
-            <ul className="mt-4 flex flex-row flex-wrap items-center justify-end gap-x-2 gap-y-2 pl-24 text-sm text-[#3f3b43]/90 dark:text-white/80">
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm text-[#3f3b43]/90 dark:text-white/80">
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 React
               </li>
@@ -163,7 +161,7 @@ const ProjectsSection = () => {
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 Railway
               </li>
-            </ul>{" "}
+            </ul>
           </div>
         </motion.div>
 
@@ -171,23 +169,45 @@ const ProjectsSection = () => {
         <motion.div
           transition={{ type: "tween", duration: 0.4 }}
           variants={projectCard}
-          class="group grid grid-cols-10 items-center"
+          class="col-span-4 flex flex-col items-center"
         >
+          {/* PROJECT 3 PHOTO */}
+          <div class="group relative rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
+            <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
+              <a
+                href="https://github.com/encarnac/portfolio"
+                className="rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-105"
+              >
+                <LuCode2 className="size-8" />
+              </a>
+              <a
+                href="https://encarnac.netlify.app/"
+                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-105"
+              >
+                <LuEye className="size-8" />
+              </a>
+            </div>
+            <img
+              src={adopt_a_pal}
+              alt="adopt-a-pal mockups"
+              className="h-full w-full rounded-2xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
+            />
+          </div>
           {/* PROJECT 3 DESCRIPTION */}
-          <div class="visible relative z-50 col-span-full row-span-full p-8 px-4 text-start transition duration-300 group-hover:invisible md:visible md:col-span-5 md:col-start-2 md:p-0 md:group-hover:visible">
+          <div class="visible relative z-50 px-2 py-2 text-start transition duration-300">
             <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
-              Pet Adoption "Dating" App
+              Pet Adoption App
             </h4>
             <h3 class="mb-2 mt-0 text-2xl font-bold">Adopt-a-Pal</h3>
             <div class="">
-              <p className="rounded-2xl md:bg-[#E3E8EE]/60 md:px-5 md:py-6 md:backdrop-blur-sm md:dark:bg-[#3f3554]/50">
+              <p className="text-bas line-clamp-3 rounded-2xl hover:line-clamp-none">
                 A web application for a "dating" service to connect potential
                 adopters with pets posted by animal shelters. Users can swipe
                 through listings posted by shelters and "like" pets to create a
                 collection of potential pets.
               </p>
             </div>
-            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-2 gap-y-2 pr-16 text-sm text-[#3f3b43]/90 dark:text-white/80">
+            <ul className="mt-4 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm text-[#3f3b43]/90 dark:text-white/80">
               <li className="rounded-lg border-2 border-[#797382]/40 px-2 py-px dark:border-[#807C8E]/90">
                 React
               </li>
@@ -204,29 +224,6 @@ const ProjectsSection = () => {
                 Figma
               </li>
             </ul>
-          </div>
-
-          {/* PROJECT 3 PHOTO */}
-          <div class="relative col-span-full row-span-full h-full rounded-3xl border-[1px] border-[#797382]/40 border-white p-2 transition duration-300 ease-in-out group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-6 md:col-end-10 md:h-fit">
-            <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 bg-opacity-0 text-white group-hover:flex">
-              <a
-                href="https://github.com/encarnac/adopt-a-pal"
-                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuCode2 className="size-8" />
-              </a>
-              <a
-                href="https://www.figma.com/file/yJkg7EMO0fpvOo6WCn6JMO/Desktop-Prototype?type=design&node-id=0%3A1&mode=design&t=dxbTPTU57jhHoxhv-1"
-                className="rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuFigma className="size-8" />
-              </a>
-            </div>
-            <img
-              src={adopt_a_pal}
-              alt="adopt-a-pal mockups"
-              className="h-full w-full rounded-2xl object-cover opacity-10 transition duration-300 ease-linear group-hover:opacity-100 md:opacity-100 md:group-hover:opacity-70"
-            />
           </div>
         </motion.div>
       </motion.div>
