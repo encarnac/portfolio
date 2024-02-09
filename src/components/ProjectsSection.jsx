@@ -73,16 +73,21 @@ const ProjectsSection = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={projectCard}
         transition={{ type: "tween", duration: 0.9 }}
-        className="relative flex h-full flex-col items-center justify-center pb-40 pt-60 text-[#6B6573] dark:text-white md:hidden"
+        className="relative flex h-full flex-col items-center justify-center pb-40 pt-72 text-[#6B6573] dark:text-white md:hidden"
       >
         <LuChevronLeft
-          className="size-8 absolute -left-2 top-1/2 z-10"
+          className="size-8 absolute -left-2 top-1/2 z-10 transition duration-300 hover:scale-110"
           onClick={prevSlide}
         />
         <LuChevronRight
-          className="size-8 absolute -right-2 top-1/2 z-10"
+          className="size-8 absolute -right-2 top-1/2 z-10 transition duration-300 hover:scale-110"
           onClick={nextSlide}
         />
+        <div className="absolute top-0 flex flex-row justify-center gap-x-2">
+          <div className="size-3 rounded-full border-[1px] border-[#6B6573] p-0 dark:border-white"></div>{" "}
+          <div className="size-3 rounded-full border-[1px] border-[#6B6573] p-0 dark:border-white"></div>{" "}
+          <div className="size-3 rounded-full border-[1px] border-[#6B6573] p-0 dark:border-white"></div>
+        </div>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={card}
@@ -145,13 +150,14 @@ const ProjectsSection = () => {
           </motion.div>
         </AnimatePresence>
       </motion.div>
+
       {/* DESKTOP COLUMNS VIEW */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={projectsContainer}
-        className="hidden gap-y-8 text-[#6B6573] dark:text-white md:grid md:grid-cols-12 md:gap-x-6 md:gap-y-0"
+        className="hidden gap-y-8 text-[#6B6573] dark:text-white md:grid md:grid-cols-12 md:gap-x-2 md:gap-y-0 lg:gap-x-8 xl:gap-x-12"
       >
         {PROJECTS_DATA.map((project, index) => (
           <motion.div
