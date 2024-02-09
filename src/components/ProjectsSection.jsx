@@ -1,13 +1,27 @@
 import watch_soon from "../assets/watch-soon.png";
 import adopt_a_pal from "../assets/adopt-a-pal.png";
 import portfolio from "../assets/portfolio.png";
-import {
-  LuGithub,
-  LuExternalLink,
-  LuFigma,
-  LuEye,
-  LuCode2,
-} from "react-icons/lu";
+import { LuFigma, LuEye, LuCode2 } from "react-icons/lu";
+import { motion } from "framer-motion";
+
+const projectCard = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const projectsContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.6,
+    },
+  },
+};
 
 const ProjectsSection = () => {
   return (
@@ -22,9 +36,19 @@ const ProjectsSection = () => {
           </span>
         </h3>
       </div>
-      <div className="space-y-8 text-[#6B6573] dark:text-white">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        variants={projectsContainer}
+        className="space-y-8 text-[#6B6573] dark:text-white"
+      >
         {/* PROJECT 1 CARD */}
-        <div class="group grid grid-cols-10 items-center">
+        <motion.div
+          transition={{ type: "tween", duration: 0.4 }}
+          variants={projectCard}
+          class="group grid grid-cols-10 items-center"
+        >
           {/* PROJECT 1 DESCRIPTION */}
           <div class="visible relative z-50 col-span-full row-span-full p-8 px-4 text-start transition duration-300 group-hover:invisible md:visible md:col-span-5 md:col-start-2 md:p-0 md:group-hover:visible">
             <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
@@ -52,20 +76,6 @@ const ProjectsSection = () => {
                 Netlify
               </li>
             </ul>
-            {/* <div className="mt-3 flex flex-row items-center justify-start space-x-4 md:hidden">
-              <a
-                href="https://github.com/encarnac/portfolio"
-                className="transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuGithub className="size-5" />
-              </a>
-              <a
-                href="https://encarnac.netlify.app/"
-                className="transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuExternalLink className="size-5" />
-              </a>
-            </div> */}
           </div>
 
           {/* PROJECT 1 PHOTO */}
@@ -90,10 +100,14 @@ const ProjectsSection = () => {
               className="h-full w-full rounded-2xl object-cover opacity-10 transition duration-300 ease-linear group-hover:opacity-100 md:opacity-100 md:group-hover:opacity-70"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* PROJECT 2 CARD */}
-        <div class="group grid grid-cols-10 items-center">
+        <motion.div
+          transition={{ type: "tween", duration: 0.4 }}
+          variants={projectCard}
+          class="group grid grid-cols-10 items-center"
+        >
           {/* PROJECT 2 PHOTO */}
           <div class="relative col-span-full row-span-full h-full rounded-3xl border-[1px] border-white p-2 transition duration-300 ease-in-out group-hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:group-hover:border-[#7943ED] md:col-start-2 md:col-end-6 md:h-fit">
             <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 bg-opacity-0 text-white group-hover:flex">
@@ -150,25 +164,15 @@ const ProjectsSection = () => {
                 Railway
               </li>
             </ul>{" "}
-            {/* <div className="mt-3 flex flex-row items-center justify-end space-x-4">
-              <a
-                href="https://github.com/encarnac/tv-movie-reminder"
-                className="transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuGithub className="size-5" />
-              </a>
-              <a
-                href="https://watch-soon.up.railway.app/"
-                className="transition duration-300 ease-in-out hover:scale-110"
-              >
-                <LuExternalLink className="size-5" />
-              </a>
-            </div> */}
           </div>
-        </div>
+        </motion.div>
 
         {/* PROJECT 3 CARD */}
-        <div class="group grid grid-cols-10 items-center">
+        <motion.div
+          transition={{ type: "tween", duration: 0.4 }}
+          variants={projectCard}
+          class="group grid grid-cols-10 items-center"
+        >
           {/* PROJECT 3 DESCRIPTION */}
           <div class="visible relative z-50 col-span-full row-span-full p-8 px-4 text-start transition duration-300 group-hover:invisible md:visible md:col-span-5 md:col-start-2 md:p-0 md:group-hover:visible">
             <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
@@ -224,8 +228,8 @@ const ProjectsSection = () => {
               className="h-full w-full rounded-2xl object-cover opacity-10 transition duration-300 ease-linear group-hover:opacity-100 md:opacity-100 md:group-hover:opacity-70"
             />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

@@ -63,7 +63,7 @@ const SkillsSection = () => {
         className="grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 px-0 sm:px-16 md:grid-cols-12 md:gap-x-4 md:gap-y-0 md:px-0 lg:gap-x-6 xl:gap-x-20 2xl:gap-x-28"
       >
         <motion.div
-          transition={{ type: "spring", stiffness: 150 }}
+          transition={{ type: "spring", stiffness: 100 }}
           variants={skillCard}
           className="relative rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
@@ -107,7 +107,7 @@ const SkillsSection = () => {
           </div>
         </motion.div>
         <motion.div
-          transition={{ type: "spring", stiffness: 150 }}
+          transition={{ type: "spring", stiffness: 100 }}
           variants={skillCard}
           className="relative h-full rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >
@@ -147,7 +147,7 @@ const SkillsSection = () => {
           </div>
         </motion.div>
         <motion.div
-          transition={{ type: "spring", stiffness: 150 }}
+          transition={{ type: "spring", stiffness: 100 }}
           variants={skillCard}
           className="relative h-full rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
         >

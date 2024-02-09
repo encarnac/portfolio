@@ -24,7 +24,7 @@ export const AboutMeData = [
         </div>
 
         <div className="">
-          <p className="text-balance mb-2">
+          <p className="text-pretty mb-2">
             My journey as a developer began in 2021 when I made a career switch
             from Psychology to Computer Science. Since then, I've continued to
             grow and evolve as a
@@ -33,7 +33,7 @@ export const AboutMeData = [
             specializing in <span className="font-extrabold">React.js</span> and
             <span className="font-extrabold"> Express</span>.
           </p>
-          <p className="text-balance">
+          <p className="text-pretty">
             I have a holistic understanding of web design and development, and I
             strive to write code that accurately implements designs for
             interactive and responsive web applications. I am a quick learner
