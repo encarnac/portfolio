@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PROJECTS_DATA } from "../constants/ProjectsData";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { LuChevronLeft, LuChevronRight, LuEye, LuCode2 } from "react-icons/lu";
 
 const projectCard = {
@@ -44,8 +43,13 @@ const sliderVariants = {
   },
 };
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset, velocity) => {
+  return Math.abs(offset) * velocity;
+};
+
 const ProjectsSection = () => {
-  const [[card, direction], setCard] = useState([1, 0]);
+  const [[card, direction], setCard] = useState([0, 0]);
 
   const nextSlide = () => {
     setCard([card === PROJECTS_DATA.length - 1 ? 0 : card + 1, 1]);
@@ -76,26 +80,26 @@ const ProjectsSection = () => {
         transition={{ type: "tween", duration: 0.9 }}
         className="relative flex h-[34rem] flex-col items-center justify-center text-[#6B6573] dark:text-white md:hidden"
       >
-        {card !== 0 && (
-          <LuChevronLeft
-            className="size-7 absolute -left-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
-            onClick={prevSlide}
-          />
-        )}
-        {card !== PROJECTS_DATA.length - 1 && (
-          <LuChevronRight
-            className="size-7 absolute -right-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
-            onClick={nextSlide}
-          />
-        )}
-        <div className="absolute bottom-3 flex flex-row justify-center gap-x-2">
+        {/* {card !== 0 && ( */}
+        <LuChevronLeft
+          className="size-7 absolute -left-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
+          onClick={prevSlide}
+        />
+        {/* )} */}
+        {/* {card !== PROJECTS_DATA.length - 1 && ( */}
+        <LuChevronRight
+          className="size-7 absolute -right-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
+          onClick={nextSlide}
+        />
+        {/* )} */}
+        <div className="absolute bottom-0 flex flex-row justify-center gap-x-3">
           {PROJECTS_DATA.map((project, index) => (
             <span
               key={index}
               onClick={() => setCard([index, index > card ? 1 : -1])}
               className={`size-3 transition-colors linear duration-500 bg-none rounded-full border-[1px] hover:bg-[#6B6573] hover:dark:bg-white border-[#6B6573]/30 p-0 dark:border-white/20 cursor-pointer ${
                 card === index
-                  ? "bg-[#6B6573] dark:bg-white"
+                  ? "bg-[#6B6573]/80 dark:bg-white"
                   : "bg-[#6B6573]/20 dark:bg-white/20"
               }`}
             ></span>
@@ -113,9 +117,21 @@ const ProjectsSection = () => {
               x: { type: "spring", stiffness: 200, damping: 30 },
               opacity: { duration: 0.8 },
             }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+
+              if (swipe < -swipeConfidenceThreshold) {
+                nextSlide();
+              } else if (swipe > swipeConfidenceThreshold) {
+                prevSlide();
+              }
+            }}
             className="absolute left-0 right-0 top-0 px-6"
           >
-            <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[5px] transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:from-[10%] dark:to-[#252949] dark:hover:border-[#7943ED] md:h-fit">
+            <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[5px] transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:to-[#171040] dark:hover:border-[#7943ED] md:h-fit">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={PROJECTS_DATA[card].github}
