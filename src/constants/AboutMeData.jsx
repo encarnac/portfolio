@@ -5,19 +5,19 @@ import resume from "../assets/Resume_ColeneEnc.pdf";
 
 export const AboutMeData = [
   {
-    name: "Background",
+    name: "Introduction",
     content: (
       <div className="flex flex-col gap-y-4 px-0 py-px sm:px-1 md:px-6">
         <div className="flex flex-row flex-wrap justify-stretch gap-x-2 gap-y-2 sm:justify-start md:gap-y-0">
-          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 text-base font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
             <HiUser className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
             <p>Colene Encarnado</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7] md:text-base">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
             <HiMapPin className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
             <p>Los Angeles, CA</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 text-base font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
             <HiLightBulb className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
             <p>&lt; 1 YOE</p>
           </div>
@@ -46,7 +46,7 @@ export const AboutMeData = [
           <a
             href={resume}
             download
-            className="inline-block rounded-3xl bg-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-[#FA8FC1] dark:bg-[#7943ED] dark:hover:bg-[#8248FF] sm:text-base md:px-6 md:py-3"
+            className="inline-block rounded-3xl bg-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-[#FA8FC1] dark:bg-[#7943ED] dark:hover:bg-[#8248FF] md:px-6 md:py-3 md:text-base"
           >
             Download CV
           </a>
