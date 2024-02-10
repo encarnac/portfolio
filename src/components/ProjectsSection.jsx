@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           onClick={nextSlide}
         />
         {/* )} */}
-        <div className="absolute bottom-0 flex flex-row justify-center gap-x-3">
+        <div className="absolute bottom-1 flex flex-row justify-center gap-x-3">
           {PROJECTS_DATA.map((project, index) => (
             <span
               key={index}
@@ -228,9 +228,11 @@ const ProjectsSection = () => {
               <h4 class="font-mono text-sm text-[#F38BBB] dark:text-[#7943ED]">
                 {project.subtitle}
               </h4>
-              <h3 class="mb-2 mt-0 text-2xl font-bold">{project.title}</h3>
+              <h3 class="mb-2 mt-0 text-xl font-bold lg:text-2xl">
+                {project.title}
+              </h3>
               <div class="">
-                <p className="line-clamp-4 rounded-2xl text-base hover:line-clamp-none">
+                <p className="line-clamp-4 text-sm hover:line-clamp-none lg:text-base">
                   {project.description}
                 </p>
               </div>

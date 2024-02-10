@@ -54,10 +54,10 @@ const SkillsSection = () => {
               <div className="mb-1 rounded-full bg-[#cfd7e5] p-4 dark:bg-[#2b2841] md:p-5">
                 <img src={skill.image} className="w-8 md:w-11" />
               </div>
-              <h4 className="relative pb-4 text-base font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-2 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED] md:text-xl">
+              <h4 className="relative pb-4 text-base font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-2 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED] lg:text-xl">
                 {skill.category}
               </h4>
-              <ul className="flex-rows flex flex-wrap justify-center gap-x-1 gap-y-2 px-6 text-sm text-[#6B6573] dark:text-[#CCC3D7] md:text-base">
+              <ul className="flex-rows flex flex-wrap justify-center gap-x-1 gap-y-2 px-6 text-sm text-[#6B6573] dark:text-[#CCC3D7] lg:text-base">
                 {skill.tools.map((tool, index) => (
                   <li
                     key={index}
