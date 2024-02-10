@@ -48,8 +48,6 @@ export default function Header() {
                 sequence={[
                   "Colene",
                   2000, // Waits 2s
-                  "Full-Stack",
-                  2000,
                   "Front-End",
                   700,
                   () => {
