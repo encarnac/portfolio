@@ -78,13 +78,13 @@ const ProjectsSection = () => {
       >
         {card !== 0 && (
           <LuChevronLeft
-            className="size-7 absolute -left-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/30 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/20 hover:dark:text-white"
+            className="size-7 absolute -left-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
             onClick={prevSlide}
           />
         )}
         {card !== PROJECTS_DATA.length - 1 && (
           <LuChevronRight
-            className="size-7 absolute -right-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/30 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/20 hover:dark:text-white"
+            className="size-7 absolute -right-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
             onClick={nextSlide}
           />
         )}
@@ -115,11 +115,11 @@ const ProjectsSection = () => {
             }}
             className="absolute left-0 right-0 top-0 px-6"
           >
-            <div class="group relative rounded-2xl border-[1px] border-[#797382]/40 border-white p-[5px] transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit">
+            <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[5px] transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:from-[10%] dark:to-[#252949] dark:hover:border-[#7943ED] md:h-fit">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={PROJECTS_DATA[card].github}
-                  className="cursor-pointer rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-300 ease-in-out hover:scale-105"
+                  className="cursor-pointer rounded-full border-2 border-white p-2 mix-blend-lighten shadow-lg transition duration-200 ease-in-out hover:scale-110"
                 >
                   <LuCode2 className="size-8" />
                 </a>
@@ -130,11 +130,14 @@ const ProjectsSection = () => {
                   <LuEye className="size-8" />
                 </a>
               </div>
-              <img
-                src={PROJECTS_DATA[card].image}
-                alt={`${PROJECTS_DATA[card].title} mock-up`}
-                className="h-full w-full rounded-xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60"
-              />
+              <div className="overflow-clip rounded-xl">
+                {" "}
+                <img
+                  src={PROJECTS_DATA[card].image}
+                  alt={`${PROJECTS_DATA[card].title} mock-up`}
+                  className="h-full w-full rounded-xl object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50"
+                />
+              </div>
             </div>
             {/* DESCRIPTION */}
             <div class="visible relative z-50 px-2 py-2 text-start transition duration-300">
@@ -180,7 +183,7 @@ const ProjectsSection = () => {
             class="col-span-4 flex flex-col items-center"
           >
             {/* PHOTO */}
-            <div class="group relative rounded-2xl border-[1px] border-[#797382]/40 border-white p-1 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:hover:border-[#7943ED] md:h-fit lg:p-2 xl:rounded-3xl">
+            <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-1 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:from-[10%] dark:to-[#252949] dark:hover:border-[#7943ED] md:h-fit lg:p-2 xl:rounded-3xl">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={project.github}
@@ -195,11 +198,14 @@ const ProjectsSection = () => {
                   <LuEye className="size-8" />
                 </a>
               </div>
-              <img
-                src={project.image}
-                alt={`${project.title} mock-up`}
-                className="h-full w-full rounded-xl object-cover opacity-100 transition duration-300 ease-linear group-hover:opacity-60 xl:rounded-2xl"
-              />
+              <div className="overflow-clip rounded-xl xl:rounded-2xl">
+                {" "}
+                <img
+                  src={project.image}
+                  alt={`${project.title} mock-up`}
+                  className="h-full w-full rounded-xl object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50 xl:rounded-2xl"
+                />
+              </div>
             </div>
             {/* DESCRIPTION */}
             <div class="visible relative z-50 px-2 py-2 text-start transition duration-300">
