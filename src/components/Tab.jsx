@@ -9,8 +9,8 @@ export const Tab = ({ active, selectTab, tabName }) => {
       className={`${
         active === tabName
           ? "text-[#5B5662] dark:text-[#CCC3D7]"
-          : "dark:text-[#b7b0c2]/70 text-[#726C7B]/70   hover:text-[#5B5662] dark:hover:text-[#CCC3D7]"
-      }  transition duration-300 px-1 md:px-4  relative text-[1.09rem] sm:text-lg lg:text-xl font-bold py-3`}
+          : "dark:text-[#b7b0c2]/70 text-[#726C7B]/70 hover:text-[#5B5662] dark:hover:text-[#CCC3D7]"
+      } font-mono transition duration-300 px-1 md:px-4 relative text-base lg:text-lg font-semibold py-3`}
     >
       <span className="relative">{tabName} </span>
 
