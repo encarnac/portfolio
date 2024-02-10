@@ -92,15 +92,15 @@ const ProjectsSection = () => {
           onClick={nextSlide}
         />
         {/* )} */}
-        <div className="absolute bottom-1 flex flex-row justify-center gap-x-3">
+        <div className="absolute bottom-1 flex flex-row items-center justify-center gap-x-3">
           {PROJECTS_DATA.map((project, index) => (
             <span
               key={index}
               onClick={() => setCard([index, index > card ? 1 : -1])}
-              className={`size-3 transition-colors linear duration-500 bg-none rounded-full border-[1px] hover:bg-[#6B6573] hover:dark:bg-white border-[#6B6573]/30 p-0 dark:border-white/20 cursor-pointer ${
+              className={`transition-all linear duration-500 bg-none rounded-full border-[1px] hover:bg-[#6B6573] hover:dark:bg-white border-[#6B6573]/30 p-0 dark:border-white/20 cursor-pointer ${
                 card === index
-                  ? "bg-[#6B6573]/80 dark:bg-white"
-                  : "bg-[#6B6573]/20 dark:bg-white/20"
+                  ? "bg-[#6B6573]/80 dark:bg-white size-3 "
+                  : "bg-[#6B6573]/20 dark:bg-white/20 size-[.5rem]"
               }`}
             ></span>
           ))}
