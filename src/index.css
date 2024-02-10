@@ -7,7 +7,7 @@
 @layer utilities {
   .custom-shape-divider-first {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -18,43 +18,25 @@
   .custom-shape-divider-first svg {
     position: relative;
     display: block;
-    width: calc(103% + 1.3px);
-    height: 29px;
+    width: calc(114% + 1.3px);
+    height: 145px;
+    transform: rotateY(180deg);
   }
 
-
-
-  .custom-shape-divider-second {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-first svg {
+      width: calc(152% + 1.3px);
+      height: 117px;
+    }
   }
 
-  .custom-shape-divider-second svg {
-    position: relative;
-    display: block;
-    width: calc(127% + 1.3px);
-    height: 56px;
+  /** For mobile devices **/
+  @media (max-width: 767px) {
+    .custom-shape-divider-first svg {
+      width: calc(169% + 1.3px);
+      height: 99px;
+    }
   }
 
-  .custom-shape-divider-third {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .custom-shape-divider-third svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 52px;
-  }
 
 }

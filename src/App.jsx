@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
+import FooterSection from "./components/FooterSection";
 import { DividerShape } from "./components/DividerShape";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -51,59 +52,59 @@ export default function App() {
         toggleTheme={toggleTheme}
       />
 
-      {/* Hero Section with Divider */}
       <div className="relative bg-[#e3e8ee] dark:bg-[#251e32]">
+        {/* Hero Section */}
         <motion.div
           className="container mx-auto mb-32 mt-16 px-5 py-4 sm:px-10 lg:mt-24"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("hero")}
         >
           <HeroSection />
+          <DividerShape shape={"first"} />
         </motion.div>
       </div>
 
       <div className="relative">
         {/* About Me Section */}
         <motion.div
-          className="container mx-auto my-36 px-5 py-4 sm:px-10"
+          className="container mx-auto my-20 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("about")}
         >
-          <DividerShape shape={"first"} />
           <AboutSection />
         </motion.div>
 
         {/* Skills Section */}
         <motion.div
-          className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
+          className="container mx-auto my-20 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("skills")}
         >
           <SkillsSection />
-          <DividerShape shape={"second"} />
         </motion.div>
       </div>
 
-      {/* Projects Section */}
-      <div className="relative bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2b2544]/70">
+      <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2f2949]/80">
+        {/* Projects Section */}
         <motion.div
-          className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
+          className="container mx-auto my-20 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("projects")}
         >
           <ProjectsSection />
-          <DividerShape shape={"third"} />
         </motion.div>
-      </div>
 
-      <div className="relative bg-[#E3E8EE] dark:bg-[#251e32]">
-        <motion.div
-          className="container mx-auto my-36 mb-40 px-5 py-4 sm:px-10"
-          viewport={{ amount: 0.7 }}
-          onViewportEnter={() => setSelectedPage("projects")}
-        >
-          <ContactSection />
-        </motion.div>
+        {/* Contact and Footer Section */}
+        <div className="relative rounded-tl-[5.5rem] bg-[#E3E8EE] dark:bg-[#251e32]">
+          <motion.div
+            className="container mx-auto pt-20"
+            viewport={{ amount: 0.7 }}
+            onViewportEnter={() => setSelectedPage("contact")}
+          >
+            <ContactSection />
+            <FooterSection />
+          </motion.div>
+        </div>
       </div>
     </main>
   );
