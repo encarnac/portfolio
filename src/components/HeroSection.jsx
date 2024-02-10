@@ -88,11 +88,11 @@ export default function Header() {
 
           <div className="col-span-5 mt-6 place-self-center sm:mt-12">
             <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
-              <div className="size-[250px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
+              <div className="size-[230px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
                 <img
                   src={HeaderPhoto}
                   alt="profile photo"
-                  className="size-[250px] md:size-[325px] xl:size-[390px] absolute inset-x-0 bottom-0 z-10 rounded-bl-[50%]"
+                  className="size-[230px] md:size-[325px] xl:size-[390px] absolute inset-x-0 bottom-0 z-10 rounded-bl-[50%]"
                 />
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
