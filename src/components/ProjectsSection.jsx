@@ -60,7 +60,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="mb-12 w-full">
+    <section id="projects" className="mb-12 flex w-full flex-col">
       <div className="relative mb-8 flex flex-col items-end justify-end py-3">
         <h4 className="text-md font-mono tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl md:text-2xl">
           [03]projects
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           onClick={nextSlide}
         />
         {/* )} */}
-        <div className="absolute bottom-1 flex flex-row items-center justify-center gap-x-3">
+        <div className="absolute bottom-1 flex flex-row items-center justify-center gap-x-4">
           {PROJECTS_DATA.map((project, index) => (
             <span
               key={index}
@@ -105,6 +105,7 @@ const ProjectsSection = () => {
             ></span>
           ))}
         </div>
+
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={card}
@@ -131,7 +132,7 @@ const ProjectsSection = () => {
             }}
             className="absolute left-0 right-0 top-0 px-6"
           >
-            <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[5px] transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:to-[#171040] dark:hover:border-[#7943ED] md:h-fit">
+            <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:to-[#171040] dark:hover:border-[#7943ED] md:h-fit">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={PROJECTS_DATA[card].github}
@@ -141,20 +142,20 @@ const ProjectsSection = () => {
                 </a>
                 <a
                   href={PROJECTS_DATA[card].demo}
-                  className="cursor-pointer rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out hover:scale-105"
+                  className="hover:scle-105 cursor-pointer rounded-full border-2 border-white p-2 shadow-lg transition duration-300 ease-in-out"
                 >
                   <LuEye className="size-8" />
                 </a>
               </div>
-              <div className="overflow-clip rounded-xl">
-                {" "}
+              <div className="overflow-clip rounded-2xl">
                 <img
                   src={PROJECTS_DATA[card].image}
                   alt={`${PROJECTS_DATA[card].title} mock-up`}
-                  className="h-full w-full rounded-xl object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50"
+                  className="h-full w-full object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50"
                 />
               </div>
             </div>
+
             {/* DESCRIPTION */}
             <div class="visible relative z-50 px-2 py-2 text-start transition duration-300">
               <h4 class="font-mono text-xs text-[#F38BBB] dark:text-[#7943ED]">
@@ -199,7 +200,7 @@ const ProjectsSection = () => {
             class="col-span-4 flex flex-col items-center"
           >
             {/* PHOTO */}
-            <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-1 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:from-[10%] dark:to-[#252949] dark:hover:border-[#7943ED] md:h-fit lg:p-2 xl:rounded-3xl">
+            <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-2 hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:from-[10%] dark:to-[#252949] dark:hover:border-[#7943ED] md:h-fit">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
                 <a
                   href={project.github}
@@ -214,12 +215,12 @@ const ProjectsSection = () => {
                   <LuEye className="size-8" />
                 </a>
               </div>
-              <div className="overflow-clip rounded-xl xl:rounded-2xl">
+              <div className="overflow-clip rounded-xl">
                 {" "}
                 <img
                   src={project.image}
                   alt={`${project.title} mock-up`}
-                  className="h-full w-full rounded-xl object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50 xl:rounded-2xl"
+                  className="h-full w-full object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50"
                 />
               </div>
             </div>
@@ -250,6 +251,15 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      <div className="mt-12 place-self-center text-white md:mt-24">
+        <a
+          href="https://github.com/encarnac"
+          className="inline-block w-full rounded-full bg-[#F38BBB] px-24 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-[#FA8FC1] dark:bg-[#7943ED] dark:hover:bg-[#8248FF] sm:w-fit md:px-32 lg:text-lg"
+        >
+          View All Projects
+        </a>
+      </div>
     </section>
   );
 };
