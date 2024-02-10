@@ -28,10 +28,9 @@ export const AboutMeData = [
             My journey as a developer began in 2021 when I made a career switch
             from Psychology to Computer Science. Since then, I've continued to
             grow and evolve as a
-            <span className="font-extrabold"> front-end</span> and
-            <span className="font-extrabold"> full-stack</span> developer,
-            specializing in <span className="font-extrabold">React.js</span> and
-            <span className="font-extrabold"> Express</span>.
+            <span className="font-extrabold"> front-end </span>
+            developer, specializing in{" "}
+            <span className="font-extrabold">React.js</span>.
           </p>
           <p className="text-pretty">
             I have a holistic understanding of web design and development, and I
