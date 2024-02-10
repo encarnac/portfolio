@@ -18,7 +18,7 @@ const aboutContent = {
 };
 
 const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("Background");
+  const [tab, setTab] = useState("Introduction");
   const [isPending, startTransition] = useTransition();
 
   const selectTab = (nextTab) => {
@@ -74,7 +74,7 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutContent}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
-          <div className="place-self-stretch text-base text-[#6B6573] dark:text-[#CCC3D7] md:text-lg">
+          <div className="place-self-stretch text-sm text-[#6B6573] dark:text-[#CCC3D7] md:text-base xl:text-lg">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
