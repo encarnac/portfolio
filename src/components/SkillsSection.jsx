@@ -41,30 +41,32 @@ const SkillsSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
         variants={skillsContainer}
-        className="grid grid-cols-1 justify-items-center gap-x-0 gap-y-4 px-0 sm:px-16 md:grid-cols-12 md:gap-x-4 md:gap-y-0 md:px-0 lg:gap-x-6 xl:gap-x-20 2xl:gap-x-28"
+        className="grid grid-cols-2 justify-items-center gap-3 md:grid-cols-4 lg:gap-4 xl:gap-8 2xl:gap-14"
       >
         {SKILLS_DATA_SORTED.map((skill, index) => (
           <motion.div
             key={index}
             transition={{ type: "spring", stiffness: 100 }}
             variants={skillCard}
-            className="relative w-full rounded-3xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-3xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:col-span-4"
+            className="relative w-full rounded-2xl backdrop-blur-none before:absolute before:-bottom-[.4rem] before:-left-[.4rem] before:z-[-1] before:h-full before:w-full before:rounded-2xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE]"
           >
-            <div className="flex h-full flex-col items-center justify-start gap-y-5 rounded-3xl bg-[#E3E8EE] px-0 py-6 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#231F2F] lg:py-10">
-              <div className="mb-1 rounded-full bg-[#cfd7e5] p-4 dark:bg-[#2b2841] md:p-5">
-                <img src={skill.image} className="w-8 md:w-11" />
+            <div className="flex h-full flex-col items-center justify-start gap-y-1 rounded-2xl bg-[#E3E8EE] px-0 py-4 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#211e2c] xl:py-8">
+              <div className="mb-1 rounded-full bg-[#cfd7e5] p-3 dark:bg-[#2b2841] md:p-5">
+                <img src={skill.image} className="w-10" />
               </div>
-              <h4 className="relative pb-4 text-base font-bold text-[#5b5662] after:absolute after:inset-x-3 after:bottom-0 after:h-2 after:w-3/4 after:rounded-full after:bg-[#AD99DB] dark:text-white dark:after:bg-[#7943ED] lg:text-xl">
+              <h4 className="relative text-base font-bold text-[#5b5662] dark:text-white lg:text-xl">
                 {skill.category}
               </h4>
-              <ul className="flex-rows flex flex-wrap justify-center gap-x-1 gap-y-2 px-6 text-sm text-[#6B6573] dark:text-[#CCC3D7] lg:text-base">
+              <span className="mt-3 h-[7px] w-14 rounded-full bg-[#AD99DB] dark:bg-[#7943ED]"></span>
+
+              <ul className="grid grid-cols-2 justify-center gap-2 px-1 py-3 text-xs text-[#6B6573] dark:text-[#CCC3D7] sm:px-2 sm:text-sm lg:text-base">
                 {skill.tools.map((tool, index) => (
                   <li
                     key={index}
-                    className="grid grid-cols-3 items-center justify-items-center gap-x-px rounded-xl border-[1px] border-[#6B6573] px-2 py-1 dark:border-[#CCC3D7]"
+                    className="flex flex-col items-center justify-items-center gap-y-1 rounded-lg px-2 py-1"
                   >
-                    {tool.logo}
                     <span className="col-span-2">{tool.name}</span>
+                    {tool.logo}
                   </li>
                 ))}
               </ul>
