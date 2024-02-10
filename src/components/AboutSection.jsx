@@ -40,7 +40,7 @@ const AboutSection = ({ setSelectedPage }) => {
             </span>
           </h3>
         </div>
-        <div className="relative flex h-fit w-fit flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-4 transition dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0">
+        <div className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-4 transition dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0">
           {AboutMeData.map((tabContent, index) => (
             <Tab
               className={index}
@@ -52,16 +52,16 @@ const AboutSection = ({ setSelectedPage }) => {
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-8 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
+      <div className="mt-0 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-8 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ type: "tween", duration: 0.5 }}
           variants={aboutPhoto}
-          className="relative flex flex-col items-center justify-items-center gap-y-2 lg:col-span-5"
+          className="relative hidden flex-col items-center justify-items-center gap-y-2 lg:col-span-5 lg:flex"
         >
-          <div className="size-[250px] md:size-[300px] xl:size-[350px] before:size-[235px] md:before:size-[285px] xl:before:size-[325px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[335px]">
+          <div className="size-[190px] md:size-[250px] lg:size-[300px] xl:size-[350px] before:size-[175px] md:before:size-[235px] lg:before:size-[285px] xl:before:size-[325px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[335px]">
             <img src={AboutPhoto} className="absolute inset-x-4 -bottom-3" />
           </div>
         </motion.div>
@@ -74,7 +74,7 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutContent}
           className="relative mt-4 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:mt-0 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
-          <div className="place-self-stretch text-sm text-[#6B6573] dark:text-[#CCC3D7] lg:text-base xl:text-lg">
+          <div className="place-self-stretch text-sm text-[#6B6573] dark:text-[#CCC3D7] lg:text-base">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
