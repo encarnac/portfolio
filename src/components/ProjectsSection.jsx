@@ -78,34 +78,8 @@ const ProjectsSection = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={projectCard}
         transition={{ type: "tween", duration: 0.9 }}
-        className="relative flex h-[34rem] flex-col items-center justify-center text-[#6B6573] dark:text-white md:hidden"
+        className="relative flex h-[33rem] flex-col items-center justify-center text-[#6B6573] dark:text-white md:hidden"
       >
-        {/* {card !== 0 && ( */}
-        <LuChevronLeft
-          className="size-7 absolute -left-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
-          onClick={prevSlide}
-        />
-        {/* )} */}
-        {/* {card !== PROJECTS_DATA.length - 1 && ( */}
-        <LuChevronRight
-          className="size-7 absolute -right-3 top-1/2 z-10 cursor-pointer text-[#6B6573]/50 transition duration-300 hover:scale-110 hover:text-[#6B6573] dark:text-white/50 hover:dark:text-white"
-          onClick={nextSlide}
-        />
-        {/* )} */}
-        <div className="absolute bottom-1 flex flex-row items-center justify-center gap-x-4">
-          {PROJECTS_DATA.map((project, index) => (
-            <span
-              key={index}
-              onClick={() => setCard([index, index > card ? 1 : -1])}
-              className={`transition-all linear duration-500 bg-none rounded-full border-[1px] hover:bg-[#6B6573] hover:dark:bg-white border-[#6B6573]/30 p-0 dark:border-white/20 cursor-pointer ${
-                card === index
-                  ? "bg-[#6B6573]/80 dark:bg-white size-3 "
-                  : "bg-[#6B6573]/20 dark:bg-white/20 size-[.5rem]"
-              }`}
-            ></span>
-          ))}
-        </div>
-
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={card}
@@ -130,7 +104,7 @@ const ProjectsSection = () => {
                 prevSlide();
               }
             }}
-            className="absolute left-0 right-0 top-0 px-6"
+            className="absolute left-0 right-0 top-0"
           >
             <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-[#F38BBB] dark:border-[#807C8E]/70 dark:from-[#422451] dark:to-[#171040] dark:hover:border-[#7943ED] md:h-fit">
               <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
@@ -180,7 +154,7 @@ const ProjectsSection = () => {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </motion.div>{" "}
         </AnimatePresence>
       </motion.div>
 
@@ -251,11 +225,23 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </motion.div>
-
-      <div className="mt-12 place-self-center text-white md:mt-24">
+      <div className="mt-4 flex flex-row items-center justify-center gap-x-4 md:hidden">
+        {PROJECTS_DATA.map((project, index) => (
+          <span
+            key={index}
+            onClick={() => setCard([index, index > card ? 1 : -1])}
+            className={`transition-all linear duration-500 bg-none rounded-full border-[1px] hover:bg-[#6B6573] hover:dark:bg-white border-[#6B6573]/30 p-0 dark:border-white/20 cursor-pointer ${
+              card === index
+                ? "bg-[#6B6573]/80 dark:bg-white size-3 "
+                : "bg-[#6B6573]/20 dark:bg-white/20 size-[.5rem]"
+            }`}
+          ></span>
+        ))}
+      </div>
+      <div className="mt-8 place-self-center text-white md:order-last md:mt-24">
         <a
           href="https://github.com/encarnac"
-          className="inline-block w-full rounded-full bg-[#F38BBB] px-24 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-[#FA8FC1] dark:bg-[#7943ED] dark:hover:bg-[#8248FF] sm:w-fit md:px-32 lg:text-lg"
+          className="inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit md:px-32 lg:text-lg"
         >
           View All Projects
         </a>
