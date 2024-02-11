@@ -39,7 +39,7 @@ export default function Header() {
           className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1"
         >
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-5xl font-extrabold text-[#5b5662] dark:text-white sm:text-6xl lg:text-8xl">
+            <h1 className="mb-4 text-5xl font-extrabold text-[#5b5662] dark:text-[#D4D3D8] sm:text-6xl lg:text-8xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                 Hello, I'm
               </span>
@@ -49,7 +49,9 @@ export default function Header() {
                   "Colene",
                   2000, // Waits 2s
                   "Front-End",
-                  700,
+                  2000, // Waits 2s
+                  "Web Dev",
+                  900,
                   () => {
                     console.log("Sequence completed");
                   },
@@ -60,13 +62,13 @@ export default function Header() {
                 className="font-mono text-4xl sm:text-5xl lg:text-7xl"
               />
             </h1>
-            <p className="mb-3 font-mono text-base text-[#938e9c] dark:text-[#9d97a6] sm:text-lg lg:text-xl">
-              // I enjoy building and designing for the web
+            <p className="text-balance md:text-md mb-3 font-mono text-sm text-[#938e9c] dark:text-[#9d97a6] lg:text-lg">
+              // I enjoy building and designing for the web with React
             </p>
             <div className="">
               <a
                 href="#contact"
-                className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
+                className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-[#D4D3D8] transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
               >
                 Hire Me
               </a>

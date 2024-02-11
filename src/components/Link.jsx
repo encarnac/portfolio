@@ -24,9 +24,9 @@ export const Link = ({ mobile, page, selectedPage, setSelectedPage }) => {
         onClick={() => setSelectedPage(page.title)}
         className={`${
           selectedPage === page.title
-            ? "dark:text-[#7943ed] text-[#DC659C]"
-            : "text-stone-500 dark:text-[#b7b0c2]"
-        } transition ease-linear duration-300 block rounded py-2 pl-3 pr-4 hover:text-[#DC659C] dark:hover:text-[#7943ed] sm:text-xl md:p-0`}
+            ? "dark:text-[#7943ed] text-[#de8abb]"
+            : "text-[#5b5662] dark:text-[#D4D3D8]"
+        } transition ease-linear duration-300 block rounded py-2 pl-3 pr-4 hover:text-[#de8abb] dark:hover:text-[#7943ed] sm:text-xl md:p-0`}
       >
         {page.title}
       </a>

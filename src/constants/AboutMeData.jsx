@@ -1,6 +1,6 @@
 import { LuGraduationCap } from "react-icons/lu";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
+import { HiUser, HiMapPin, HiBriefcase } from "react-icons/hi2";
 import resume from "../assets/Resume_ColeneEnc.pdf";
 
 export const AboutMeData = [
@@ -8,17 +8,17 @@ export const AboutMeData = [
     name: "Introduction",
     content: (
       <div className="flex flex-col gap-y-4 px-0 py-px sm:px-1 md:px-6">
-        <div className="flex flex-row flex-wrap justify-stretch gap-x-2 gap-y-2 sm:justify-start md:gap-y-0">
-          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
-            <HiUser className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
+        <div className="flex flex-row flex-wrap justify-stretch gap-x-2 gap-y-2 text-xs text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:gap-y-0 md:text-sm lg:text-base">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+            <HiUser className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>Colene Encarnado</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
-            <HiMapPin className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+            <HiMapPin className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>Los Angeles, CA</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-2 rounded-lg bg-white/30 px-2 py-2 font-semibold text-[#797382] backdrop-blur-lg dark:bg-[#403457]/50 dark:text-[#CCC3D7]">
-            <HiLightBulb className="sm:size-6 text-[#E38EC0] dark:text-[#a32dd2]" />
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+            <HiBriefcase className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>&lt; 1 YOE</p>
           </div>
         </div>
@@ -45,17 +45,17 @@ export const AboutMeData = [
           <a
             href={resume}
             download
-            className="inline-block rounded-3xl bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] md:px-6 md:py-3 lg:text-base"
+            className="inline-block rounded-3xl bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-4 py-3 text-xs text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] md:px-6 md:py-3 md:text-sm lg:px-4 lg:py-3 lg:text-base"
           >
             Download CV
           </a>
           <hr class="h-px w-8 border-0 bg-[#6B6573] dark:bg-[#CCC3D7] sm:w-12"></hr>
           <p className="hidden text-sm font-light sm:inline">Follow me</p>
           <a href="https://github.com/encarnac">
-            <SiGithub className="size-7 sm:size-8 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
+            <SiGithub className="size-5 sm:size-8 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
           </a>
           <a href="https://www.linkedin.com/in/encarnac/">
-            <SiLinkedin className="size-7 sm:size-8 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
+            <SiLinkedin className="size-5 sm:size-8 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
           </a>
         </div>
       </div>
@@ -66,13 +66,13 @@ export const AboutMeData = [
     content: (
       <ul className="space-y-4 px-0 py-px sm:px-1 md:px-6">
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[.15rem] before:bg-[#F38BBB]/90 dark:before:bg-[#7943ed]/90">
-            <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[.15rem] before:bg-[#de8abb]/90 dark:before:bg-[#7943ed]/90">
+            <LuGraduationCap className="size-5 text-[#de8abb] dark:text-[#7943ed]" />
           </div>
           <div className="w-full">
             <div className="flex items-start justify-between md:items-center">
               <h4 className="font-semibold">Oregon State University</h4>
-              <p className="rounded-lg bg-[#F38BBB]/50 bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 px-3 py-px text-stone-100 dark:from-[#3034C2]/80 dark:via-[#6A3DD1]/80 dark:to-[#9329BE]/80">
+              <p className="rounded-lg bg-[#F38BBB]/50 bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 px-3 py-px text-white/90 dark:from-[#3034C2]/80 dark:via-[#6A3DD1]/80 dark:to-[#9329BE]/80">
                 <span className="hidden sm:inline">2021 - </span>2023
               </p>
             </div>
@@ -83,8 +83,8 @@ export const AboutMeData = [
           </div>
         </li>
         <li className="relative flex gap-2 md:gap-4">
-          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[.15rem] before:bg-[#F38BBB]/90 dark:before:bg-[#7943ed]/90">
-            <LuGraduationCap className="size-5 text-[#F38BBB] dark:text-[#7943ed]" />
+          <div className="before:absolute before:left-[.55rem] before:top-6 before:h-5/6 before:w-[.15rem] before:bg-[#de8abb]/90 dark:before:bg-[#7943ed]/90">
+            <LuGraduationCap className="size-5 text-[#de8abb] dark:text-[#7943ed]" />
           </div>
           <div className="w-full">
             <div className="flex items-start justify-between md:items-center">
@@ -93,7 +93,7 @@ export const AboutMeData = [
                 <span className="hidden sm:inline">California </span>State Long
                 Beach
               </h4>
-              <p className="rounded-lg bg-[#F38BBB]/50 bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 px-3 py-px text-stone-100 dark:from-[#3034C2]/80 dark:via-[#6A3DD1]/80 dark:to-[#9329BE]/80">
+              <p className="rounded-lg bg-[#F38BBB]/50 bg-gradient-to-bl from-[#68A3EB]/60 to-[#F38BBB]/60 px-3 py-px text-white/90 dark:from-[#3034C2]/80 dark:via-[#6A3DD1]/80 dark:to-[#9329BE]/80">
                 <span className="hidden sm:inline">2015 - </span>2019
               </p>
             </div>

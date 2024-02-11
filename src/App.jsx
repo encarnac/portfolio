@@ -52,7 +52,7 @@ export default function App() {
         toggleTheme={toggleTheme}
       />
 
-      <div className="relative bg-[#e3e8ee] dark:bg-[#251e32]">
+      <div className="relative bg-[#e3e8ee] dark:bg-[#211e2c]">
         {/* Hero Section */}
         <motion.div
           className="container mx-auto mb-32 mt-16 px-5 py-4 sm:px-10 lg:mt-24"
@@ -84,7 +84,7 @@ export default function App() {
         </motion.div>
       </div>
 
-      <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2f2949]/80">
+      <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#241f36]">
         {/* Projects Section */}
         <motion.div
           className="container mx-auto my-20 px-5 py-4 sm:px-10"
@@ -96,9 +96,9 @@ export default function App() {
 
         {/* Contact and Footer Section */}
 
-        <div className="relative rounded-tl-[5.5rem] bg-[#E3E8EE] dark:bg-[#251e32]">
+        <div className="relative rounded-tl-[5.5rem] bg-[#E3E8EE] dark:bg-[#211e2c]">
           <motion.div
-            className="container mx-auto mt-20 px-5 py-8 sm:px-10"
+            className="container mx-auto mt-20 px-5 py-16 sm:px-10"
             viewport={{ amount: 0.7 }}
             onViewportEnter={() => setSelectedPage("contact")}
           >
