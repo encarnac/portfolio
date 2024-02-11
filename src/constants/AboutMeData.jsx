@@ -45,7 +45,7 @@ export const AboutMeData = [
           <a
             href={resume}
             download
-            className="inline-block rounded-3xl bg-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 hover:bg-[#FA8FC1] dark:bg-[#7943ED] dark:hover:bg-[#8248FF] md:px-6 md:py-3 lg:text-base"
+            className="inline-block rounded-3xl bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-4 py-3 text-sm text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] md:px-6 md:py-3 lg:text-base"
           >
             Download CV
           </a>
