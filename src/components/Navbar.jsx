@@ -27,14 +27,14 @@ const Navbar = ({
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
-          className="text-2xl font-semibold text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-[#b7b0c2] dark:hover:text-[#7943ed] md:text-4xl"
+          className="text-2xl font-semibold text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-white dark:hover:text-[#7943ed] md:text-4xl"
         >
           <HiOutlineCodeBracketSquare className="inline w-6" /> ce
         </a>
-        <div className="mobile-menu flex flex-row text-stone-500 dark:text-[#b7b0c2] md:hidden">
+        <div className="mobile-menu flex flex-row text-stone-600 dark:text-white md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
+            className="p-0 transition duration-300 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
           >
             {theme === "dark" ? (
               <FiMoon className="h-5 w-5" />
@@ -50,7 +50,7 @@ const Navbar = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="flex items-center rounded px-3 py-2 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
+            className="flex cursor-pointer items-center rounded px-3 py-2 transition duration-200 hover:text-[#DC659C] dark:hover:text-[#7943ed]"
           >
             {navbarOpen ? (
               <FiX className="h-5 w-5" />
@@ -73,7 +73,7 @@ const Navbar = ({
             ))}
             <button
               onClick={toggleTheme}
-              className="p-0 text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-[#b7b0c2] dark:hover:text-[#7943ed]"
+              className="p-0 text-stone-600 transition duration-300 hover:text-[#DC659C] dark:text-white dark:hover:text-[#7943ed]"
             >
               {theme === "dark" ? (
                 <FiMoon className="h-5 w-5" />
@@ -94,7 +94,7 @@ const Navbar = ({
             open: { opacity: 1, height: "auto" },
             collapsed: { opacity: 0, height: 0 },
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           {navbarOpen ? (
             <NavDrawer
