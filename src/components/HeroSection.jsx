@@ -39,7 +39,7 @@ export default function Header() {
           className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1"
         >
           <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className="mb-4 text-5xl font-extrabold text-[#797382] dark:text-white sm:text-6xl lg:text-8xl">
+            <h1 className="mb-4 text-5xl font-extrabold text-[#5b5662] dark:text-white sm:text-6xl lg:text-8xl">
               <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                 Hello, I'm
               </span>
