@@ -95,9 +95,10 @@ export default function App() {
         </motion.div>
 
         {/* Contact and Footer Section */}
+
         <div className="relative rounded-tl-[5.5rem] bg-[#E3E8EE] dark:bg-[#251e32]">
           <motion.div
-            className="container mx-auto pt-20"
+            className="container mx-auto mt-20 px-5 py-8 sm:px-10"
             viewport={{ amount: 0.7 }}
             onViewportEnter={() => setSelectedPage("contact")}
           >
