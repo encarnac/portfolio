@@ -27,13 +27,13 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="mb-12 w-full">
       <div className="relative mb-8 flex flex-col items-center justify-center py-3">
-        <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
+        <h4 className="l font-mono text-lg tracking-widest text-[#5b5662]/60 dark:text-white/40 lg:text-xl">
           [02]skills
         </h4>
-        <h3 className="font-sans text-4xl font-bold lg:text-5xl">
-          <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
-            What I Do
-          </span>
+        <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-white/80 lg:text-4xl">
+          {/* <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"> */}
+          What I Use
+          {/* </span> */}
         </h3>
       </div>
       <motion.div
@@ -54,7 +54,7 @@ const SkillsSection = () => {
               <div className="mb-1 rounded-full bg-[#cfd7e5] p-3 dark:bg-[#2b2841] md:p-5">
                 <img src={skill.image} className="w-10" />
               </div>
-              <h4 className="relative text-base font-bold text-[#5b5662] dark:text-white lg:text-xl">
+              <h4 className="relative text-base font-bold text-[#676070] dark:text-white lg:text-xl">
                 {skill.category}
               </h4>
               <span className="mt-3 h-[7px] w-14 rounded-full bg-[#AD99DB] dark:bg-[#7943ED]"></span>

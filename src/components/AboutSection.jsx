@@ -31,13 +31,13 @@ const AboutSection = ({ setSelectedPage }) => {
     <section id="about" className="mb-12 w-full">
       <div className="grid grid-cols-1 items-center justify-items-start lg:grid-cols-12">
         <div className="relative mb-8 flex flex-col items-start justify-start lg:col-span-5">
-          <h4 className="font-mono text-lg tracking-widest text-[#797382]/40 dark:text-white/40 sm:text-xl lg:text-2xl">
+          <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/60 dark:text-white/40 lg:text-xl">
             [01]about
           </h4>
-          <h3 className="font-sans text-4xl font-bold lg:text-5xl">
-            <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
-              Who I Am
-            </span>
+          <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-white/80 lg:text-4xl">
+            {/* <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"> */}
+            Who I Am
+            {/* </span> */}
           </h3>
         </div>
         <div className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-4 transition dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0">
