@@ -46,7 +46,7 @@ const SkillsSection = () => {
         {SKILLS_DATA_SORTED.map((skill, index) => (
           <motion.div
             key={index}
-            transition={{ type: "spring", stiffness: 100 }}
+            transition={{ type: "spring", stiffness: 50 }}
             variants={skillCard}
             className="relative w-full rounded-2xl backdrop-blur-none before:absolute before:-bottom-[.3rem] before:-left-[.3rem] before:z-[-1] before:h-full before:w-full before:rounded-2xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:before:-bottom-[.4rem] md:before:-left-[.4rem]"
           >

@@ -16,8 +16,8 @@ const projectsContainer = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.6,
+      delayChildren: 0.2,
+      staggerChildren: 0.4,
     },
   },
 };
@@ -76,14 +76,14 @@ const ProjectsSection = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={projectsContainer}
           className="grid gap-y-8 text-[#7B7484] dark:text-[#c3c3c4] md:grid-cols-12 md:gap-x-2 md:gap-y-0 lg:gap-x-8 xl:gap-x-12"
         >
           {PROJECTS_DATA.map((project, index) => (
             <motion.div
               key={index}
-              transition={{ type: "tween", duration: 0.4 }}
+              transition={{ type: "tween", duration: 0.3 }}
               variants={projectCard}
               class="col-span-1 flex flex-col items-center md:col-span-4"
             >
