@@ -59,11 +59,11 @@ const SkillsSection = () => {
               </h4>
               <span className="mt-3 h-[7px] w-14 rounded-full bg-[#AD99DB] dark:bg-[#7943ED]"></span>
 
-              <ul className="grid grid-cols-2 justify-center gap-2 px-1 py-3 text-xs text-[#6B6573] dark:text-[#CCC3D7] sm:px-2 sm:text-sm lg:text-base">
+              <ul className="grid grid-cols-2 justify-center gap-2 px-2 py-3 text-[.65rem] text-[#6B6573] dark:text-[#CCC3D7] sm:px-2 sm:text-sm lg:text-base">
                 {skill.tools.map((tool, index) => (
                   <li
                     key={index}
-                    className="flex flex-col items-center justify-items-center gap-y-1 rounded-lg px-2 py-1"
+                    className="flex flex-col items-center justify-items-center gap-y-1 px-2 py-1"
                   >
                     <span className="col-span-2">{tool.name}</span>
                     {tool.logo}
