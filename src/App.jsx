@@ -55,7 +55,7 @@ export default function App() {
       <div className="relative bg-[#e3e8ee] dark:bg-[#211e2c]">
         {/* Hero Section */}
         <motion.div
-          className="container mx-auto mb-32 mt-16 px-5 py-4 sm:px-10 lg:mt-24"
+          className="container mx-auto mb-40 mt-16 px-5 py-4 sm:px-10 lg:mt-24"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("hero")}
         >
