@@ -89,15 +89,15 @@ const ProjectsSection = () => {
             >
               {/* PHOTO */}
               <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
-                <div className="absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-white group-hover:flex">
+                <div className="group/demo absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 group-hover:flex">
                   <a
                     href={project.demo}
-                    className="rounded-full border-2 border-white p-2 transition duration-300 ease-in-out hover:scale-105"
+                    className="rounded-full border-2 border-[#dee2e6] p-2 text-[#dee2e6] transition duration-300 ease-in group-hover/demo:border-white group-hover/demo:text-white"
                   >
                     <LuEye className="size-8" />
                   </a>
                 </div>
-                <div className="overflow-clip rounded-2xl">
+                <div className="before:size-full relative overflow-clip rounded-2xl before:absolute before:bg-[#181818] before:bg-opacity-0 before:transition before:duration-300 before:ease-in-out group-hover:before:bg-opacity-40 dark:group-hover:before:bg-opacity-70">
                   <img
                     src={project.image}
                     alt={`${project.title} mock-up`}
@@ -117,7 +117,7 @@ const ProjectsSection = () => {
                     </h3>
                   </div>
                   <a href={project.github} className="">
-                    <LuExternalLink className="size-5 text-[#de8abb] transition duration-300 hover:scale-105 dark:text-[#7943ED]" />
+                    <LuExternalLink className="size-5 text-[#de8abb] dark:text-[#7943ED]" />
                   </a>
                 </div>
 
