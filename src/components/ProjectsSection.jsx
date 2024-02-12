@@ -62,7 +62,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="mb-12 w-full">
       <div className="relative mb-8 flex flex-col items-end justify-end py-3">
-        <h4 className="text-md font-mono tracking-widest text-[#5b5662]/60 dark:text-[#D4D3D8]/40 lg:text-xl">
+        <h4 className="text-md font-mono tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [03]projects
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">

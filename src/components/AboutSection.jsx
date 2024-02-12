@@ -50,7 +50,7 @@ const AboutSection = ({ setSelectedPage }) => {
     <section id="about" className="mb-12 w-full">
       <div className="grid grid-cols-1 items-center justify-items-start lg:grid-cols-12">
         <div className="relative mb-4 flex flex-col items-start justify-start lg:col-span-5 lg:mb-8">
-          <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/60 dark:text-[#D4D3D8]/40 lg:text-xl">
+          <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
             [01]about
           </h4>
           <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
