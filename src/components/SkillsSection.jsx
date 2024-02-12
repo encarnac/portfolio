@@ -41,7 +41,7 @@ const SkillsSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
         variants={skillsContainer}
-        className="grid grid-cols-1 justify-items-center gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:gap-8 2xl:gap-14"
+        className="grid grid-cols-1 justify-items-center gap-3 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 xl:gap-8 2xl:gap-14"
       >
         {SKILLS_DATA_SORTED.map((skill, index) => (
           <motion.div
