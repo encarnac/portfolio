@@ -5,34 +5,27 @@ import AboutPhoto from "../assets/about-pfp.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
 
-const aboutPhoto = {
-  hidden: { x: -20, opacity: 0 },
-  visible: {
-    opacity: 1,
-    x: 0,
-  },
-};
-// const aboutContent = {
-//   hidden: { x: 20, opacity: 0 },
-//   visible: { opacity: 1, x: 0 },
-// };
-
-const aboutContent = {
-  hidden: { y: 30, opacity: 0 },
+const aboutTabs = {
+  hidden: { y: -30, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
   },
 };
 
-const aboutContainer = {
-  hidden: { opacity: 0 },
+const aboutPhoto = {
+  hidden: { y: -20, opacity: 0 },
   visible: {
+    y: 0,
     opacity: 1,
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.5,
-    },
+  },
+};
+const aboutContent = {
+  hidden: { y: -10, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { delay: 0.7 },
   },
 };
 
@@ -63,8 +56,8 @@ const AboutSection = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
-          variants={aboutContainer}
-          transition={{ type: "tween", duration: 0.5 }}
+          variants={aboutTabs}
+          transition={{ type: "tween", duration: 0.3 }}
           className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0"
         >
           {AboutMeData.map((tabContent, index) => (
@@ -78,17 +71,12 @@ const AboutSection = ({ setSelectedPage }) => {
         </motion.div>
       </div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        variants={aboutContainer}
-        className="mt-0 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-4 lg:grid-cols-12 lg:gap-y-0 lg:py-0"
-      >
+      <div className="mt-0 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-4 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={aboutContent}
+          viewport={{ once: true, amount: 0.9 }}
+          variants={aboutPhoto}
           transition={{ type: "tween", duration: 0.3 }}
           className="relative hidden flex-col items-center justify-items-center gap-y-2 lg:col-span-5 lg:flex"
         >
@@ -100,7 +88,8 @@ const AboutSection = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          transition={{ type: "tween", duration: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ type: "tween", duration: 0.4 }}
           variants={aboutContent}
           className="relative mt-0 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
@@ -118,7 +107,7 @@ const AboutSection = ({ setSelectedPage }) => {
             </AnimatePresence>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 };
