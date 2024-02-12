@@ -62,7 +62,7 @@ export default function Header() {
                 className="font-mono text-4xl sm:text-5xl lg:text-7xl"
               />
             </h1>
-            <p className="text-balance md:text-md mb-3 font-mono text-sm text-[#938e9c] dark:text-[#9d97a6] lg:text-lg">
+            <p className="text-balance md:text-md mb-2 font-mono text-sm text-[#938e9c] dark:text-[#9d97a6] lg:text-lg">
               // I enjoy building and designing for the web with React
             </p>
             <div className="">
@@ -97,23 +97,23 @@ export default function Header() {
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
                   variants={logo}
-                  className="absolute -bottom-9 right-9 z-50 rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80 sm:rounded-[2rem]"
+                  className="absolute -bottom-7 right-11 z-50 rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-[2rem]"
                 >
-                  <img src={react} className="size-16 md:size-24" />
+                  <img src={react} className="size-14 md:size-24" />
                 </motion.div>
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
                   variants={logo}
-                  className="absolute -left-3 top-1/4 z-[1] rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80"
+                  className="absolute -left-3 top-1/4 z-[1] rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80"
                 >
-                  <img src={nodejs} className="size-12 md:size-16" />
+                  <img src={nodejs} className="size-10 md:size-16" />
                 </motion.div>
                 <motion.div
                   transition={{ type: "spring", stiffness: 200 }}
                   variants={logo}
-                  className="absolute right-0 h-fit rounded-2xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#231F2F] dark:bg-[#231F2F]/80 sm:rounded-3xl"
+                  className="absolute right-0 h-fit rounded-2xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-3xl"
                 >
-                  <img src={python} className="size-9 md:size-14" />
+                  <img src={python} className="size-8 md:size-14" />
                 </motion.div>
               </div>
             </div>
