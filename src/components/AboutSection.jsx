@@ -41,34 +41,15 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section id="about" className="mb-12 w-full">
-      <div className="grid grid-cols-1 items-center justify-items-start lg:grid-cols-12">
-        <div className="relative mb-4 flex flex-col items-start justify-start lg:col-span-5 lg:mb-8">
-          <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-            [01]about
-          </h4>
-          <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
-            {/* <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"> */}
-            Who I Am
-            {/* </span> */}
-          </h3>
-        </div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 1 }}
-          variants={aboutTabs}
-          transition={{ type: "tween", duration: 0.3 }}
-          className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0"
-        >
-          {AboutMeData.map((tabContent, index) => (
-            <Tab
-              className={index}
-              active={tab}
-              selectTab={() => selectTab(tabContent.name)}
-              tabName={tabContent.name}
-            />
-          ))}
-        </motion.div>
+      <div className="relative mb-8 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
+        <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
+          [01]about
+        </h4>
+        <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
+          {/* <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"> */}
+          Who I Am
+          {/* </span> */}
+        </h3>
       </div>
 
       <div className="mt-0 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-4 lg:grid-cols-12 lg:gap-y-0 lg:py-0">
@@ -93,6 +74,23 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutContent}
           className="relative mt-0 flex h-full w-full min-w-fit flex-col items-center space-y-4 px-0 lg:col-span-7 lg:min-w-min lg:space-y-6 xl:w-11/12"
         >
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 1 }}
+            variants={aboutTabs}
+            transition={{ type: "tween", duration: 0.3 }}
+            className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0"
+          >
+            {AboutMeData.map((tabContent, index) => (
+              <Tab
+                className={index}
+                active={tab}
+                selectTab={() => selectTab(tabContent.name)}
+                tabName={tabContent.name}
+              />
+            ))}
+          </motion.div>
           <div className="place-self-stretch text-sm text-[#7B7484] dark:text-[#c3c3c4] lg:text-base">
             <AnimatePresence mode="wait">
               <motion.div

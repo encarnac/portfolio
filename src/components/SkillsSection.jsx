@@ -26,7 +26,7 @@ const skillsContainer = {
 const SkillsSection = () => {
   return (
     <section id="skills" className="mb-12 w-full">
-      <div className="relative mb-8 flex flex-col items-center justify-center py-3">
+      <div className="relative mb-8 flex flex-col items-start justify-center py-3">
         <h4 className="l font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [02]skills
         </h4>
