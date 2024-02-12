@@ -31,10 +31,10 @@ const Navbar = ({
         >
           <HiOutlineCodeBracketSquare className="inline w-6" /> ce
         </a>
-        <div className="mobile-menu flex flex-row text-[#5b5662] dark:text-[#D4D3D8] md:hidden">
+        <div className="mobile-menu flex flex-row md:hidden">
           <button
             onClick={toggleTheme}
-            className="p-0 transition duration-300 hover:text-[#de8abb] dark:hover:text-[#7943ed]"
+            className="p-0 text-[#5b5662] transition duration-300 hover:text-[#de8abb] dark:text-[#D4D3D8] dark:hover:text-[#7943ed]"
           >
             {theme === "dark" ? (
               <FiMoon className="h-5 w-5" />
@@ -42,22 +42,24 @@ const Navbar = ({
               <FiSun className="h-5 w-5" />
             )}
           </button>
-
-          <motion.div
-            onClick={() => setNavbarOpen(!navbarOpen)}
-            key={navbarOpen}
-            layoutId="nav-drawer"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="flex cursor-pointer items-center rounded px-3 py-2 transition duration-200 hover:text-[#de8abb] dark:hover:text-[#7943ed]"
-          >
-            {navbarOpen ? (
-              <FiX className="h-5 w-5" />
-            ) : (
-              <FiMenu className="h-5 w-5" />
-            )}
-          </motion.div>
+          <AnimatePresence inital={true} mode="wait">
+            <motion.div
+              onClick={() => setNavbarOpen(!navbarOpen)}
+              key={navbarOpen}
+              // layoutId="nav-drawer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-[#5b5662]hover:text-[#de8abb] flex cursor-pointer items-center rounded px-3 py-2 transition-colors duration-300 dark:text-[#D4D3D8] dark:hover:text-[#7943ed]"
+            >
+              {navbarOpen ? (
+                <FiX className="h-5 w-5" />
+              ) : (
+                <FiMenu className="h-5 w-5" />
+              )}
+            </motion.div>
+          </AnimatePresence>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
