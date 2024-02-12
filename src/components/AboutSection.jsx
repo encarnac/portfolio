@@ -65,7 +65,7 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 1 }}
           variants={aboutContainer}
           transition={{ type: "tween", duration: 0.5 }}
-          className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 transition dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0"
+          className="relative flex h-fit w-full flex-row justify-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0"
         >
           {AboutMeData.map((tabContent, index) => (
             <Tab
