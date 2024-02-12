@@ -48,7 +48,7 @@ const SkillsSection = () => {
             key={index}
             transition={{ type: "spring", stiffness: 50 }}
             variants={skillCard}
-            className="relative w-full rounded-2xl backdrop-blur-none before:absolute before:-bottom-[.3rem] before:-left-[.3rem] before:z-[-1] before:h-full before:w-full before:rounded-2xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:before:-bottom-[.4rem] md:before:-left-[.4rem]"
+            className="relative h-full w-full backdrop-blur-none before:absolute before:-bottom-[.3rem] before:-left-[.3rem] before:z-[-1] before:h-full before:w-full before:rounded-xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:before:rounded-2xl"
           >
             <div className="flex h-full flex-col items-center justify-start gap-y-2 rounded-xl bg-[#E3E8EE] px-0 py-5 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#211e2c] md:rounded-2xl xl:py-8">
               <div className="mb-px rounded-full bg-[#cfd7e5] p-4 dark:bg-[#2b2841] lg:p-5">
