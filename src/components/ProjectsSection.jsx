@@ -16,48 +16,14 @@ const projectsContainer = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.8,
+      delayChildren: 0.2,
+      staggerChildren: 0.4,
     },
   },
 };
 
-const sliderVariants = {
-  enter: (direction) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-};
-
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset, velocity) => {
-  return Math.abs(offset) * velocity;
-};
-
 const ProjectsSection = () => {
   const [[card, direction], setCard] = useState([0, 0]);
-
-  const nextSlide = () => {
-    setCard([card === PROJECTS_DATA.length - 1 ? 0 : card + 1, 1]);
-  };
-
-  const prevSlide = () => {
-    setCard([card === 0 ? PROJECTS_DATA.length - 1 : card - 1, -1]);
-  };
 
   return (
     <section id="projects" className="mb-12 w-full">
@@ -76,7 +42,7 @@ const ProjectsSection = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={projectsContainer}
           className="grid gap-y-8 text-[#7B7484] dark:text-[#c3c3c4] md:grid-cols-12 md:gap-x-2 md:gap-y-0 lg:gap-x-8 xl:gap-x-12"
         >
