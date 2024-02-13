@@ -1,5 +1,5 @@
 export const DividerShape = ({ shape }) => {
-  const color = "dark:fill-[#28213F] fill-[#D5C4DB]";
+  const color = "dark:fill-[#201E2C] fill-[#E3E8EE]";
   return (
     <>
       {shape === "first" && (

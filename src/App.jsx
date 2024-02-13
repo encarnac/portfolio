@@ -52,8 +52,8 @@ export default function App() {
         toggleTheme={toggleTheme}
       />
 
-      <div className="relative bg-[#e3e8ee] dark:bg-[#211e2c]">
-        {/* Hero Section */}
+      {/* Hero Section */}
+      <div className="relative">
         <motion.div
           className="container mx-auto mb-40 mt-16 px-5 py-4 sm:px-10 lg:mt-24"
           viewport={{ amount: 0.7 }}
@@ -64,8 +64,8 @@ export default function App() {
         </motion.div>
       </div>
 
-      <div className="relative">
-        {/* About Me Section */}
+      {/* About Me Section */}
+      <div className="relative bg-[#e3e8ee] dark:bg-[#211e2c]">
         <motion.div
           className="container mx-auto my-20 px-5 py-4 sm:px-10"
           viewport={{ amount: 0.7 }}
@@ -73,38 +73,38 @@ export default function App() {
         >
           <AboutSection />
         </motion.div>
-
         {/* Skills Section */}
-        <motion.div
-          className="container mx-auto my-20 px-5 py-4 sm:px-10"
-          viewport={{ amount: 0.7 }}
-          onViewportEnter={() => setSelectedPage("skills")}
-        >
-          <SkillsSection />
-        </motion.div>
-      </div>
-
-      <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#241f36]">
-        {/* Projects Section */}
-        <motion.div
-          className="container mx-auto my-20 px-5 py-4 sm:px-10"
-          viewport={{ amount: 0.7 }}
-          onViewportEnter={() => setSelectedPage("projects")}
-        >
-          <ProjectsSection />
-        </motion.div>
-
-        {/* Contact and Footer Section */}
-
-        <div className="relative rounded-tl-[5.5rem] bg-[#E3E8EE] dark:bg-[#211e2c]">
+        <div className="relative rounded-tl-[5.5rem] bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] dark:from-[#371E43] dark:from-5% dark:to-[#1E223C]">
           <motion.div
-            className="container mx-auto mt-20 px-5 pb-4 pt-16 sm:px-10"
+            className="container mx-auto my-20 px-5 pb-4 pt-16 sm:px-10"
             viewport={{ amount: 0.7 }}
-            onViewportEnter={() => setSelectedPage("contact")}
+            onViewportEnter={() => setSelectedPage("skills")}
           >
-            <ContactSection />
-            <FooterSection />
+            <SkillsSection />
           </motion.div>
+
+          {/* Projects Section */}
+          <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#241f36]">
+            <motion.div
+              className="container mx-auto my-20 px-5 pt-16 sm:px-10"
+              viewport={{ amount: 0.7 }}
+              onViewportEnter={() => setSelectedPage("projects")}
+            >
+              <ProjectsSection />
+            </motion.div>
+
+            {/* Contact and Footer Section */}
+            <div className="relative rounded-tl-[5.5rem] bg-[#E3E8EE] dark:bg-[#211e2c]">
+              <motion.div
+                className="container mx-auto mt-20 px-5 pb-4 pt-16 sm:px-10"
+                viewport={{ amount: 0.7 }}
+                onViewportEnter={() => setSelectedPage("contact")}
+              >
+                <ContactSection />
+                <FooterSection />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

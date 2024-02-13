@@ -26,19 +26,19 @@ export const AboutMeData = [
           </p>
         </div>
         <div className="flex flex-row flex-wrap justify-stretch gap-2 text-xs text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:text-sm lg:text-base">
-          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/50 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
             <HiUser className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>Colene Encarnado</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/50 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
             <HiMapPin className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>Los Angeles, CA</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/50 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
             <HiAcademicCap className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>B.S. Computer Science</p>
           </div>
-          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/30 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
+          <div className="flex w-fit flex-row items-center justify-between gap-x-1 rounded-lg bg-white/50 px-1 py-2 font-semibold backdrop-blur-lg dark:bg-[#403457]/50 sm:gap-x-2 sm:px-2">
             <HiBriefcase className="size-4 text-[#AD99DB] dark:text-[#a32dd2]" />
             <p>&lt; 1 YOE</p>
           </div>
