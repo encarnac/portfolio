@@ -3,7 +3,7 @@ import { Tab } from "./Tab";
 import { AboutMeData } from "../constants/AboutMeData";
 import AboutPhoto from "../assets/about-pfp.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiUser, HiMapPin, HiLightBulb } from "react-icons/hi2";
+import { HiUser, HiMapPin, HiBriefcase, HiAcademicCap } from "react-icons/hi2";
 
 const aboutTabs = {
   hidden: { y: -30, opacity: 0 },
@@ -30,7 +30,7 @@ const aboutContent = {
 };
 
 const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("Summary");
+  const [tab, setTab] = useState("Introduction");
   const [isPending, startTransition] = useTransition();
 
   const selectTab = (nextTab) => {
@@ -106,6 +106,36 @@ const AboutSection = ({ setSelectedPage }) => {
           </div>
         </motion.div>
       </div>
+      {/* <div className="mt-6 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:grid-cols-4 md:text-start md:text-sm lg:text-lg">
+        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
+          <HiUser className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
+          <div className="flex flex-col">
+            <p>Colene</p>
+            <p>Encarnado</p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
+          <HiMapPin className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
+          <div className="flex flex-col">
+            <p>Los Angeles,</p>
+            <p>California</p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
+          <HiAcademicCap className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
+          <div className="flex flex-col">
+            <p>B.S. Computer </p>
+            <p>Science</p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
+          <HiBriefcase className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
+          <div className="flex flex-col">
+            <p>&lt; 1 Year of</p>
+            <p>Experience</p>
+          </div>
+        </div>
+      </div> */}
     </section>
   );
 };
