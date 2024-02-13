@@ -4,7 +4,7 @@ import portrait from "../assets/portrait.png";
 const ContactSection = () => {
   return (
     <section id="contact" className="mb-12 w-full">
-      <div className="relative mb-6 flex flex-col items-start justify-start py-3">
+      <div className="relative mb-3 flex flex-col items-start justify-start py-3">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [04]contact
         </h4>
@@ -140,7 +140,7 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="mt-3 inline-block w-fit rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"
+              className="inline-block w-fit rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"
             >
               <span className="block rounded-full bg-[#e3e8ee] px-10 py-2 transition duration-300 dark:bg-[#201E2C]">
                 <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
