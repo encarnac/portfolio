@@ -48,6 +48,23 @@ const AboutSection = ({ setSelectedPage }) => {
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
           Who I Am
         </h3>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 1 }}
+          variants={aboutTabs}
+          transition={{ type: "tween", duration: 0.3 }}
+          className="relative flex h-fit w-fit flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-3"
+        >
+          {AboutMeData.map((tabContent, index) => (
+            <Tab
+              className={index}
+              active={tab}
+              selectTab={() => selectTab(tabContent.name)}
+              tabName={tabContent.name}
+            />
+          ))}
+        </motion.div>
       </div>
 
       <div className="mt-0 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-4 md:grid-cols-12 lg:gap-y-0 lg:py-0">
@@ -72,23 +89,6 @@ const AboutSection = ({ setSelectedPage }) => {
           variants={aboutContent}
           className="relative mt-0 flex h-full w-full min-w-fit flex-col items-center gap-y-4 px-0 md:col-span-7 lg:min-w-min lg:gap-y-6 xl:w-11/12"
         >
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 1 }}
-            variants={aboutTabs}
-            transition={{ type: "tween", duration: 0.3 }}
-            className="relative flex h-fit w-full flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-4 lg:col-span-7 lg:mx-0 lg:my-0"
-          >
-            {AboutMeData.map((tabContent, index) => (
-              <Tab
-                className={index}
-                active={tab}
-                selectTab={() => selectTab(tabContent.name)}
-                tabName={tabContent.name}
-              />
-            ))}
-          </motion.div>
           <div className="place-self-stretch text-sm text-[#7B7484] dark:text-[#c3c3c4] lg:text-base">
             <AnimatePresence mode="wait">
               <motion.div
@@ -104,7 +104,7 @@ const AboutSection = ({ setSelectedPage }) => {
           </div>
         </motion.div>
       </div>
-      {/* <div className="mt-6 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:grid-cols-4 md:text-start md:text-sm lg:text-lg">
+      <div className="mt-6 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:grid-cols-4 md:text-start md:text-sm lg:text-lg">
         <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
           <HiUser className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
           <div className="flex flex-col">
@@ -133,7 +133,7 @@ const AboutSection = ({ setSelectedPage }) => {
             <p>Experience</p>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
