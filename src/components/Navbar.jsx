@@ -20,9 +20,14 @@ const Navbar = ({
   setSelectedPage,
 }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const navStyle = isTopOfPage
+    ? "bg-opacity-0 backdrop-blur-sm dark:bg-opacity-0 dark:backdrop-blur-sm"
+    : "bg-opacity-100";
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 border-[1px] border-[#726C7B]/20 bg-[#e3e8ee] transition duration-300 dark:border-[#b7b0c2]/10 dark:bg-[#211e2c]">
+    <nav
+      className={`${navStyle} fixed left-0 right-0 top-0 z-50 border-[1px] border-[#726C7B]/20 bg-[#e3e8ee] transition duration-300 dark:border-[#b7b0c2]/10 dark:bg-[#211e2c]`}
+    >
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2">
         <a
           href="#hero"
