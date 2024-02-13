@@ -2,8 +2,9 @@ import React from "react";
 
 const FooterSection = () => {
   return (
-    <div className="flex flex-row items-center justify-center text-xs text-[#797382] dark:text-white">
-      <p>All Rights Reserved</p>
+    <div className="flex flex-col items-center justify-center font-mono text-xs text-[#7B7484] dark:text-[#c3c3c4]">
+      <p> Designed & Built by Colene Encarnado </p>
+      <p>© 2024. All Rights Reserved</p>
     </div>
   );
 };
