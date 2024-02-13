@@ -30,7 +30,7 @@ const aboutContent = {
 };
 
 const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("Introduction");
+  const [tab, setTab] = useState("Summary");
   const [isPending, startTransition] = useTransition();
 
   const selectTab = (nextTab) => {
@@ -80,7 +80,7 @@ const AboutSection = ({ setSelectedPage }) => {
             viewport={{ once: true, amount: 1 }}
             variants={aboutTabs}
             transition={{ type: "tween", duration: 0.3 }}
-            className="relative flex h-fit w-full flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-0 lg:place-self-start"
+            className="relative flex h-fit w-fit flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-3 lg:col-span-7 lg:mx-0 lg:my-0"
           >
             {AboutMeData.map((tabContent, index) => (
               <Tab

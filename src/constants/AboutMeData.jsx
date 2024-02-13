@@ -5,7 +5,7 @@ import resume from "../assets/Resume_ColeneEnc.pdf";
 
 export const AboutMeData = [
   {
-    name: "Introduction",
+    name: "Summary",
     content: (
       <div className="flex flex-col gap-y-4 py-px">
         <div className="">
