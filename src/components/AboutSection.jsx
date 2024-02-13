@@ -80,7 +80,7 @@ const AboutSection = ({ setSelectedPage }) => {
             viewport={{ once: true, amount: 1 }}
             variants={aboutTabs}
             transition={{ type: "tween", duration: 0.3 }}
-            className="relative flex h-fit w-fit flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-8 lg:col-span-7 lg:mx-0 lg:my-0"
+            className="relative flex h-fit w-full flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-4 lg:col-span-7 lg:mx-0 lg:my-0"
           >
             {AboutMeData.map((tabContent, index) => (
               <Tab
