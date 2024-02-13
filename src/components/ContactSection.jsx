@@ -4,7 +4,7 @@ import portrait from "../assets/portrait.png";
 const ContactSection = () => {
   return (
     <section id="contact" className="mb-12 w-full">
-      <div className="relative mb-8 flex flex-col items-center justify-start py-3">
+      <div className="relative mb-6 flex flex-col items-start justify-start py-3">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [04]contact
         </h4>

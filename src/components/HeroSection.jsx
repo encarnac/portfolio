@@ -77,7 +77,7 @@ export default function Header() {
                 download
                 className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
               >
-                <span className="block rounded-full bg-[#D1C5DC] px-5 py-2 transition duration-300 dark:bg-gradient-to-r dark:from-[#2C1F40] dark:to-[#20213C] dark:sm:bg-[#27213F] dark:sm:bg-none">
+                <span className="block rounded-full bg-gradient-to-r from-[#D0C5DD] to-[#DFC6D8] px-5 py-2 transition duration-300 dark:from-[#2C1F40] dark:to-[#20213C] sm:bg-[#D2C6DD] sm:bg-none dark:sm:bg-[#27213F]">
                   <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
                     Download CV
                   </span>

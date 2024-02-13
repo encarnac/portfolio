@@ -46,9 +46,7 @@ const AboutSection = ({ setSelectedPage }) => {
           [01]about
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
-          {/* <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"> */}
           Who I Am
-          {/* </span> */}
         </h3>
       </div>
 
