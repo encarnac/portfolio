@@ -63,7 +63,8 @@ export default function Header() {
               />
             </h1>
             <p className="text-balance md:text-md mb-2 font-mono text-sm text-[#938e9c] dark:text-[#9d97a6] lg:text-lg">
-              // I enjoy building and designing for the web with React
+              //I enjoy building interactive and responsive applications with
+              React
             </p>
             <div className="">
               <a
