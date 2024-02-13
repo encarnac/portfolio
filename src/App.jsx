@@ -84,9 +84,9 @@ export default function App() {
           </motion.div>
 
           {/* Projects Section */}
-          <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#241f36]">
+          <div className="relative rounded-tr-[5.5rem] bg-[#eff1f2]/50 backdrop-blur-lg dark:bg-[#2d2842]/60">
             <motion.div
-              className="container mx-auto my-20 px-5 pt-16 sm:px-10"
+              className="container mx-auto my-20 px-5 pb-4 pt-16 sm:px-10"
               viewport={{ amount: 0.7 }}
               onViewportEnter={() => setSelectedPage("projects")}
             >
