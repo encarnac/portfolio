@@ -1,9 +1,10 @@
 import { FaPhoneAlt, FaEnvelope, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
 import portrait from "../assets/portrait.png";
+
 const ContactSection = () => {
   return (
     <section id="contact" className="mb-12 w-full">
+      {/* SECTION HEADER */}
       <div className="relative mb-3 flex flex-col items-start justify-start py-3">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [04]contact
@@ -12,6 +13,8 @@ const ContactSection = () => {
           Get In Touch
         </h3>
       </div>
+
+      {/* SECTION CONTENT */}
       <div className="grid grid-cols-1 text-sm text-[#7B7484] dark:text-[#c3c3c4] sm:text-base md:grid-cols-10">
         <div className="col-span-5 flex flex-col">
           <div className="flow-row mb-2 flex items-center gap-x-2">

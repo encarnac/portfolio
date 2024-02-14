@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
-
-export const Link = ({ mobile, page, selectedPage, setSelectedPage }) => {
+export const NavLink = ({ page, selectedPage, setSelectedPage }) => {
   const variants = {
     hidden: {
       height: 100,

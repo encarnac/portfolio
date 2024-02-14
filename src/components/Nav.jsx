@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "./Link";
+import { NavLink } from "./NavLink";
 import { NavDrawer } from "./NavDrawer";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
 import { HiOutlineCodeBracketSquare } from "react-icons/hi2";
@@ -12,7 +12,7 @@ const pages = [
   { title: "contact", href: "#contact" },
 ];
 
-const Navbar = ({
+const Nav = ({
   isTopOfPage,
   theme,
   toggleTheme,
@@ -70,7 +70,7 @@ const Navbar = ({
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
             {pages.map((page, index) => (
               <li className={index}>
-                <Link
+                <NavLink
                   mobile={false}
                   page={page}
                   selectedPage={selectedPage}
@@ -116,4 +116,4 @@ const Navbar = ({
   );
 };
 
-export default Navbar;
+export default Nav;

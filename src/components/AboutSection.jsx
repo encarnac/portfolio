@@ -1,10 +1,9 @@
 import { useState, useTransition } from "react";
-import { Tab } from "./Tab";
+import { motion } from "framer-motion";
 import { AboutMeData } from "../constants/AboutMeData";
 import AboutPhoto from "../assets/about-pfp.png";
 import resume from "../assets/Resume_ColeneEnc.pdf";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { motion } from "framer-motion";
 
 const aboutSummary = {
   hidden: { y: -10, opacity: 0 },
@@ -43,7 +42,8 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section id="about" className="mb-12 w-full">
-      <div className="relative mb-0 flex flex-col items-start justify-start md:items-center lg:col-span-5 lg:mb-8">
+      {/* SECTION HEADER */}
+      <div className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [01]about
         </h4>
@@ -51,6 +51,8 @@ const AboutSection = ({ setSelectedPage }) => {
           Who I Am
         </h3>
       </div>
+
+      {/* SECTION CONTENT */}
       <div className="flex flex-col">
         <div className="mt-0 grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-4 py-4 md:grid-cols-12 lg:gap-y-0 lg:py-0">
           <motion.div

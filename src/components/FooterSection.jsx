@@ -1,5 +1,3 @@
-import React from "react";
-
 const FooterSection = () => {
   return (
     <div className="flex flex-col items-center justify-center font-mono text-xs text-[#7B7484] dark:text-[#c3c3c4]">

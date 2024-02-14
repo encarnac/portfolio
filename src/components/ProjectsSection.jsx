@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { PROJECTS_DATA } from "../constants/ProjectsData";
-import { LuEye, LuExternalLink, LuGithub, LuFolder } from "react-icons/lu";
+import { LuEye, LuExternalLink } from "react-icons/lu";
 
 const projectCard = {
   hidden: { y: 30, opacity: 0 },
@@ -23,21 +23,19 @@ const projectsContainer = {
 };
 
 const ProjectsSection = () => {
-  const [[card, direction], setCard] = useState([0, 0]);
-
   return (
     <section id="projects" className="mb-12 w-full">
+      {/* SECTION HEADER */}
       <div className="relative mb-8 flex flex-col items-end justify-end py-3">
         <h4 className="text-md font-mono tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [03]projects
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
-          {/* <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]"> */}
           What I Made
-          {/* </span> */}
         </h3>
       </div>
 
+      {/* SECTION CONTENT */}
       <div className="flex flex-col items-center gap-y-12">
         <motion.div
           initial="hidden"

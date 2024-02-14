@@ -1,10 +1,10 @@
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 import HeaderPhoto from "../assets/header-pfp.png";
 import react from "../assets/react.svg";
 import python from "../assets/python.svg";
 import nodejs from "../assets/nodejs.svg";
 import resume from "../assets/Resume_ColeneEnc.pdf";
-import { motion } from "framer-motion";
 
 const heroContainer = {
   hidden: { opacity: 0, scale: 0.5 },

@@ -1,5 +1,5 @@
 import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -44,7 +44,7 @@ export default function App() {
       className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] transition duration-300 dark:from-[#371E43] dark:from-5% dark:to-[#1E223C]"
     >
       {/* Navbar and Drawer */}
-      <Navbar
+      <Nav
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
