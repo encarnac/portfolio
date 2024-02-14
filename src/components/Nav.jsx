@@ -1,9 +1,8 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "./NavLink";
 import { NavDrawer } from "./NavDrawer";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
-import { HiOutlineCodeBracketSquare } from "react-icons/hi2";
-import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
   { title: "about", href: "#about" },
@@ -32,9 +31,9 @@ const Nav = ({
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
-          className="text-2xl font-semibold text-[#5b5662] transition duration-300 hover:text-[#de8abb] dark:text-[#D4D3D8] dark:hover:text-[#7943ed] md:text-4xl"
+          className="font-mono text-2xl font-semibold text-[#5b5662] transition duration-300 hover:text-[#de8abb] dark:text-[#D4D3D8] dark:hover:text-[#7943ed] md:text-4xl"
         >
-          <HiOutlineCodeBracketSquare className="inline w-6" /> ce
+          {"</ce>"}
         </a>
         <div className="mobile-menu flex flex-row md:hidden">
           <button
@@ -51,7 +50,6 @@ const Nav = ({
             <motion.div
               onClick={() => setNavbarOpen(!navbarOpen)}
               key={navbarOpen}
-              // layoutId="nav-drawer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -69,9 +67,8 @@ const Nav = ({
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
             {pages.map((page, index) => (
-              <li className={index}>
+              <li key={index}>
                 <NavLink
-                  mobile={false}
                   page={page}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
