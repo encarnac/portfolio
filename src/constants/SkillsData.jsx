@@ -103,7 +103,7 @@ export const SKILLS_DATA = [
     image: "/dev-tools.svg",
     tools: [
       {
-        name: "Git/GitHub",
+        name: "Git / GitHub",
         percentage: "75%",
         logo: <SiGit className="size-7 xl:size-9" />,
       },
