@@ -1,6 +1,6 @@
 import { HiUser, HiMapPin, HiBriefcase, HiAcademicCap } from "react-icons/hi2";
 
-export const AboutMeData = {
+export const ABOUT_DATA = {
   introduction: (
     <div className="">
       <p className="text-balance mb-2">

@@ -13,7 +13,6 @@ import {
   SiMysql,
   SiGooglecloud,
   SiGit,
-  SiGithub,
   SiJirasoftware,
   SiFigma,
   SiPostman,
