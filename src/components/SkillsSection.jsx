@@ -40,10 +40,10 @@ const SkillsSection = () => {
         viewport={{ once: true, amount: 0.4 }}
         variants={skillsContainer}
         y
-        className="grid grid-cols-12"
+        className="grid grid-cols-2 md:grid-cols-12"
       >
-        <div className="col-span-6"></div>
-        <div className="col-span-5 col-end-12 grid grid-cols-2 items-start justify-items-start gap-2">
+        <div className="col-span-full"></div>
+        <div className="col-span-full grid grid-cols-2 items-start justify-items-start gap-2 md:col-span-5 md:col-end-12">
           {SKILLS_DATA_SORTED.map((skill, index) => (
             <motion.div
               key={index}
@@ -51,9 +51,9 @@ const SkillsSection = () => {
               variants={skillCard}
               className="relative h-full w-full backdrop-blur-none before:absolute before:-bottom-[.3rem] before:-left-[.3rem] before:z-[-1] before:h-full before:w-full before:rounded-xl before:bg-gradient-to-br before:from-[#68A3EB] before:to-[#F38BBB] before:opacity-0 before:transition before:duration-300 hover:before:-translate-y-2 before:hover:opacity-100 before:hover:duration-300 before:dark:from-[#3034C2] before:dark:via-[#6A3DD1] before:dark:to-[#9329BE] md:before:rounded-2xl"
             >
-              <div className="flex h-full flex-col items-center justify-start gap-y-2 rounded-xl bg-[#E3E8EE] px-0 py-5 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#211e2c] md:rounded-2xl xl:py-8">
-                <div className="mb-px rounded-full bg-[#cfd7e5] p-4 dark:bg-[#2b2841] lg:p-5">
-                  <img src={skill.image} className="w-7 md:w-9" />
+              <div className="flex h-full flex-col items-center justify-start gap-y-1 rounded-xl bg-[#E3E8EE] px-0 py-3 transition duration-300 hover:-translate-y-2 hover:duration-300 dark:bg-[#211e2c] md:gap-y-2 md:rounded-2xl xl:py-8">
+                <div className="mb-px rounded-full bg-[#cfd7e5] p-3 dark:bg-[#2b2841] lg:p-5">
+                  <img src={skill.image} className="w-5 md:w-9" />
                 </div>
                 <h4 className="relative text-base font-bold text-[#5b5662] dark:text-[#D4D3D8] sm:text-sm md:text-base lg:text-lg">
                   {skill.category}
