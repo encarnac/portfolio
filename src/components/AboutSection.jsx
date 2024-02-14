@@ -2,14 +2,16 @@ import { useState, useTransition } from "react";
 import { Tab } from "./Tab";
 import { AboutMeData } from "../constants/AboutMeData";
 import AboutPhoto from "../assets/about-pfp.png";
-import { motion, AnimatePresence } from "framer-motion";
-import { HiUser, HiMapPin, HiBriefcase, HiAcademicCap } from "react-icons/hi2";
+import resume from "../assets/Resume_ColeneEnc.pdf";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { motion } from "framer-motion";
 
-const aboutTabs = {
-  hidden: { y: -30, opacity: 0 },
+const aboutSummary = {
+  hidden: { y: -10, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
+    transition: { delay: 0.6 },
   },
 };
 
@@ -25,12 +27,12 @@ const aboutContent = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { delay: 0.7 },
+    transition: { delay: 0.8 },
   },
 };
 
 const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("Summary");
+  const [tab, setTab] = useState("Introduction");
   const [isPending, startTransition] = useTransition();
 
   const selectTab = (nextTab) => {
@@ -41,98 +43,84 @@ const AboutSection = ({ setSelectedPage }) => {
 
   return (
     <section id="about" className="mb-12 w-full">
-      <div className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
+      <div className="relative mb-0 flex flex-col items-start justify-start md:items-center lg:col-span-5 lg:mb-8">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           [01]about
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
           Who I Am
         </h3>
+      </div>
+      <div className="flex flex-col">
+        <div className="mt-0 grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-4 py-4 md:grid-cols-12 lg:gap-y-0 lg:py-0">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.9 }}
+            variants={aboutPhoto}
+            transition={{ type: "tween", duration: 0.3 }}
+            className="relative hidden flex-col items-center justify-items-center gap-y-2 md:col-span-5 md:flex"
+          >
+            <div className="size-[250px] lg:size-[300px] before:size-[235px] lg:before:size-[285px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[285px]">
+              <img src={AboutPhoto} className="absolute -bottom-3" />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ type: "tween", duration: 0.4 }}
+            variants={aboutContent}
+            className="relative mt-0 flex w-full min-w-fit flex-col gap-y-4 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12"
+          >
+            {AboutMeData.introduction}
+
+            <div className="flex flex-row items-center justify-stretch gap-x-2 md:gap-x-3">
+              <a
+                href={resume}
+                download
+                className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] p-1 text-xs text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] md:text-sm lg:text-base"
+              >
+                <span className="block rounded-full bg-[#E3E8EE] px-4 py-3 transition duration-300 dark:bg-[#201E2C] md:px-6 md:py-3 lg:px-4 lg:py-3">
+                  <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+                    Download CV
+                  </span>
+                </span>
+              </a>
+              <hr class="h-px w-8 border-0 bg-[#6B6573] dark:bg-[#CCC3D7] sm:w-12"></hr>
+              <p className="hidden font-mono text-sm font-light sm:inline">
+                Follow me
+              </p>
+              <a href="https://github.com/encarnac">
+                <SiGithub className="size-5 sm:size-6 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
+              </a>
+              <a href="https://www.linkedin.com/in/encarnac/">
+                <SiLinkedin className="size-5 sm:size-6 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
-          variants={aboutTabs}
-          transition={{ type: "tween", duration: 0.3 }}
-          className="relative flex h-fit w-fit flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0 lg:my-3"
+          variants={aboutSummary}
+          transition={{ type: "tween", duration: 0.6 }}
+          className="order-first mt-10 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:order-last md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
         >
-          {AboutMeData.map((tabContent, index) => (
-            <Tab
-              className={index}
-              active={tab}
-              selectTab={() => selectTab(tabContent.name)}
-              tabName={tabContent.name}
-            />
+          {AboutMeData.summary.map((data, index) => (
+            <div className="flex flex-col items-center gap-x-1 gap-y-2 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row md:justify-center md:gap-y-0">
+              {data.icon}
+              <div className="flex flex-col">
+                <p className="leading-none">{data.firstLine}</p>
+                <p className="text-sm font-normal text-[#ADADB6] dark:text-[#686671] md:text-xs lg:text-base">
+                  {data.secondLine}
+                </p>
+              </div>
+            </div>
           ))}
         </motion.div>
-      </div>
-
-      <div className="mt-0 grid grid-cols-1 items-start justify-items-center gap-x-0 gap-y-4 py-4 md:grid-cols-12 lg:gap-y-0 lg:py-0">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.9 }}
-          variants={aboutPhoto}
-          transition={{ type: "tween", duration: 0.3 }}
-          className="relative hidden flex-col items-center justify-items-center gap-y-2 py-10 md:col-span-5 md:flex"
-        >
-          <div className="size-[190px] md:size-[250px] lg:size-[300px] xl:size-[350px] before:size-[175px] md:before:size-[235px] lg:before:size-[285px] xl:before:size-[325px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[335px]">
-            <img src={AboutPhoto} className="absolute -bottom-3" />
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ type: "tween", duration: 0.4 }}
-          variants={aboutContent}
-          className="relative mt-0 flex h-full w-full min-w-fit flex-col items-center gap-y-4 px-0 md:col-span-7 lg:min-w-min lg:gap-y-6 xl:w-11/12"
-        >
-          <div className="place-self-stretch text-sm text-[#7B7484] dark:text-[#c3c3c4] lg:text-base">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={tab}
-                initial={{ y: -25, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 25, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {AboutMeData.find((t) => t.name === tab).content}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </motion.div>
-      </div>
-      <div className="mt-6 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:grid-cols-4 md:text-start md:text-sm lg:text-lg">
-        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
-          <HiUser className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
-          <div className="flex flex-col">
-            <p>Colene</p>
-            <p>Encarnado</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
-          <HiMapPin className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
-          <div className="flex flex-col">
-            <p>Los Angeles,</p>
-            <p>California</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
-          <HiAcademicCap className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
-          <div className="flex flex-col">
-            <p>B.S. Computer </p>
-            <p>Science</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-x-1 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row">
-          <HiBriefcase className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
-          <div className="flex flex-col">
-            <p>&lt; 1 Year of</p>
-            <p>Experience</p>
-          </div>
-        </div>
       </div>
     </section>
   );
