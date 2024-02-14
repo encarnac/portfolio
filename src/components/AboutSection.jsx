@@ -1,6 +1,7 @@
 import { useState, useTransition } from "react";
 import { motion } from "framer-motion";
-import { AboutMeData } from "../constants/AboutMeData";
+import AboutIconCard from "./AboutIconCard";
+import { ABOUT_DATA } from "../utils/AboutData";
 import AboutPhoto from "../assets/about-pfp.png";
 import resume from "../assets/Resume_ColeneEnc.pdf";
 import { SiGithub, SiLinkedin } from "react-icons/si";
@@ -55,6 +56,7 @@ const AboutSection = ({ setSelectedPage }) => {
       {/* SECTION CONTENT */}
       <div className="flex flex-col">
         <div className="mt-0 grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-4 py-4 md:grid-cols-12 lg:gap-y-0 lg:py-0">
+          {/* PHOTO */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -68,6 +70,7 @@ const AboutSection = ({ setSelectedPage }) => {
             </div>
           </motion.div>
 
+          {/* SELF INTRODUCTION AND LINKS  */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -76,7 +79,7 @@ const AboutSection = ({ setSelectedPage }) => {
             variants={aboutContent}
             className="relative mt-0 flex w-full min-w-fit flex-col gap-y-4 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12"
           >
-            {AboutMeData.introduction}
+            {ABOUT_DATA.introduction}
 
             <div className="flex flex-row items-center justify-stretch gap-x-2 md:gap-x-3">
               <a
@@ -103,6 +106,8 @@ const AboutSection = ({ setSelectedPage }) => {
             </div>
           </motion.div>
         </div>
+
+        {/* SUMMARY ICONS */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -111,16 +116,8 @@ const AboutSection = ({ setSelectedPage }) => {
           transition={{ type: "tween", duration: 0.6 }}
           className="order-first mt-10 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:order-last md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
         >
-          {AboutMeData.summary.map((data, index) => (
-            <div className="flex flex-col items-center gap-x-1 gap-y-2 rounded-lg px-1 py-2 font-semibold backdrop-blur-lg sm:gap-x-2 sm:px-2 md:flex-row md:justify-center md:gap-y-0">
-              {data.icon}
-              <div className="flex flex-col">
-                <p className="leading-none">{data.firstLine}</p>
-                <p className="text-sm font-normal text-[#ADADB6] dark:text-[#686671] md:text-xs lg:text-base">
-                  {data.secondLine}
-                </p>
-              </div>
-            </div>
+          {ABOUT_DATA.summary.map((info, index) => (
+            <AboutIconCard info={info} />
           ))}
         </motion.div>
       </div>
