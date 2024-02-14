@@ -17,7 +17,7 @@ const ProjectCard = ({ project, index }) => {
       variants={projectCard}
       class="col-span-1 flex flex-col items-center md:col-span-4"
     >
-      {/* PHOTO */}
+      {/* PROJECT PHOTO */}
       <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
         <div className="group/demo absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 group-hover:flex">
           <a
@@ -35,8 +35,9 @@ const ProjectCard = ({ project, index }) => {
           />
         </div>
       </div>
-      {/* DESCRIPTION */}
+      {/* PROJECT DETAILS */}
       <div class="relative z-50 px-2 py-2 text-start">
+        {/* HEADER */}
         <div className="mb-2 flex flex-row items-start justify-between">
           <div className="flex flex-col py-1">
             <h4 class="font-mono text-sm font-semibold text-[#de8abb] dark:text-[#7943ED]">
@@ -51,11 +52,14 @@ const ProjectCard = ({ project, index }) => {
           </a>
         </div>
 
+        {/* DESCRIPTION */}
         <div class="">
           <p className="text-pretty text-sm hover:line-clamp-none md:line-clamp-4 lg:text-base">
             {project.description}
           </p>
         </div>
+
+        {/* TAGS */}
         <ul className="mt-2 flex flex-row flex-wrap justify-start gap-x-1 gap-y-2 text-sm">
           {project.tags.map((tag, index) => (
             <li

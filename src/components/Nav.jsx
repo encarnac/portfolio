@@ -28,6 +28,7 @@ const Nav = ({
       className={`${navStyle} fixed left-0 right-0 top-0 z-50 border-[1px] border-[#726C7B]/20 bg-[#e3e8ee] transition duration-300 dark:border-[#b7b0c2]/10 dark:bg-[#211e2c]`}
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2">
+        {/* LOGO */}
         <a
           href="#hero"
           onClick={() => setSelectedPage("hero")}
@@ -35,6 +36,8 @@ const Nav = ({
         >
           {"</ce>"}
         </a>
+
+        {/* MOBILE THEME AND DROPDOWN THEMES */}
         <div className="mobile-menu flex flex-row md:hidden">
           <button
             onClick={toggleTheme}
@@ -64,6 +67,8 @@ const Nav = ({
             </motion.div>
           </AnimatePresence>
         </div>
+
+        {/* DESKTOP SECTION LINKS AND THEME BUTTON */}
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex justify-evenly p-4 md:flex-row md:space-x-8 md:p-0">
             {pages.map((page, index) => (
@@ -88,6 +93,8 @@ const Nav = ({
           </ul>
         </div>
       </div>
+
+      {/* MOBILE NAV DRAWER */}
       <AnimatePresence mode="wait">
         <motion.div
           key={navbarOpen}

@@ -28,6 +28,7 @@ const ProjectsSection = () => {
 
       {/* SECTION CONTENT */}
       <div className="flex flex-col items-center gap-y-12">
+        {/* PROJECT CARDS */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -39,6 +40,8 @@ const ProjectsSection = () => {
             <ProjectCard key={index} project={project} />
           ))}
         </motion.div>
+
+        {/* GITHUB LINK */}
         <div className="place-self-center text-white">
           <a
             href=""

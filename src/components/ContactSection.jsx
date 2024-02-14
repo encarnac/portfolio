@@ -16,6 +16,7 @@ const ContactSection = () => {
 
       {/* SECTION CONTENT */}
       <div className="grid grid-cols-1 text-sm text-[#7B7484] dark:text-[#c3c3c4] sm:text-base md:grid-cols-10">
+        {/* CONTACT INFO */}
         <div className="col-span-5 flex flex-col">
           <div className="flow-row mb-2 flex items-center gap-x-2">
             <div className="w-20 overflow-clip rounded-custom-3">
@@ -75,6 +76,8 @@ const ContactSection = () => {
             </a>
           </div>
         </div>
+
+        {/* EMAIL FORM SECTION */}
         <div className="col-span-5 mt-8 md:mt-0">
           <form className="flex flex-col">
             <div className="mb-3 flex w-full flex-col items-stretch justify-between gap-x-4 md:flex-row">

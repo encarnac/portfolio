@@ -7,6 +7,7 @@ const SkillCard = ({ skills }) => {
             <p>{skill.skill}</p>
             <p>{skill.percentage}</p>
           </div>
+
           <div className="h-4 w-full rounded-xl bg-[#E3E8EE] dark:bg-[#2B2841]">
             <div
               style={{ width: skill.percentage }}

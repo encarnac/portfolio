@@ -29,9 +29,11 @@ const SkillTab = ({ index, skill, tab, selectTab }) => {
         <div className="mb-px rounded-full bg-[#cfd7e5] p-3 dark:bg-[#2b2841] lg:p-5">
           <img src={skill.image} className="w-5 md:w-9" />
         </div>
+
         <h4 className="relative text-base font-bold text-[#5b5662] dark:text-[#D4D3D8] sm:text-sm md:text-base lg:text-lg">
           {skill.category}
         </h4>
+
         <spans
           className={`${
             tab === skill

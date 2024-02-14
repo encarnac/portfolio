@@ -31,6 +31,7 @@ export default function Header() {
   return (
     <>
       <header className="relative mb-12">
+        {/* INTRO TEXT AND BUTTONS */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -87,6 +88,7 @@ export default function Header() {
             </div>
           </div>
 
+          {/* HERO PHOTO */}
           <div className="col-span-5 mt-6 place-self-center sm:mt-12">
             <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
               <div className="size-[230px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
