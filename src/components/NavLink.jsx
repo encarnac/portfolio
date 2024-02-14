@@ -15,6 +15,7 @@ export const NavLink = ({ page, selectedPage, setSelectedPage }) => {
       },
     },
   };
+
   return (
     <div className="relative">
       <a

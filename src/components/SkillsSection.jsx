@@ -2,7 +2,7 @@ import { useState, useTransition } from "react";
 import { motion } from "framer-motion";
 import SkillCard from "./SkillCard";
 import SkillTab from "./SkillTab";
-import { SKILLS_DATA } from "../constants/SkillsData";
+import { SKILLS_DATA } from "../utils/SkillsData";
 
 const skillsContainer = {
   hidden: { opacity: 0 },

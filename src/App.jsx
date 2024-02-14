@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import Nav from "./components/Nav";
 import AboutSection from "./components/AboutSection";
@@ -5,9 +7,7 @@ import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import FooterSection from "./components/FooterSection";
-import { DividerShape } from "./components/DividerShape";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { DividerShape } from "./assets/DividerShape";
 
 export default function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
