@@ -4,20 +4,22 @@ import portrait from "../assets/portrait.png";
 const ContactSection = () => {
   return (
     <section id="contact" className="mb-12 w-full">
-      {/* SECTION HEADER */}
-      <div className="relative mb-3 flex flex-col items-start justify-start py-3">
-        <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-          [04]contact
-        </h4>
-        <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
-          Get In Touch
-        </h3>
-      </div>
-
       {/* SECTION CONTENT */}
       <div className="grid grid-cols-1 text-sm text-[#7B7484] dark:text-[#c3c3c4] sm:text-base md:grid-cols-10">
         {/* CONTACT INFO */}
         <div className="col-span-5 flex flex-col">
+          {/* SECTION HEADER */}
+          <div className="relative mb-3 flex flex-col items-start justify-start py-3">
+            <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
+              contact
+            </h4>
+            <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
+              Get In{" "}
+              <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+                Touch
+              </span>
+            </h3>
+          </div>
           <div className="flow-row mb-2 flex items-center gap-x-2">
             <div className="w-20 overflow-clip rounded-custom-3">
               <img src={portrait} />
@@ -78,8 +80,8 @@ const ContactSection = () => {
         </div>
 
         {/* EMAIL FORM SECTION */}
-        <div className="col-span-5 mt-8 md:mt-0">
-          <form className="flex flex-col">
+        <div className="col-span-5 mt-8 flex flex-col justify-end md:mt-0">
+          <form className="">
             <div className="mb-3 flex w-full flex-col items-stretch justify-between gap-x-4 md:flex-row">
               <div className="mb-3 grow md:mb-0">
                 <label
@@ -140,7 +142,8 @@ const ContactSection = () => {
               <textarea
                 name="message"
                 id="message"
-                className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
+                rows="5"
+                className="block h-full w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                 placeholder="Let's talk about..."
               />
             </div>
