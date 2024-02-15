@@ -98,8 +98,8 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    category: "Dev skills",
-    image: "/dev-skills.svg",
+    category: "Dev Tools",
+    image: "/dev-tools.svg",
     skills: [
       {
         skill: "Git / GitHub",
