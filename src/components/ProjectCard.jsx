@@ -13,9 +13,9 @@ const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
       key={index}
-      transition={{ type: "tween", duration: 0.4 }}
+      transition={{ type: "tween", duration: 0.6 }}
       variants={projectCard}
-      class="col-span-1 flex flex-col items-center md:col-span-4"
+      class="col-span-1 flex flex-col items-center md:col-span-3"
     >
       {/* PROJECT PHOTO */}
       <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, index }) => {
             </h3>
           </div>
           <a href={project.github} className="">
-            <LuExternalLink className="size-5 text-[#de8abb] dark:text-[#7943ED]" />
+            <LuExternalLink className="size-5 m-1 text-[#de8abb] dark:text-[#7943ED]" />
           </a>
         </div>
 
