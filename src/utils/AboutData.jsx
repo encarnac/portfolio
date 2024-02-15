@@ -28,26 +28,22 @@ export const ABOUT_DATA = {
   ),
   summary: [
     {
-      icon: <HiUser className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />,
+      icon: <HiUser className="size-11" />,
       firstLine: "Colene",
       secondLine: "Encarnado",
     },
     {
-      icon: <HiMapPin className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />,
+      icon: <HiMapPin className="size-11" />,
       firstLine: "Los Angeles,",
       secondLine: "California",
     },
     {
-      icon: (
-        <HiAcademicCap className="size-11 text-[#AD99DB] dark:text-[#a32dd2]" />
-      ),
+      icon: <HiAcademicCap className="size-12" />,
       firstLine: "Computer Science",
       secondLine: "Bachelor's",
     },
     {
-      icon: (
-        <HiBriefcase className="size-10 text-[#AD99DB] dark:text-[#a32dd2]" />
-      ),
+      icon: <HiBriefcase className="size-11" />,
       firstLine: "< 1 Year",
       secondLine: "Experience",
     },
