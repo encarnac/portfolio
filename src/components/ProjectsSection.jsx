@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import ProjectsTab from "./ProjectsTab";
 import { PROJECTS_DATA } from "../utils/ProjectsData";
 
 const projectsContainer = {
@@ -7,26 +9,63 @@ const projectsContainer = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.2,
+      delayChildren: 0.5,
       staggerChildren: 0.4,
     },
   },
 };
 
+const projectsTabs = {
+  hidden: { y: -30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
+const types = ["all", "web", "mobile", "design"];
+
 const ProjectsSection = () => {
+  const [filter, setFilter] = useState("all");
+  const selectFilter = (type) => {
+    setFilter(type);
+  };
+
   return (
     <section id="projects" className="mb-12 w-full">
       {/* SECTION HEADER */}
-      <div className="relative mb-8 flex flex-col items-end justify-end py-3">
+      <div className="relative mb-8 flex flex-col items-center justify-end py-3">
         <h4 className="text-md font-mono tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-          [03]projects
+          projects
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
-          What I Made
+          What I{" "}
+          <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+            Made
+          </span>
         </h3>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 1 }}
+          variants={projectsTabs}
+          transition={{ type: "tween", duration: 0.3 }}
+          className="relative mt-8 flex h-fit w-fit flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0"
+        >
+          {types.map((type, index) => (
+            <ProjectsTab
+              className={index}
+              active={filter}
+              selectFilter={() => selectFilter(type)}
+              type={type}
+            />
+          ))}
+        </motion.div>
       </div>
 
       {/* SECTION CONTENT */}
+
       <div className="flex flex-col items-center gap-y-12">
         {/* PROJECT CARDS */}
         <motion.div
