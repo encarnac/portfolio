@@ -46,10 +46,13 @@ const AboutSection = ({ setSelectedPage }) => {
       {/* SECTION HEADER */}
       <div className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-          [01]about
+          about
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
-          Who I Am
+          Who I{" "}
+          <span className="bg-gradient-to-r from-[#68A3EB] to-[#F38BBB] bg-clip-text text-transparent dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE]">
+            Am
+          </span>
         </h3>
       </div>
 
@@ -114,7 +117,7 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 1 }}
           variants={aboutSummary}
           transition={{ type: "tween", duration: 0.6 }}
-          className="order-first mt-10 grid grid-cols-2 gap-2 text-center text-base text-[#5b5662] dark:text-[#D4D3D8] sm:justify-start md:order-last md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
+          className="order-first mt-10 grid grid-cols-2 gap-2 text-center text-base sm:justify-start md:order-last md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
         >
           {ABOUT_DATA.summary.map((info, index) => (
             <AboutIconCard info={info} />
