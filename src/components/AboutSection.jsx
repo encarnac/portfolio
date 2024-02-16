@@ -58,7 +58,7 @@ const AboutSection = ({ setSelectedPage }) => {
 
       {/* SECTION CONTENT */}
       <div className="flex flex-col">
-        <div className="mt-0 grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-4 py-4 md:grid-cols-12 lg:gap-y-0 lg:py-0">
+        <div className="mt-0 grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-4 py-0 md:grid-cols-12 md:py-2 lg:gap-y-0 lg:py-0">
           {/* PHOTO */}
           <motion.div
             initial="hidden"
@@ -80,7 +80,7 @@ const AboutSection = ({ setSelectedPage }) => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ type: "tween", duration: 0.4 }}
             variants={aboutContent}
-            className="relative mt-0 flex w-full min-w-fit flex-col gap-y-4 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12"
+            className="relative mt-0 flex w-full min-w-fit flex-col gap-y-2 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12"
           >
             {ABOUT_DATA.introduction}
 
@@ -117,7 +117,7 @@ const AboutSection = ({ setSelectedPage }) => {
           viewport={{ once: true, amount: 1 }}
           variants={aboutSummary}
           transition={{ type: "tween", duration: 0.6 }}
-          className="order-first mt-10 grid grid-cols-2 gap-2 text-center text-base sm:justify-start md:order-last md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
+          className="order-first mt-0 grid grid-cols-2 gap-2 text-center text-base sm:justify-start md:order-last md:mt-10 md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
         >
           {ABOUT_DATA.summary.map((info, index) => (
             <AboutIconCard info={info} />
