@@ -5,7 +5,7 @@ export const PROJECTS_DATA = [
     description:
       "A responsive and interactive website to showcase my background, skills, and projects. Used as a learning tool for using animations and a dark/light mode theme.",
     tags: ["React", "Tailwind", "Framer Motion", "Netlify"],
-    image: "/portfolio(1).png",
+    image: "/portfolio.png",
     github: "https://github.com/encarnac/portfolio",
     demo: "https://encarnac.netlify.app/",
   },
@@ -15,7 +15,7 @@ export const PROJECTS_DATA = [
     description:
       "A web application for a 'dating' service to connect potential adopters with pets posted by animal shelters. Users can swipe through listings posted by shelters and 'like' pets to create a collection of potential pets.",
     tags: ["React", "Tailwind", "Flask", "GCP", "Figma"],
-    image: "/adopt-a-pal(1).png",
+    image: "/adopt-a-pal.png",
     github: "https://github.com/encarnac/Adopt-A-Pal",
     demo: "https://www.figma.com/file/yJkg7EMO0fpvOo6WCn6JMO/Desktop-Prototype?type=design&node-id=0%3A1&mode=design&t=TfNgvSewE7efiwJb-1",
   },
@@ -25,8 +25,40 @@ export const PROJECTS_DATA = [
     description:
       "Search for tv shows or movies by title using the The Movie Database API, and add content to your watchlist to receive future release reminders on Google Calendar.",
     tags: ["React", "Bootstrap", "Express", "MongoDB", "GCP", "Railway"],
-    image: "/watch-soon(1).png",
+    image: "/watch-soon.png",
     github: "https://github.com/encarnac/tv-movie-reminder",
     demo: "https://watch-soon.up.railway.app/",
+  },
+  {
+    title: "Papermate",
+    subtitle: "MySQL Database Manager",
+    description:
+      "A web application for administrators to manage a MySQL database for a book subscription service via CRUD operations.",
+    tags: ["React", "Bootstrap", "Express", "MySQL"],
+    image: "/papermate.png",
+    github: "https://github.com/encarnac/tv-movie-reminder",
+    demo: "/",
+  },
+  {
+    title: "Readr",
+    subtitle: "Reading App Design",
+    description:
+      "An interactive prototype for a mobile app used to track reading habits and discover new books.",
+    tags: ["Figma"],
+    image: "/readr.png",
+    github:
+      "https://www.figma.com/file/aGwVuq0U4WMDPgyps76Oai/Readr?type=design&node-id=0-1&mode=design&t=Y7jCxqU69T2SPtHt-0",
+    demo: "https://www.figma.com/proto/aGwVuq0U4WMDPgyps76Oai/Readr?type=design&node-id=0-1&t=FeOLp6hLGMlAlKzU-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A645",
+  },
+
+  {
+    title: "Mood Journal",
+    subtitle: "Journal Mobile App",
+    description:
+      "A cross-platform mobile app for journaling and recording your daily mood. Includes a dark mode and landscape view.",
+    tags: ["Flutter", "SQLite"],
+    image: "/journal.png",
+    github: "https://github.com/encarnac/mood-journal",
+    demo: "/",
   },
 ];

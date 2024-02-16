@@ -24,6 +24,14 @@ const projectsTabs = {
   },
 };
 
+const projectCard = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const types = ["all", "web", "mobile", "design"];
 
 const ProjectsSection = () => {
@@ -73,7 +81,7 @@ const ProjectsSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={projectsContainer}
-          className="grid gap-y-8 text-[#7B7484] dark:text-[#c3c3c4] md:grid-cols-12 md:gap-x-2 md:gap-y-0 lg:gap-x-8 xl:gap-x-12"
+          className="grid gap-y-8 text-[#312f34] dark:text-[#c3c3c4] md:grid-cols-12 md:gap-x-2 md:gap-y-8 lg:gap-x-8 xl:gap-x-12"
         >
           {PROJECTS_DATA.map((project, index) => (
             <ProjectCard key={index} project={project} />
