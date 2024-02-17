@@ -6,31 +6,6 @@ import AboutPhoto from "../assets/about-pfp.png";
 import resume from "../assets/Resume_ColeneEnc.pdf";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
-const aboutSummary = {
-  hidden: { y: -10, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { delay: 0.6 },
-  },
-};
-
-const aboutPhoto = {
-  hidden: { y: -20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-const aboutContent = {
-  hidden: { y: -10, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { delay: 0.8 },
-  },
-};
-
 const AboutSection = ({ setSelectedPage }) => {
   const [tab, setTab] = useState("Introduction");
   const [isPending, startTransition] = useTransition();
@@ -39,6 +14,33 @@ const AboutSection = ({ setSelectedPage }) => {
     startTransition(() => {
       setTab(nextTab);
     });
+  };
+
+  const photoVariants = {
+    hidden: { y: -20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const summaryVariants = {
+    hidden: { y: -10, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.3, delay: 0.3 },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { y: -10, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.3, delay: 0.6 },
+    },
   };
 
   return (
@@ -64,8 +66,8 @@ const AboutSection = ({ setSelectedPage }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.9 }}
-            variants={aboutPhoto}
-            transition={{ type: "tween", duration: 0.3 }}
+            variants={photoVariants}
+            transition={{ type: "tween" }}
             className="relative hidden flex-col items-center justify-items-center gap-y-2 md:col-span-5 md:flex"
           >
             <div className="size-[250px] lg:size-[300px] before:size-[235px] lg:before:size-[285px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[285px]">
@@ -78,8 +80,8 @@ const AboutSection = ({ setSelectedPage }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ type: "tween", duration: 0.4 }}
-            variants={aboutContent}
+            transition={{ type: "tween" }}
+            variants={contentVariants}
             className="relative mt-0 flex w-full min-w-fit flex-col gap-y-2 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12"
           >
             {ABOUT_DATA.introduction}
@@ -115,8 +117,8 @@ const AboutSection = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
-          variants={aboutSummary}
-          transition={{ type: "tween", duration: 0.6 }}
+          variants={summaryVariants}
+          transition={{ type: "tween" }}
           className="order-first mt-0 grid grid-cols-2 gap-2 text-center text-base sm:justify-start md:order-last md:mt-10 md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
         >
           {ABOUT_DATA.summary.map((info, index) => (
