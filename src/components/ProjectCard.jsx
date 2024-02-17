@@ -1,17 +1,28 @@
-import { LuEye, LuExternalLink } from "react-icons/lu";
+import { LuEye, LuEyeOff, LuExternalLink } from "react-icons/lu";
 
 const ProjectCard = ({ index, project }) => {
   return (
     <div class="">
       {/* PROJECT PHOTO */}
       <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[6px] transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
-        <div className="group/demo absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 group-hover:flex">
-          <a
-            href={project.demo}
-            className="rounded-full border-2 border-[#dee2e6] p-2 text-[#dee2e6] transition duration-300 ease-in group-hover/demo:border-white group-hover/demo:text-white"
-          >
-            <LuEye className="size-8" />
-          </a>
+        <div className="group/demo absolute left-1/2 top-1/2 z-50 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-[#dee2e6] group-hover:flex">
+          {project.demo ? (
+            <a
+              href={project.demo}
+              className="rounded-full border-2 border-[#dee2e6] p-2 transition duration-300 ease-in group-hover/demo:border-white group-hover/demo:text-white"
+            >
+              <LuEye className="size-8" />
+            </a>
+          ) : (
+            <div className="group/invalid relative flex flex-col items-center">
+              <span className="text-nowrap absolute -top-7 w-fit rounded-lg px-2 py-1 text-center text-sm font-semibold opacity-0 transition-all duration-150 ease-in group-hover/invalid:opacity-100">
+                No Demo
+              </span>
+              <div className="w-fit rounded-full border-2 border-[#dee2e6] p-2">
+                <LuEyeOff className="size-8" />
+              </div>
+            </div>
+          )}
         </div>
         <div className="before:size-full relative overflow-clip rounded-xl before:absolute before:bg-[#181818] before:bg-opacity-0 before:transition before:duration-300 before:ease-in-out group-hover:before:bg-opacity-40 dark:group-hover:before:bg-opacity-70">
           <img
@@ -22,7 +33,7 @@ const ProjectCard = ({ index, project }) => {
         </div>
       </div>
       {/* PROJECT DETAILS */}
-      <div class="relative z-50 px-2 py-2 text-start">
+      <div class="relative z-50 px-2 py-2 text-start text-[#7B7484] dark:text-[#C3C3C4]">
         {/* HEADER */}
         <div className="mb-2 flex flex-row items-start justify-between">
           <div className="flex flex-col py-1">
@@ -33,7 +44,7 @@ const ProjectCard = ({ index, project }) => {
               {project.title}
             </h3>
           </div>
-          <a href={project.github} className="">
+          <a href={project.repo} className="">
             <LuExternalLink className="size-5 m-1 text-[#de8abb] dark:text-[#7943ED]" />
           </a>
         </div>
