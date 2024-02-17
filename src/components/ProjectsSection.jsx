@@ -18,9 +18,12 @@ const ProjectsSection = () => {
     setView(count);
   };
 
+  // const filteredProjects = PROJECTS_DATA.filter((project) =>
+  //   project.type.includes(filter)
+  // );
   const filteredProjects = PROJECTS_DATA.filter((project) =>
     project.type.includes(filter)
-  );
+  ).slice(0, filter === "all" ? view : undefined);
 
   const types = ["all", "web", "mobile", "design"];
 
@@ -80,7 +83,7 @@ const ProjectsSection = () => {
           ref={ref}
           className="grid gap-y-8 text-[#312f34] dark:text-[#c3c3c4] sm:grid-cols-12 sm:gap-x-4 md:gap-x-3 lg:gap-x-8 xl:gap-x-12"
         >
-          {filteredProjects.slice(0, view).map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.li
               key={index}
               variants={cardVariants}
@@ -96,21 +99,25 @@ const ProjectsSection = () => {
 
         {/* GITHUB LINK */}
         <div className="place-self-center text-white">
-          {view < filteredProjects.length && (
-            <button
-              onClick={() => changeView(view + 3)}
-              className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] lg:text-lg"
-            >
-              View More
-            </button>
-          )}
-          {view >= filteredProjects.length && view > 3 && (
-            <button
-              onClick={() => changeView(3)}
-              className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] lg:text-lg"
-            >
-              View Less
-            </button>
+          {filter === "all" && (
+            <>
+              {view < PROJECTS_DATA.length && (
+                <button
+                  onClick={() => changeView(view + 3)}
+                  className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] lg:text-lg"
+                >
+                  View More
+                </button>
+              )}
+              {view >= PROJECTS_DATA.length && view > 3 && (
+                <button
+                  onClick={() => changeView(3)}
+                  className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] lg:text-lg"
+                >
+                  View Less
+                </button>
+              )}
+            </>
           )}
         </div>
       </div>
