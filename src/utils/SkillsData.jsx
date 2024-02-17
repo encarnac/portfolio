@@ -91,8 +91,8 @@ export const SKILLS_DATA = [
         logo: <SiMysql classskill="size-7 xl:size-9" />,
       },
       {
-        skill: "GCP",
-        percentage: "50%",
+        skill: "Google Cloud Platform",
+        percentage: "45%",
         logo: <SiGooglecloud classskill="size-7 xl:size-9" />,
       },
     ],
@@ -123,24 +123,4 @@ export const SKILLS_DATA = [
       },
     ],
   },
-];
-
-export const SKILLS_DATA_UNSORTED = [
-  { skill: "HTML", logo: <SiHtml5 classskill="size-7 xl:size-9" /> },
-  { skill: "CSS", logo: <SiCss3 classskill="size-7 xl:size-9" /> },
-  { skill: "Javascript", logo: <SiJavascript classskill="size-7 xl:size-9" /> },
-  { skill: "React", logo: <SiReact classskill="size-7 xl:size-9" /> },
-  { skill: "Next.js", logo: <SiNextdotjs classskill="size-7 xl:size-9" /> },
-  { skill: "Bootstrap", logo: <SiBootstrap classskill="size-7 xl:size-9" /> },
-  { skill: "Tailwind", logo: <SiTailwindcss classskill="size-7 xl:size-9" /> },
-  { skill: "Python", logo: <SiPython classskill="size-7 xl:size-9" /> },
-  { skill: "Flask", logo: <SiFlask classskill="size-7 xl:size-9" /> },
-  { skill: "Express", logo: <SiExpress classskill="size-7 xl:size-9" /> },
-  { skill: "MongoDB", logo: <SiMongodb classskill="size-7 xl:size-9" /> },
-  { skill: "MySQL", logo: <SiMysql classskill="size-7 xl:size-9" /> },
-  { skill: "GCP", logo: <SiGooglecloud classskill="size-7 xl:size-9" /> },
-  { skill: "Git", logo: <SiGit classskill="size-7 xl:size-9" /> },
-  { skill: "Jira", logo: <SiJirasoftware classskill="size-7 xl:size-9" /> },
-  { skill: "Figma", logo: <SiFigma classskill="size-7 xl:size-9" /> },
-  { skill: "Postman", logo: <SiPostman classskill="size-7 xl:size-9" /> },
 ];
