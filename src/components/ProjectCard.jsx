@@ -1,24 +1,10 @@
-import { motion } from "framer-motion";
 import { LuEye, LuExternalLink } from "react-icons/lu";
 
-const projectCard = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ index, project }) => {
   return (
-    <motion.div
-      key={index}
-      transition={{ type: "tween", duration: 0.6 }}
-      variants={projectCard}
-      class="col-span-1 flex flex-col items-center md:col-span-4"
-    >
+    <div class="">
       {/* PROJECT PHOTO */}
-      <div class="group relative overflow-clip rounded-3xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-2 transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
+      <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[6px] transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
         <div className="group/demo absolute left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 transform gap-x-4 group-hover:flex">
           <a
             href={project.demo}
@@ -27,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
             <LuEye className="size-8" />
           </a>
         </div>
-        <div className="before:size-full relative overflow-clip rounded-2xl before:absolute before:bg-[#181818] before:bg-opacity-0 before:transition before:duration-300 before:ease-in-out group-hover:before:bg-opacity-40 dark:group-hover:before:bg-opacity-70">
+        <div className="before:size-full relative overflow-clip rounded-xl before:absolute before:bg-[#181818] before:bg-opacity-0 before:transition before:duration-300 before:ease-in-out group-hover:before:bg-opacity-40 dark:group-hover:before:bg-opacity-70">
           <img
             src={project.image}
             alt={`${project.title} mock-up`}
@@ -54,7 +40,7 @@ const ProjectCard = ({ project, index }) => {
 
         {/* DESCRIPTION */}
         <div class="">
-          <p className="text-pretty text-sm hover:line-clamp-none md:line-clamp-4 lg:text-base">
+          <p className="text-pretty text-sm hover:line-clamp-none sm:line-clamp-3 lg:text-base">
             {project.description}
           </p>
         </div>
@@ -71,7 +57,7 @@ const ProjectCard = ({ project, index }) => {
           ))}
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
