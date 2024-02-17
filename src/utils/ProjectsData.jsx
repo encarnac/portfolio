@@ -61,4 +61,14 @@ export const PROJECTS_DATA = [
     github: "https://github.com/encarnac/mood-journal",
     demo: "/",
   },
+  {
+    title: "Wasteagram",
+    subtitle: "Food Waste Tracker",
+    description:
+      "A cross-platform mobile app that enables coffee shop employees to document daily food waste in the form of 'posts' consisting of a photo, number of leftover items, the current date, and the location of the device when the post is created.",
+    tags: ["Flutter", "Firebase", "Sentry"],
+    image: "/wasteagram.png",
+    github: "https://github.com/encarnac/wasteagram",
+    demo: "/",
+  },
 ];
