@@ -6,11 +6,16 @@ import { PROJECTS_DATA } from "../utils/ProjectsData";
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState("all");
+  const [view, setView] = useState(3);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const selectFilter = (type) => {
     setFilter(type);
+  };
+
+  const changeView = (count) => {
+    setView(count);
   };
 
   const filteredProjects = PROJECTS_DATA.filter((project) =>
@@ -75,7 +80,7 @@ const ProjectsSection = () => {
           ref={ref}
           className="grid gap-y-8 text-[#312f34] dark:text-[#c3c3c4] sm:grid-cols-12 sm:gap-x-4 md:gap-x-3 lg:gap-x-8 xl:gap-x-12"
         >
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.slice(0, view).map((project, index) => (
             <motion.li
               key={index}
               variants={cardVariants}
@@ -91,12 +96,22 @@ const ProjectsSection = () => {
 
         {/* GITHUB LINK */}
         <div className="place-self-center text-white">
-          <a
-            href=""
-            className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit md:px-32 lg:text-lg"
-          >
-            View All Projects
-          </a>
+          {view < filteredProjects.length && (
+            <button
+              onClick={() => changeView(view + 3)}
+              className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] lg:text-lg"
+            >
+              View More
+            </button>
+          )}
+          {view >= filteredProjects.length && view > 3 && (
+            <button
+              onClick={() => changeView(3)}
+              className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-8 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] lg:text-lg"
+            >
+              View Less
+            </button>
+          )}
         </div>
       </div>
     </section>
