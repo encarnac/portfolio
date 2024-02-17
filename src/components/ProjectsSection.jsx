@@ -18,9 +18,6 @@ const ProjectsSection = () => {
     setView(count);
   };
 
-  // const filteredProjects = PROJECTS_DATA.filter((project) =>
-  //   project.type.includes(filter)
-  // );
   const filteredProjects = PROJECTS_DATA.filter((project) =>
     project.type.includes(filter)
   ).slice(0, filter === "all" ? view : undefined);
@@ -56,6 +53,8 @@ const ProjectsSection = () => {
             Made
           </span>
         </h3>
+
+        {/* CATEGORY FILTER TABS */}
         <motion.div
           initial="hidden"
           whileInView="visible"
