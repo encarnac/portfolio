@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 
-const skillCard = {
-  hidden: { y: 40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-
 const SkillTab = ({ index, skill, tab, selectTab }) => {
+  const tabVariants = {
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <motion.div
       onClick={() => selectTab(skill)}
       key={index}
       transition={{ type: "spring", stiffness: 50 }}
-      variants={skillCard}
+      variants={tabVariants}
       className={`${
         tab === skill
           ? "before:opacity-100 before:-translate-y-2 "
