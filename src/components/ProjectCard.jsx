@@ -1,8 +1,21 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 import { LuEye, LuEyeOff, LuExternalLink } from "react-icons/lu";
 
 const ProjectCard = ({ index, project }) => {
+  const cardVariants = {
+    enter: {
+      y: 0,
+      opacity: 1,
+    },
+    exit: {
+      y: 30,
+      opacity: 0,
+    },
+  };
+
   return (
-    <div class="">
+    <motion.div variants={cardVariants} class="">
       {/* PROJECT PHOTO */}
       <div class="group relative overflow-clip rounded-2xl border-[1px] border-[#797382]/40 border-white bg-gradient-to-br from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] bg-clip-content p-[6px] transition duration-300 ease-in-out hover:border-[1.5px] hover:border-[#de8abb] dark:border-[#807C8E]/70 dark:from-[#3034C2]/30 dark:via-[#6A3DD1]/30 dark:to-[#9329BE]/30 dark:hover:border-[#7943ED] md:h-fit">
         <div className="group/demo absolute left-1/2 top-1/2 z-50 hidden w-fit -translate-x-1/2 -translate-y-1/2 transform gap-x-4 text-[#dee2e6] group-hover:flex">
@@ -68,7 +81,7 @@ const ProjectCard = ({ index, project }) => {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

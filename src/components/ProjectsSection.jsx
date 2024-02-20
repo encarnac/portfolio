@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import ProjectsTab from "./ProjectsTab";
 import ProjectCard from "./ProjectCard";
 import { PROJECTS_DATA } from "../utils/ProjectsData";
@@ -15,7 +15,9 @@ const ProjectsSection = () => {
   };
 
   const changeView = (count) => {
+    console.log(filteredProjects);
     setView(count);
+    console.log(filteredProjects);
   };
 
   const filteredProjects = PROJECTS_DATA.filter((project) =>
@@ -32,11 +34,23 @@ const ProjectsSection = () => {
     },
   };
 
+  const cardsVariants = {
+    enter: {
+      transition: { staggerChildren: 0.5, delayChildren: 0.5 },
+    },
+    exit: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
   const cardVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
+    enter: {
       y: 0,
       opacity: 1,
+    },
+    exit: {
+      y: 30,
+      opacity: 0,
     },
   };
 
@@ -78,23 +92,26 @@ const ProjectsSection = () => {
 
       <div className="flex flex-col items-center gap-y-12">
         {/* PROJECT CARDS */}
-        <ul
-          ref={ref}
-          className="grid gap-y-8 text-[#312f34] dark:text-[#c3c3c4] sm:grid-cols-12 sm:gap-x-4 md:gap-x-3 lg:gap-x-8 xl:gap-x-12"
-        >
-          {filteredProjects.map((project, index) => (
-            <motion.li
-              key={index}
-              variants={cardVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              transition={{ duration: 0.4, delay: index * 0.5 }}
-              className="col-span-1 flex flex-col items-center sm:col-span-6 md:col-span-4"
-            >
-              <ProjectCard key={project.id} project={project} />
-            </motion.li>
-          ))}
-        </ul>
+        <AnimatePresence>
+          <motion.ul
+            ref={ref}
+            key={`${filter}`}
+            variants={cardsVariants}
+            initial="exit"
+            animate={isInView ? "enter" : "exit"}
+            exit="exit"
+            className="grid gap-y-8 text-[#312f34] dark:text-[#c3c3c4] sm:grid-cols-12 sm:gap-x-4 md:gap-x-3 lg:gap-x-8 xl:gap-x-12"
+          >
+            {filteredProjects.map((project, index) => (
+              <li
+                key={`${project.id}-${index}-${filter}`}
+                className="col-span-1 flex flex-col items-center sm:col-span-6 md:col-span-4"
+              >
+                <ProjectCard key={index} project={project} />
+              </li>
+            ))}{" "}
+          </motion.ul>
+        </AnimatePresence>
 
         {/* GITHUB LINK */}
         <div className="place-self-center text-white">
