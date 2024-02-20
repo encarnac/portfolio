@@ -57,7 +57,7 @@ const Nav = ({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-[#5b5662]hover:text-[#de8abb] flex cursor-pointer items-center rounded px-3 py-2 transition-colors duration-300 dark:text-[#D4D3D8] dark:hover:text-[#7943ed]"
+              className="text-[#5b5662]hover:text-[#de8abb] flex cursor-pointer items-center rounded px-3 py-2 text-[#5b5662] transition-colors duration-300 hover:text-[#de8abb] dark:text-[#D4D3D8] dark:hover:text-[#7943ed]"
             >
               {navbarOpen ? (
                 <FiX className="h-5 w-5" />
