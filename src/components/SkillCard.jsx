@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const SkillCard = ({ skills }) => {
-  const progressBarVariants = {
+  const skillVariants = {
     hidden: { opacity: 0, width: "0%" },
     visible: {
       opacity: 1,
@@ -10,11 +10,12 @@ const SkillCard = ({ skills }) => {
     },
   };
 
-  const progressVariants = {
+  const barVariants = {
     hidden: { width: "0%" },
-    visible: (skill) => ({
-      width: `${skill.percentage}`,
+    visible: (index) => ({
+      width: `${skills[index].percentage}`,
       transition: {
+        // delay: `${index + 0.6}`,
         type: "spring",
         damping: 17,
         stiffness: 150,
@@ -25,7 +26,7 @@ const SkillCard = ({ skills }) => {
   return (
     <div className="space-y-3">
       {skills.map((skill, index) => (
-        <motion.div variants={progressBarVariants} key={`skill_${index}`}>
+        <motion.div variants={skillVariants} key={`skill_${index}`}>
           <div className="flex flex-row justify-between">
             <p>{skill.skill}</p>
             <p className="font-mono">{skill.percentage}</p>
@@ -33,9 +34,10 @@ const SkillCard = ({ skills }) => {
 
           <div className="h-4 w-full rounded-xl bg-[#E3E8EE]/70 dark:bg-[#201E2C]/70">
             <motion.div
-              custom={skill}
+              custom={index}
+              initial="hidden"
               animate="visible"
-              variants={progressVariants}
+              variants={barVariants}
               className={`h-4 rounded-xl bg-gradient-to-r from-[#A09AD8] to-[#CD94CA] dark:from-[#4E39CA] dark:to-[#703BCF]`}
             ></motion.div>
           </div>
