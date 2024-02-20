@@ -27,10 +27,11 @@ const ProjectsSection = () => {
   const types = ["all", "web", "mobile", "design"];
 
   const tabVariants = {
-    hidden: { y: -30, opacity: 0 },
+    hidden: { y: -40, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
+      transition: { type: "tween", duration: 0.5 },
     },
   };
 
@@ -39,7 +40,7 @@ const ProjectsSection = () => {
       transition: { staggerChildren: 0.5, delayChildren: 0.5 },
     },
     exit: {
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+      transition: { staggerChildren: 0.1, staggerDirection: -1 },
     },
   };
 
@@ -74,7 +75,6 @@ const ProjectsSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
           variants={tabVariants}
-          transition={{ type: "tween", duration: 0.3 }}
           className="relative mt-8 flex h-fit w-fit flex-row place-self-center border-b-[2px] border-b-[#726C7B]/20 px-2 dark:border-b-[#b7b0c2]/10 sm:px-6 lg:col-span-7 lg:mx-0"
         >
           {types.map((type, index) => (
@@ -103,12 +103,13 @@ const ProjectsSection = () => {
             className="grid gap-y-8 text-[#312f34] dark:text-[#c3c3c4] sm:grid-cols-12 sm:gap-x-4 md:gap-x-3 lg:gap-x-8 xl:gap-x-12"
           >
             {filteredProjects.map((project, index) => (
-              <li
+              <motion.li
                 key={`${project.id}-${index}-${filter}`}
+                variants={cardVariants}
                 className="col-span-1 flex flex-col items-center sm:col-span-6 md:col-span-4"
               >
                 <ProjectCard key={index} project={project} />
-              </li>
+              </motion.li>
             ))}{" "}
           </motion.ul>
         </AnimatePresence>
