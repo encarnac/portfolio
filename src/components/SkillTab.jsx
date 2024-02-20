@@ -13,7 +13,7 @@ const SkillTab = ({ index, skill, tab, selectTab }) => {
     <motion.div
       onClick={() => selectTab(skill)}
       key={index}
-      transition={{ type: "spring", stiffness: 50 }}
+      transition={{ type: "spring", stiffness: 80 }}
       variants={tabVariants}
       className={`${
         tab === skill
