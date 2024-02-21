@@ -29,7 +29,7 @@ const ProjectsSection = () => {
   const projectsVariants = {
     hidden: {
       opacity: 0,
-      transition: { staggerChildren: 0.1, staggerDirection: -1 },
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
     visible: {
       opacity: 1,
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
 
   const listVariants = {
     hidden: {
-      transition: { staggerChildren: 0.1, staggerDirection: -1 },
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
     visible: {
       transition: { delayChildren: 0.6, staggerChildren: 0.2 },
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
       {/* SECTION HEADER */}
       <div className="relative mb-8 flex flex-col items-center justify-end py-3">
         <h4 className="text-md font-mono tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-          projects
+          //projects
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
           What I{" "}
