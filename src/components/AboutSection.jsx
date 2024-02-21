@@ -65,7 +65,7 @@ const AboutSection = ({}) => {
             variants={contentVariants}
             className="relative hidden flex-col items-center justify-items-center gap-y-2 md:col-span-5 md:flex"
           >
-            <div className="size-[250px] lg:size-[300px] before:size-[235px] lg:before:size-[285px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[285px]">
+            <div className="size-[250px] lg:size-[300px] before:size-[235px] lg:before:size-[285px] relative rounded-custom-1 bg-[#abaceb] transition-colors before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] before:transition-colors dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[285px]">
               <img src={AboutPhoto} className="absolute -bottom-3" />
             </div>
           </motion.div>

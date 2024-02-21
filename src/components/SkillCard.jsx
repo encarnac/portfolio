@@ -31,7 +31,7 @@ const SkillCard = ({ skills }) => {
             <p className="font-mono">{skill.percentage}</p>
           </div>
 
-          <div className="h-4 w-full rounded-xl bg-[#E3E8EE]/70 dark:bg-[#201E2C]/70">
+          <div className="h-4 w-full rounded-xl bg-[#E3E8EE]/70 transition-colors dark:bg-[#201E2C]/70">
             <motion.div
               custom={index}
               initial="hidden"
