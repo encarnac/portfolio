@@ -38,7 +38,7 @@ const ContactSection = () => {
           {/* SECTION HEADER */}
           <div className="relative mb-3 flex flex-col items-start justify-start py-3">
             <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-              contact
+              //contact
             </h4>
             <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
               Get In{" "}

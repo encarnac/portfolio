@@ -34,7 +34,7 @@ const SkillsSection = () => {
           <div className="place-self-start md:place-self-end">
             {/* SECTION HEADER */}
             <h4 className="text-start font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 md:text-end lg:text-xl">
-              skills
+              //skills
             </h4>
             <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
               What I{" "}

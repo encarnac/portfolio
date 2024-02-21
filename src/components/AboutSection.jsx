@@ -47,7 +47,7 @@ const AboutSection = ({}) => {
       {/* SECTION HEADER */}
       <div className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
-          about
+          //about
         </h4>
         <h3 className="font-sans text-3xl font-bold text-[#5b5662] dark:text-[#D4D3D8] lg:text-4xl">
           Who I{" "}
