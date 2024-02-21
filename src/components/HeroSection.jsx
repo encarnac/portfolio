@@ -44,8 +44,8 @@ export default function Header() {
       className="relative mb-12"
     >
       {/* INTRO TEXT AND BUTTONS */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-x-1">
-        <div className="col-span-7 place-self-center text-center sm:text-left">
+      <div className="grid grid-cols-1 md:grid-cols-12 lg:gap-x-1">
+        <div className="col-span-7 place-self-center text-center md:text-left">
           <motion.h1
             variants={contentVariants}
             className="mb-4 text-5xl font-extrabold text-[#5b5662] dark:text-[#D4D3D8] sm:text-6xl lg:text-8xl"
@@ -56,11 +56,12 @@ export default function Header() {
             <br />
             <TypeAnimation
               sequence={[
+                1000,
                 "Colene",
                 2000, // Waits 2s
                 "Front-End",
                 2000, // Waits 2s
-                "Web Dev",
+                "Developer",
                 900,
                 () => {
                   console.log("Sequence completed");
@@ -76,7 +77,7 @@ export default function Header() {
             variants={contentVariants}
             className="text-balance md:text-md mb-2 font-mono text-sm text-[#938e9c] dark:text-[#9d97a6] lg:text-lg"
           >
-            //I enjoy building interactive and responsive applications with
+            // I enjoy building interactive and responsive applications with
             React
           </motion.p>
           <div className="">
@@ -115,8 +116,8 @@ export default function Header() {
           variants={contentVariants}
           className="col-span-5 mt-6 place-self-center sm:mt-12"
         >
-          <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
-            <div className="size-[230px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] dark:bg-[#7943ed]">
+          <div className="relative z-0 before:absolute before:bottom-2 before:left-2 before:h-full before:w-full before:rounded-custom-3 before:bg-[#afc6e2] before:transition-colors dark:before:bg-[#872FC3] lg:before:h-[330px] lg:before:w-[330px] xl:before:h-[400px] xl:before:w-[400px]">
+            <div className="size-[230px] md:size-[325px] xl:size-[400px] relative rounded-custom-2 bg-[#ad99db] transition-colors dark:bg-[#7943ed]">
               <img
                 src={HeaderPhoto}
                 alt="profile photo"
@@ -124,19 +125,19 @@ export default function Header() {
               />
               <motion.div
                 variants={logoVariants}
-                className="absolute -bottom-7 right-11 z-50 rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-[2rem]"
+                className="absolute -bottom-7 right-11 z-50 rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm transition-colors dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-[2rem]"
               >
                 <img src={react} className="size-14 md:size-24" />
               </motion.div>
               <motion.div
                 variants={logoVariants}
-                className="absolute -left-3 top-1/4 z-[1] rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80"
+                className="absolute -left-3 top-1/4 z-[1] rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm transition-colors dark:border-[#312D3C] dark:bg-[#211e2c]/80"
               >
                 <img src={nodejs} className="size-10 md:size-16" />
               </motion.div>
               <motion.div
                 variants={logoVariants}
-                className="absolute right-0 h-fit rounded-2xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-3xl"
+                className="absolute right-0 h-fit rounded-2xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm transition-colors dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-3xl"
               >
                 <img src={python} className="size-8 md:size-14" />
               </motion.div>
