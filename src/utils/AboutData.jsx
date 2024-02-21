@@ -2,7 +2,7 @@ import { HiUser, HiMapPin, HiBriefcase, HiAcademicCap } from "react-icons/hi2";
 
 export const ABOUT_DATA = {
   introduction: (
-    <div className="">
+    <>
       <p className="text-balance mb-2">
         I consistently embraced my creativity throughout my life and found joy
         in the process of designing and crafting things. Due to my background in
@@ -24,7 +24,7 @@ export const ABOUT_DATA = {
         </span>
         , taking on new challenges and learning the latest technologies.
       </p>
-    </div>
+    </>
   ),
   summary: [
     {
