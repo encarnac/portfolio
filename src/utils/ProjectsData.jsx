@@ -29,14 +29,7 @@ export const PROJECTS_DATA = [
     subtitle: "TV/Movie Reminder App",
     description:
       "Create a watchlist and receive future release reminders on your Google Calendar.",
-    tags: [
-      "React",
-      "Bootstrap",
-      "Express",
-      "MongoDB",
-      "Google Calander",
-      "Railway",
-    ],
+    tags: ["React", "Bootstrap", "Express", "MongoDB", "Google API", "Railway"],
     type: ["all", "web"],
     image: "/watch-soon.png",
     repo: "https://github.com/encarnac/tv-movie-reminder",
