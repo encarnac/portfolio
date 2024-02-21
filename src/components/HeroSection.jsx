@@ -81,15 +81,21 @@ export default function Header() {
           <div className="">
             <motion.a
               variants={contentVariants}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
               href="#contact"
-              className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
+              className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-6 py-3 text-white dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
             >
               Hire Me
             </motion.a>
             <motion.a
               variants={contentVariants}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
               href={resume}
               download
               className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"

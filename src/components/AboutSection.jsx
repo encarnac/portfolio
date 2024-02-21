@@ -14,14 +14,14 @@ const AboutSection = ({}) => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.6, delayChildren: 0.3, staggerChildren: 0.4 },
+      transition: { duration: 0.6, delayChildren: 0.3, staggerChildren: 0.3 },
     },
   };
 
   const listVariants = {
     visible: {
       transition: {
-        staggerChildren: 0.4,
+        staggerChildren: 0.3,
       },
     },
   };
@@ -31,17 +31,17 @@ const AboutSection = ({}) => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.4 },
+      transition: { duration: 0.3 },
     },
   };
 
   return (
     <motion.section
       id="about"
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
       variants={aboutVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
       className="mb-12 w-full"
     >
       {/* SECTION HEADER */}
@@ -108,6 +108,7 @@ const AboutSection = ({}) => {
 
         {/* SUMMARY ICONS */}
         <motion.ul
+          ref={ref}
           variants={listVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
