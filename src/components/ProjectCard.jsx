@@ -24,11 +24,11 @@ const ProjectCard = ({ index, project }) => {
             </div>
           )}
         </div>
-        <div className="before:size-full relative overflow-clip rounded-xl before:absolute before:bg-[#181818] before:bg-opacity-0 before:transition before:duration-300 before:ease-in-out group-hover:before:bg-opacity-40 dark:group-hover:before:bg-opacity-70">
+        <div className="before:size-full relative overflow-clip rounded-xl before:absolute before:bg-[#181818] before:bg-opacity-0 before:transition before:duration-300 before:ease-in-out group-hover:before:bg-opacity-50 dark:group-hover:before:bg-opacity-90">
           <img
             src={project.image}
             alt={`${project.title} mock-up`}
-            className="h-full w-full object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-50"
+            className="h-full w-full object-cover opacity-100 transition duration-200 ease-linear group-hover:scale-110 group-hover:opacity-40"
           />
         </div>
       </div>
