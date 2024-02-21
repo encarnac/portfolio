@@ -1,52 +1,56 @@
-import { useState, useTransition } from "react";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import AboutIconCard from "./AboutIconCard";
 import { ABOUT_DATA } from "../utils/AboutData";
 import AboutPhoto from "../assets/about-pfp.png";
 import resume from "../assets/Resume_ColeneEnc.pdf";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
-const AboutSection = ({ setSelectedPage }) => {
-  const [tab, setTab] = useState("Introduction");
-  const [isPending, startTransition] = useTransition();
+const AboutSection = ({}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.33 });
 
-  const selectTab = (nextTab) => {
-    startTransition(() => {
-      setTab(nextTab);
-    });
-  };
-
-  const photoVariants = {
-    hidden: { y: -20, opacity: 0 },
+  const aboutVariants = {
+    hidden: { opacity: 0 },
     visible: {
-      y: 0,
       opacity: 1,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.3, delayChildren: 0.3, staggerChildren: 0.3 },
     },
   };
 
-  const summaryVariants = {
-    hidden: { y: -10, opacity: 0 },
+  const listVariants = {
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.3, delay: 0.3 },
+      transition: {
+        delay: 0.5,
+        delayChildren: 0.4,
+        staggerChildren: 0.4,
+      },
     },
   };
 
   const contentVariants = {
-    hidden: { y: -10, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.3, delay: 0.6 },
+      transition: { duration: 0.4 },
     },
   };
 
   return (
-    <section id="about" className="mb-12 w-full">
+    <motion.section
+      id="about"
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={aboutVariants}
+      className="mb-12 w-full"
+    >
       {/* SECTION HEADER */}
-      <div className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
+      <motion.div
+        variants={aboutVariants}
+        className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8"
+      >
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           about
         </h4>
@@ -56,18 +60,14 @@ const AboutSection = ({ setSelectedPage }) => {
             Am
           </span>
         </h3>
-      </div>
+      </motion.div>
 
       {/* SECTION CONTENT */}
       <div className="flex flex-col">
         <div className="mt-0 grid grid-cols-1 items-center justify-items-center gap-x-0 gap-y-4 py-0 md:grid-cols-12 md:py-2 lg:gap-y-0 lg:py-0">
           {/* PHOTO */}
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.9 }}
-            variants={photoVariants}
-            transition={{ type: "tween" }}
+            variants={contentVariants}
             className="relative hidden flex-col items-center justify-items-center gap-y-2 md:col-span-5 md:flex"
           >
             <div className="size-[250px] lg:size-[300px] before:size-[235px] lg:before:size-[285px] relative rounded-custom-1 bg-[#abaceb] before:absolute before:bottom-0 before:right-3 before:rounded-custom-4 before:bg-[#ad99db] dark:bg-[#5A32AF] dark:before:bg-[#7943ed] xl:before:w-[285px]">
@@ -75,18 +75,17 @@ const AboutSection = ({ setSelectedPage }) => {
             </div>
           </motion.div>
 
-          {/* SELF INTRODUCTION AND LINKS  */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ type: "tween" }}
-            variants={contentVariants}
-            className="relative mt-0 flex w-full min-w-fit flex-col gap-y-2 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12"
-          >
-            {ABOUT_DATA.introduction}
+          <div className="relative mt-0 flex w-full min-w-fit flex-col gap-y-2 px-0 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:col-span-7 lg:min-w-min lg:gap-y-6 lg:text-base xl:w-11/12">
+            {/* SELF INTRODUCTION */}
+            <motion.div variants={contentVariants}>
+              {ABOUT_DATA.introduction}
+            </motion.div>
 
-            <div className="flex flex-row items-center justify-stretch gap-x-2 md:gap-x-3">
+            {/* SOCIAL LINKS AND RESUME BUTTON */}
+            <motion.div
+              variants={contentVariants}
+              className="flex flex-row items-center justify-stretch gap-x-2 md:gap-x-3"
+            >
               <a
                 href={resume}
                 download
@@ -108,25 +107,25 @@ const AboutSection = ({ setSelectedPage }) => {
               <a href="https://www.linkedin.com/in/encarnac/">
                 <SiLinkedin className="size-5 sm:size-6 transition duration-300 ease-in-out hover:scale-105 hover:text-[#7B7484] dark:hover:text-[#DAD1E6]" />
               </a>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         {/* SUMMARY ICONS */}
-        <motion.div
+        <motion.ul
+          variants={listVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 1 }}
-          variants={summaryVariants}
-          transition={{ type: "tween" }}
+          animate={isInView ? "visible" : "hidden"}
           className="order-first mt-0 grid grid-cols-2 gap-2 text-center text-base sm:justify-start md:order-last md:mt-10 md:grid-cols-4 md:text-start md:text-sm lg:text-lg"
         >
           {ABOUT_DATA.summary.map((info, index) => (
-            <AboutIconCard info={info} />
+            <motion.li variants={contentVariants}>
+              <AboutIconCard info={info} />
+            </motion.li>
           ))}
-        </motion.div>
+        </motion.ul>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
