@@ -17,8 +17,8 @@ export const PROJECTS_DATA = [
     subtitle: "Pet Adoption App",
     description:
       "A pet adoption 'matching' service to connect potential adopters with pets looking for a home.",
-    tags: ["React", "Tailwind", "Flask", "Datastore", "Cloud Storage", "Figma"],
-    type: ["all", "web"],
+    tags: ["React", "Tailwind", "Flask", "Cloud Storage", "Datastore", "Figma"],
+    type: ["all", "web", "design"],
     image: "/adopt-a-pal.png",
     repo: "https://github.com/encarnac/Adopt-A-Pal",
     demo: "https://www.figma.com/file/yJkg7EMO0fpvOo6WCn6JMO/Desktop-Prototype?type=design&node-id=0%3A1&mode=design&t=TfNgvSewE7efiwJb-1",
