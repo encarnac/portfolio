@@ -8,7 +8,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const AboutSection = ({}) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: "all" });
 
   const aboutVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +41,7 @@ const AboutSection = ({}) => {
       variants={aboutVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.25 }}
       className="mb-12 w-full"
     >
       {/* SECTION HEADER */}
