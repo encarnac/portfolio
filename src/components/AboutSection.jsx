@@ -8,22 +8,21 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const AboutSection = ({}) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.33 });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   const aboutVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.3, delayChildren: 0.3, staggerChildren: 0.3 },
+      transition: { duration: 0.5, delayChildren: 0.3, staggerChildren: 0.4 },
     },
   };
 
   const listVariants = {
     visible: {
       transition: {
-        delay: 0.5,
-        delayChildren: 0.4,
-        staggerChildren: 0.4,
+        delayChildren: 0.5,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -47,10 +46,7 @@ const AboutSection = ({}) => {
       className="mb-12 w-full"
     >
       {/* SECTION HEADER */}
-      <motion.div
-        variants={aboutVariants}
-        className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8"
-      >
+      <div className="relative mb-0 flex flex-col items-center justify-start lg:col-span-5 lg:mb-8">
         <h4 className="font-mono text-lg tracking-widest text-[#5b5662]/40 dark:text-[#D4D3D8]/40 lg:text-xl">
           about
         </h4>
@@ -60,7 +56,7 @@ const AboutSection = ({}) => {
             Am
           </span>
         </h3>
-      </motion.div>
+      </div>
 
       {/* SECTION CONTENT */}
       <div className="flex flex-col">

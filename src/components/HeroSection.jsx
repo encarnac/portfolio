@@ -19,7 +19,7 @@ export default function Header() {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.2,
+        duration: 0.4,
         delayChildren: 0.3,
         staggerChildren: 0.3,
       },
