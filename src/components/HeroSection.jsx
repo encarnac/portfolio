@@ -19,9 +19,9 @@ export default function Header() {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.2,
         delayChildren: 0.3,
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   };

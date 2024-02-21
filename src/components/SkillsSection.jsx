@@ -15,7 +15,7 @@ const SkillsSection = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.6, delayChildren: 0.3, staggerChildren: 0.3 },
+      transition: { duration: 0.6, delayChildren: 0.3, staggerChildren: 0.2 },
     },
   };
 

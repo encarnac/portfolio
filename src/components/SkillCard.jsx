@@ -6,7 +6,7 @@ const SkillCard = ({ skills }) => {
     visible: {
       opacity: 1,
       width: "100%",
-      transition: { duration: 0.3 },
+      transition: { duration: 0.2 },
     },
   };
 

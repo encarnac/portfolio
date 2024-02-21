@@ -6,7 +6,7 @@ const SkillTab = ({ index, skill, tab, selectTab }) => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.2 },
     },
   };
 
