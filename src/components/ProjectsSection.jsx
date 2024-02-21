@@ -42,7 +42,7 @@ const ProjectsSection = () => {
       transition: { staggerChildren: 0.1, staggerDirection: -1 },
     },
     visible: {
-      transition: { delayChildren: 0.4, staggerChildren: 0.2 },
+      transition: { delayChildren: 0.6, staggerChildren: 0.2 },
     },
   };
 
