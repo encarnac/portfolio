@@ -41,7 +41,7 @@ export default function App() {
   return (
     <main
       id="hero"
-      className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] transition duration-300 dark:from-[#371E43] dark:from-5% dark:to-[#1E223C]"
+      className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-tr from-[#B0BEDF] via-[#D0C5DD] to-[#E1C6D7] transition-all duration-500 dark:from-[#371E43] dark:from-5% dark:to-[#1E223C]"
     >
       {/* Navbar and Drawer */}
       <Nav
@@ -55,7 +55,7 @@ export default function App() {
       {/* Hero Section */}
       <div className="relative">
         <motion.div
-          className="container mx-auto mb-40 mt-16 px-5 py-4 sm:px-10 lg:mt-24"
+          className="container mx-auto mb-64 mt-16 px-5 py-3 sm:px-10 lg:mt-24"
           viewport={{ amount: 0.7 }}
           onViewportEnter={() => setSelectedPage("hero")}
         >
