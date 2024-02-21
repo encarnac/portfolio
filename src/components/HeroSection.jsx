@@ -31,6 +31,7 @@ export default function Header() {
     visible: {
       y: 0,
       opacity: 1,
+      transition: { type: "spring", stiffness: 150, damping: 15 },
     },
   };
 
@@ -122,21 +123,18 @@ export default function Header() {
                 className="size-[230px] md:size-[325px] xl:size-[390px] absolute inset-x-0 bottom-0 z-10 rounded-bl-[50%]"
               />
               <motion.div
-                transition={{ type: "spring", stiffness: 200 }}
                 variants={logoVariants}
                 className="absolute -bottom-7 right-11 z-50 rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-[2rem]"
               >
                 <img src={react} className="size-14 md:size-24" />
               </motion.div>
               <motion.div
-                transition={{ type: "spring", stiffness: 200 }}
                 variants={logoVariants}
                 className="absolute -left-3 top-1/4 z-[1] rounded-3xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80"
               >
                 <img src={nodejs} className="size-10 md:size-16" />
               </motion.div>
               <motion.div
-                transition={{ type: "spring", stiffness: 200 }}
                 variants={logoVariants}
                 className="absolute right-0 h-fit rounded-2xl border-[1px] border-[#E3E8EE] bg-[#E3E8EE]/70 p-2 shadow-md backdrop-blur-sm dark:border-[#312D3C] dark:bg-[#211e2c]/80 sm:rounded-3xl"
               >
