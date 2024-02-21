@@ -2,18 +2,17 @@ import { motion } from "framer-motion";
 
 const SkillTab = ({ index, skill, tab, selectTab }) => {
   const tabVariants = {
-    hidden: { y: 40, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
+      transition: { type: "spring", dampness: 20, stiffness: 100 },
     },
   };
 
   return (
-    <motion.div
+    <motion.li
       onClick={() => selectTab(skill)}
-      key={index}
-      transition={{ type: "spring", stiffness: 80 }}
       variants={tabVariants}
       className={`${
         tab === skill
@@ -42,7 +41,7 @@ const SkillTab = ({ index, skill, tab, selectTab }) => {
           } h-[.3rem] transition duration-100 ease-in w-10 rounded-sm md:mt-0`}
         ></spans>
       </div>
-    </motion.div>
+    </motion.li>
   );
 };
 

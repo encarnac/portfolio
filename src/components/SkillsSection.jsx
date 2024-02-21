@@ -1,42 +1,33 @@
-import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import SkillCard from "./SkillCard";
 import SkillTab from "./SkillTab";
 import { SKILLS_DATA } from "../utils/SkillsData";
 
 const SkillsSection = () => {
   const [tab, setTab] = useState(SKILLS_DATA[0]);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
 
   const selectTab = (nextTab) => {
     setTab(nextTab);
   };
 
-  const tabsVariants = {
+  const skillsVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.4,
-      },
-    },
-  };
-
-  const cardsVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.4,
-      },
+      transition: { duration: 0.5, delayChildren: 0.3, staggerChildren: 0.4 },
     },
   };
 
   return (
-    <section id="skills" className="my-20 w-full">
+    <motion.section
+      id="skills"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={skillsVariants}
+      className="my-20 w-full"
+    >
       {/* SECTION CONTENT */}
       <div className="grid grid-cols-2 md:grid-cols-11 md:gap-x-4">
         <div className="col-span-full flex flex-col justify-center md:col-span-5 md:col-end-6 xl:col-span-4 xl:col-end-6">
@@ -55,10 +46,7 @@ const SkillsSection = () => {
 
           {/* SKILLS CONTENT */}
           <motion.div
-            ref={ref}
-            variants={cardsVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            variants={skillsVariants}
             className="py-4 text-[#7B7484] dark:text-[#c3c3c4]"
           >
             <SkillCard skills={tab.skills} />
@@ -66,13 +54,7 @@ const SkillsSection = () => {
         </div>
 
         {/* SKILLS TABS */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={tabsVariants}
-          className="col-span-full mt-6 grid h-full grid-cols-2 items-start justify-items-start gap-x-3 gap-y-4 md:col-span-5 md:col-end-12 md:mt-0 xl:col-span-4 xl:col-end-11"
-        >
+        <ul className="col-span-full mt-6 grid h-full grid-cols-2 items-start justify-items-start gap-x-3 gap-y-4 md:col-span-5 md:col-end-12 md:mt-0 xl:col-span-4 xl:col-end-11">
           {SKILLS_DATA.map((skill, index) => (
             <SkillTab
               key={index}
@@ -81,9 +63,9 @@ const SkillsSection = () => {
               selectTab={selectTab}
             />
           ))}
-        </motion.div>
+        </ul>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,4 @@
-import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SkillCard = ({ skills }) => {
   const skillVariants = {
@@ -7,6 +6,7 @@ const SkillCard = ({ skills }) => {
     visible: {
       opacity: 1,
       width: "100%",
+      transition: { duration: 0.4 },
     },
   };
 
@@ -15,7 +15,6 @@ const SkillCard = ({ skills }) => {
     visible: (index) => ({
       width: `${skills[index].percentage}`,
       transition: {
-        // delay: `${index + 0.6}`,
         type: "spring",
         damping: 17,
         stiffness: 150,
@@ -24,9 +23,9 @@ const SkillCard = ({ skills }) => {
   };
 
   return (
-    <div className="space-y-3">
+    <ul className="space-y-3">
       {skills.map((skill, index) => (
-        <motion.div variants={skillVariants} key={`skill_${index}`}>
+        <motion.li variants={skillVariants} key={`skill_${index}`}>
           <div className="flex flex-row justify-between">
             <p>{skill.skill}</p>
             <p className="font-mono">{skill.percentage}</p>
@@ -41,9 +40,9 @@ const SkillCard = ({ skills }) => {
               className={`h-4 rounded-xl bg-gradient-to-r from-[#A09AD8] to-[#CD94CA] dark:from-[#4E39CA] dark:to-[#703BCF]`}
             ></motion.div>
           </div>
-        </motion.div>
+        </motion.li>
       ))}
-    </div>
+    </ul>
   );
 };
 
