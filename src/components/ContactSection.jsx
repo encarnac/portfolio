@@ -55,7 +55,10 @@ const ContactSection = () => {
             className="flow-row mb-2 flex items-center gap-x-2"
           >
             <div className="w-20 overflow-clip rounded-custom-3">
-              <img src={portrait} />
+              <img
+                src={portrait}
+                className="grayscale transition duration-300 hover:grayscale-0"
+              />
             </div>
             <div className="">
               <p className="text-base font-semibold sm:text-lg lg:text-xl">
