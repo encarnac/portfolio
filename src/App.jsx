@@ -13,7 +13,11 @@ export default function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [selectedPage, setSelectedPage] = useState("hero");
   const [darkMode, setDarkMode] = useState(() => {
-    if (localStorage.getItem("theme") === "dark") {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
       return true;
     } else {
       return false;
@@ -29,16 +33,6 @@ export default function App() {
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
-    }
-
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
 
