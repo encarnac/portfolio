@@ -11,20 +11,36 @@ import { DividerShape } from "./assets/DividerShape";
 
 export default function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const [theme, setTheme] = useState("dark");
   const [selectedPage, setSelectedPage] = useState("hero");
+  const [darkMode, setDarkMode] = useState(() => {
+    if (localStorage.getItem("theme") === "dark") {
+      return true;
+    } else {
+      return false;
+    }
+  });
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const toggleTheme = () => setDarkMode(!darkMode);
 
   useEffect(() => {
-    if (theme === "dark") {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [theme]);
+  }, [darkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +64,7 @@ export default function App() {
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
-        theme={theme}
+        darkMode={darkMode}
         toggleTheme={toggleTheme}
       />
 

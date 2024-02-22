@@ -13,7 +13,7 @@ const pages = [
 
 const Nav = ({
   isTopOfPage,
-  theme,
+  darkMode,
   toggleTheme,
   selectedPage,
   setSelectedPage,
@@ -43,7 +43,7 @@ const Nav = ({
             onClick={toggleTheme}
             className="p-0 text-[#5b5662] transition duration-300 hover:text-[#de8abb] dark:text-[#D4D3D8] dark:hover:text-[#7943ed]"
           >
-            {theme === "dark" ? (
+            {darkMode ? (
               <FiMoon className="h-5 w-5" />
             ) : (
               <FiSun className="h-5 w-5" />
@@ -84,7 +84,7 @@ const Nav = ({
               onClick={toggleTheme}
               className="p-0 text-[#5b5662] transition duration-300 hover:text-[#de8abb] dark:text-[#D4D3D8] dark:hover:text-[#7943ed]"
             >
-              {theme === "dark" ? (
+              {darkMode ? (
                 <FiMoon className="h-5 w-5" />
               ) : (
                 <FiSun className="h-5 w-5" />
