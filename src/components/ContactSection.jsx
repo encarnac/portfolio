@@ -142,7 +142,8 @@ const ContactSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="col-span-5 mt-8 flex flex-col justify-end md:mt-0"
         >
-          <form className="">
+          <form name="contact" method="post">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="mb-3 flex w-full flex-col items-stretch justify-between gap-x-4 md:flex-row">
               {/* NAME */}
               <motion.div
@@ -156,9 +157,9 @@ const ContactSection = () => {
                   Name
                 </label>
                 <input
-                  name="name"
-                  type="text"
                   id="name"
+                  type="text"
+                  name="name"
                   required
                   className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                   placeholder="John Doe"
@@ -173,9 +174,9 @@ const ContactSection = () => {
                   Email
                 </label>
                 <input
-                  name="email"
-                  type="email"
                   id="email"
+                  type="email"
+                  name="email"
                   required
                   className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                   placeholder="johndoe@gmail.com"
@@ -191,9 +192,9 @@ const ContactSection = () => {
                 Subject
               </label>
               <input
-                name="subject"
-                type="text"
                 id="subject"
+                type="text"
+                name="subject"
                 required
                 className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                 placeholder="Just wanted to say hi"
@@ -208,8 +209,8 @@ const ContactSection = () => {
                 Message
               </label>
               <textarea
-                name="message"
                 id="message"
+                name="message"
                 rows="5"
                 className="block h-full w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                 placeholder="Let's talk about..."
