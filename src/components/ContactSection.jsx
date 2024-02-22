@@ -1,9 +1,10 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import portrait from "../assets/portrait.png";
 import { FaPhoneAlt, FaEnvelope, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const ContactSection = () => {
+  const [submitted, setSubmitted] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -161,6 +162,7 @@ const ContactSection = () => {
                   type="text"
                   name="name"
                   required
+                  disabled={submitted ? true : false}
                   className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                   placeholder="John Doe"
                 />
@@ -178,6 +180,7 @@ const ContactSection = () => {
                   type="email"
                   name="email"
                   required
+                  disabled={submitted ? true : false}
                   className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                   placeholder="johndoe@gmail.com"
                 />
@@ -196,6 +199,7 @@ const ContactSection = () => {
                 type="text"
                 name="subject"
                 required
+                disabled={submitted ? true : false}
                 className="block w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                 placeholder="Just wanted to say hi"
               />
@@ -212,6 +216,7 @@ const ContactSection = () => {
                 id="message"
                 name="message"
                 rows="5"
+                disabled={submitted ? true : false}
                 className="block h-full w-full rounded-xl border border-[#CCD0D7] bg-[#DCE1E7] p-2.5 text-sm text-[#ADADB6] placeholder-[#9CA2A9] dark:border-[#33353F] dark:bg-[#282638] dark:text-gray-100"
                 placeholder="Let's talk about..."
               />
