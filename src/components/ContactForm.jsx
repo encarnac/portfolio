@@ -1,5 +1,11 @@
 import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useTransform,
+  useMotionValue,
+  AnimatePresence,
+} from "framer-motion";
 
 const ContactForm = ({ contactVariants, contentVariants }) => {
   const [formData, setFormData] = useState({
@@ -8,6 +14,7 @@ const ContactForm = ({ contactVariants, contentVariants }) => {
     subject: "",
     message: "",
   });
+
   const [submitted, setSubmitted] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -38,6 +45,22 @@ const ContactForm = ({ contactVariants, contentVariants }) => {
       .catch((error) => alert(error));
 
     e.preventDefault();
+  };
+
+  const checkVariants = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: {
+          type: "spring",
+          stiffness: 400,
+          damping: 20,
+        },
+        opacity: { duration: 0.1 },
+      },
+    },
   };
 
   return (
@@ -120,9 +143,34 @@ const ContactForm = ({ contactVariants, contentVariants }) => {
         </motion.div>
         {/* SUBMIT BUTTON */}
         {submitted ? (
-          <p>
-            Message sent successfully! I'll get back to you as soon as possible.
-          </p>
+          <div className="flex items-center gap-x-2">
+            <svg
+              fill="none"
+              width="24"
+              viewBox="0 0 24 24"
+              className="stroke-[#de8abb] transition dark:stroke-[#7943ED]"
+              strokeWidth={3.5}
+            >
+              <motion.path
+                variants={checkVariants}
+                initial="hidden"
+                animate="visible"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 13l4 4L19 7"
+              ></motion.path>
+            </svg>
+            <motion.span
+              className="font-semibold"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 0.3, duration: 0.7 },
+              }}
+            >
+              Message sent successfully!
+            </motion.span>
+          </div>
         ) : (
           <motion.button
             variants={contentVariants}

@@ -24,7 +24,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="mb-12 w-full">
       {/* SECTION CONTENT */}
-      <div className="grid grid-cols-1 text-sm text-[#7B7484] dark:text-[#c3c3c4] sm:text-base md:grid-cols-10">
+      <div className="grid grid-cols-1 text-sm text-[#7B7484] dark:text-[#c3c3c4] md:grid-cols-10 lg:text-base">
         {/* CONTACT INFO */}
         <motion.div
           initial="hidden"
@@ -61,7 +61,9 @@ const ContactSection = () => {
               <p className="text-base font-semibold sm:text-lg lg:text-xl">
                 Colene Encarnado
               </p>
-              <p className="font-mono">Front-End Developer</p>
+              <p className="font-mono text-xs sm:text-sm lg:text-base">
+                Front-End Developer
+              </p>
             </div>
           </motion.div>
 
