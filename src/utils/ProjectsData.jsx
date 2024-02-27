@@ -51,7 +51,7 @@ export const PROJECTS_DATA = [
     ],
     type: ["all", "mobile"],
     image: "/wasteagram.png",
-    repo: "https://github.com/encarnac/wasteagram",
+    repo: "https://github.com/encarnac/cs-492-mobile/tree/main/wasteagram",
     demo: null,
   },
   {
@@ -76,7 +76,7 @@ export const PROJECTS_DATA = [
     tags: ["Dart", "Flutter", "SQLite"],
     type: ["all", "mobile"],
     image: "/journal.png",
-    repo: "https://github.com/encarnac/mood-journal",
+    repo: "https://github.com/encarnac/cs-492-mobile/tree/main/mood-journal",
     demo: null,
   },
   {
