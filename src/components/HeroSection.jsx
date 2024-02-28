@@ -99,7 +99,6 @@ export default function Header() {
                 transition: { duration: 0.3, ease: "easeInOut" },
               }}
               href={resume}
-              download
               className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] px-1 py-1 text-white dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] sm:w-fit"
             >
               <span className="block rounded-full bg-gradient-to-r from-[#D0C5DD] to-[#DFC6D8] px-5 py-2 transition duration-300 dark:from-[#2C1F40] dark:to-[#20213C] sm:bg-[#D2C6DD] sm:bg-none dark:sm:bg-[#27213F]">

@@ -83,7 +83,6 @@ const AboutSection = ({}) => {
             >
               <a
                 href={resume}
-                download
                 className="inline-block rounded-full bg-gradient-to-br from-[#68A3EB] to-[#F38BBB] p-1 text-xs text-white transition duration-300 ease-in-out hover:scale-105 dark:from-[#3034C2] dark:via-[#6A3DD1] dark:to-[#9329BE] md:text-sm lg:text-base"
               >
                 <span className="block rounded-full bg-[#E3E8EE] px-4 py-3 transition duration-300 dark:bg-[#201E2C] md:px-6 md:py-3 lg:px-4 lg:py-3">
