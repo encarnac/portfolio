@@ -1,6 +1,18 @@
 export const PROJECTS_DATA = [
   {
     id: 1,
+    title: "Yums for Buns",
+    subtitle: "Rabbit Diet Planner",
+    description:
+      "A mockup design for an upcoming a rabbit-safe food database and diet planner.",
+    tags: ["Figma"],
+    type: ["all", "design"],
+    image: "/yums-for-buns.png",
+    repo: "https://www.figma.com/file/jUxEe6wWTOFlWozQcVWRrq/Yums-for-Buns?type=design&node-id=0-1&mode=design&t=75XuA0JI6uGXvrbP-0",
+    demo: null,
+  },
+  {
+    id: 2,
     title: "Portfolio",
     subtitle: "Personal Website",
     description:
@@ -12,7 +24,7 @@ export const PROJECTS_DATA = [
     demo: "https://encarnac.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Adopt-a-Pal",
     subtitle: "Pet Adoption App",
     description:
@@ -24,7 +36,7 @@ export const PROJECTS_DATA = [
     demo: "https://www.figma.com/file/yJkg7EMO0fpvOo6WCn6JMO/Desktop-Prototype?type=design&node-id=0%3A1&mode=design&t=TfNgvSewE7efiwJb-1",
   },
   {
-    id: 3,
+    id: 4,
     title: "Watch Soon",
     subtitle: "TV/Movie Reminder App",
     description:
@@ -36,7 +48,7 @@ export const PROJECTS_DATA = [
     demo: "https://watch-soon.up.railway.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Wasteagram",
     subtitle: "Waste Tracker App",
     description:
@@ -55,7 +67,7 @@ export const PROJECTS_DATA = [
     demo: null,
   },
   {
-    id: 5,
+    id: 6,
     title: "Papermate",
     subtitle: "Database Manager",
     description:
@@ -68,7 +80,7 @@ export const PROJECTS_DATA = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Mood Journal",
     subtitle: "Journal Mobile App",
     description:
@@ -80,7 +92,7 @@ export const PROJECTS_DATA = [
     demo: null,
   },
   {
-    id: 7,
+    id: 8,
     title: "Readr",
     subtitle: "Reading App Design",
     description:
