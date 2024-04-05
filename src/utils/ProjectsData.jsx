@@ -33,7 +33,7 @@ export const PROJECTS_DATA = [
     type: ["all", "web", "design"],
     image: "/adopt-a-pal.png",
     repo: "https://github.com/encarnac/Adopt-A-Pal",
-    demo: "https://www.figma.com/file/yJkg7EMO0fpvOo6WCn6JMO/Desktop-Prototype?type=design&node-id=0%3A1&mode=design&t=TfNgvSewE7efiwJb-1",
+    demo: "https://www.figma.com/community/file/1358070968793173765/adopt-a-pal",
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ export const PROJECTS_DATA = [
     tags: ["Figma"],
     type: ["all", "design"],
     image: "/readr.png",
-    repo: "https://www.figma.com/file/aGwVuq0U4WMDPgyps76Oai/Readr?type=design&node-id=0-1&mode=design&t=Y7jCxqU69T2SPtHt-0",
+    repo: "https://www.figma.com/community/file/1358069950336916228/readr",
     demo: "https://www.figma.com/proto/aGwVuq0U4WMDPgyps76Oai/Readr?type=design&node-id=0-1&t=FeOLp6hLGMlAlKzU-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A645",
   },
 
